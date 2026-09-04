@@ -1,0 +1,87 @@
+{
+  "patch": {
+    "orig_nodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      14,
+      15
+    ],
+    "n": 9,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "center_orig": 4,
+    "center_relabelled": 4,
+    "center_degree": 3,
+    "trotter_steps": 5
+  },
+  "rzz_angle": -1.5707963267948966,
+  "max_abs_dev": 2.19824158875781e-14,
+  "data": [
+    {
+      "h": 0.09817477042468103,
+      "h_over_pi": 0.03125,
+      "pado": 0.9952713137615361,
+      "pennylane": 0.9952713137615274,
+      "abs_dev": 8.659739592076221e-15
+    },
+    {
+      "h": 0.39269908169872414,
+      "h_over_pi": 0.125,
+      "pado": 0.9274379546062055,
+      "pennylane": 0.9274379546061835,
+      "abs_dev": 2.19824158875781e-14
+    },
+    {
+      "h": 0.7853981633974483,
+      "h_over_pi": 0.25,
+      "pado": 0.4833737762017416,
+      "pennylane": 0.4833737762017303,
+      "abs_dev": 1.1324274851176597e-14
+    },
+    {
+      "h": 1.0471975511965976,
+      "h_over_pi": 0.3333333333333333,
+      "pado": 0.06253814697265642,
+      "pennylane": 0.06253814697265503,
+      "abs_dev": 1.3877787807814457e-15
+    }
+  ],
+  "note": "exact PennyLane statevector vs PADO-Pauli (untruncated, float64) on a real ibmeagletopology sub-patch incl. a degree-3 branch vertex"
+}

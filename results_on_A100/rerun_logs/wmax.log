@@ -1,0 +1,42 @@
+
+=== launching preset=gpu w_max=2 ===
+propagate:   0%|          | 0/240 [00:00<?, ?it/s]<repo>/reproducibility/scaling_accuracy_noise/_common.py:134: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  prog = qc.compile(observables=[obs], preset=preset, max_weight=int(w_max), dtype="float32")
+propagate:   0%|          | 1/240 [00:00<00:43,  5.55it/s]propagate:  30%|██▉       | 71/240 [00:00<00:00, 311.11it/s]propagate:  58%|█████▊    | 140/240 [00:00<00:00, 456.16it/s]propagate:  88%|████████▊ | 211/240 [00:00<00:00, 544.98it/s]propagate: 100%|██████████| 240/240 [00:00<00:00, 467.22it/s]
+[PPS Info] Propagation complete. Terms generated: 135
+zero-filter:   0%|          | 0/240 [00:00<?, ?it/s]zero-filter:  30%|███       | 72/240 [00:00<00:00, 714.47it/s, step=175 rows=135 cols=135 nnz=4]zero-filter:  67%|██████▋   | 161/240 [00:00<00:00, 812.74it/s, step=79 rows=135 cols=135 nnz=4]zero-filter: 100%|██████████| 240/240 [00:00<00:00, 823.98it/s, step=0 rows=37 cols=30 nnz=7]   
+[PPS Info] Terms retained after pruning: 15 (11.111111% of peak)
+[PPS Profile] compile_s=0.807650 propagate_s=0.514896 canonicalize_s=0.000000 zero_filter_s=0.292009
+[done] preset=gpu w_max=2 propagated=135 zero_filtered=15 VRAM_peak=0.002GB prop_s=0.51
+
+=== launching preset=gpu w_max=3 ===
+propagate:   0%|          | 0/240 [00:00<?, ?it/s]<repo>/reproducibility/scaling_accuracy_noise/_common.py:134: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  prog = qc.compile(observables=[obs], preset=preset, max_weight=int(w_max), dtype="float32")
+propagate:   0%|          | 1/240 [00:00<00:42,  5.60it/s]propagate:  28%|██▊       | 67/240 [00:00<00:00, 295.13it/s]propagate:  53%|█████▎    | 128/240 [00:00<00:00, 417.04it/s]propagate:  79%|███████▉  | 190/240 [00:00<00:00, 489.14it/s]propagate: 100%|██████████| 240/240 [00:00<00:00, 435.33it/s]
+[PPS Info] Propagation complete. Terms generated: 3,247
+zero-filter:   0%|          | 0/240 [00:00<?, ?it/s]zero-filter:  28%|██▊       | 67/240 [00:00<00:00, 664.46it/s, step=175 rows=2603 cols=2612 nnz=131]zero-filter:  62%|██████▎   | 150/240 [00:00<00:00, 757.75it/s, step=95 rows=1491 cols=1458 nnz=95] zero-filter:  98%|█████████▊| 235/240 [00:00<00:00, 797.18it/s, step=7 rows=69 cols=67 nnz=2]      zero-filter: 100%|██████████| 240/240 [00:00<00:00, 778.17it/s, step=0 rows=37 cols=30 nnz=7]
+[PPS Info] Terms retained after pruning: 120 (3.695719% of peak)
+[PPS Profile] compile_s=0.862305 propagate_s=0.552416 canonicalize_s=0.000000 zero_filter_s=0.309197
+[done] preset=gpu w_max=3 propagated=3,247 zero_filtered=120 VRAM_peak=0.008GB prop_s=0.55
+
+=== launching preset=gpu w_max=4 ===
+propagate:   0%|          | 0/240 [00:00<?, ?it/s]<repo>/reproducibility/scaling_accuracy_noise/_common.py:134: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  prog = qc.compile(observables=[obs], preset=preset, max_weight=int(w_max), dtype="float32")
+propagate:   0%|          | 1/240 [00:00<00:43,  5.53it/s]propagate:  29%|██▉       | 69/240 [00:00<00:00, 300.87it/s]propagate:  52%|█████▏    | 125/240 [00:00<00:00, 399.40it/s]propagate:  73%|███████▎  | 176/240 [00:00<00:00, 436.66it/s]propagate: 100%|█████████▉| 239/240 [00:00<00:00, 500.47it/s]propagate: 100%|██████████| 240/240 [00:00<00:00, 409.54it/s]
+[PPS Info] Propagation complete. Terms generated: 51,794
+zero-filter:   0%|          | 0/240 [00:00<?, ?it/s]zero-filter:  30%|███       | 73/240 [00:00<00:00, 726.73it/s, step=167 rows=35823 cols=36061 nnz=2915]zero-filter:  63%|██████▎   | 152/240 [00:00<00:00, 763.31it/s, step=95 rows=19762 cols=19168 nnz=1920]zero-filter:  99%|█████████▉| 238/240 [00:00<00:00, 806.19it/s, step=7 rows=69 cols=67 nnz=2]          zero-filter: 100%|██████████| 240/240 [00:00<00:00, 790.79it/s, step=0 rows=37 cols=30 nnz=7]
+[PPS Info] Terms retained after pruning: 575 (1.110167% of peak)
+[PPS Profile] compile_s=0.892073 propagate_s=0.587102 canonicalize_s=0.000000 zero_filter_s=0.304296
+[done] preset=gpu w_max=4 propagated=51,794 zero_filtered=575 VRAM_peak=0.115GB prop_s=0.59
+
+=== launching preset=gpu w_max=5 ===
+propagate:   0%|          | 0/240 [00:00<?, ?it/s]<repo>/reproducibility/scaling_accuracy_noise/_common.py:134: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  prog = qc.compile(observables=[obs], preset=preset, max_weight=int(w_max), dtype="float32")
+propagate:   0%|          | 1/240 [00:00<00:43,  5.54it/s]propagate:  28%|██▊       | 67/240 [00:00<00:00, 292.85it/s]propagate:  48%|████▊     | 115/240 [00:00<00:00, 362.61it/s]propagate:  68%|██████▊   | 164/240 [00:00<00:00, 404.64it/s]propagate:  88%|████████▊ | 210/240 [00:00<00:00, 421.99it/s]propagate: 100%|██████████| 240/240 [00:00<00:00, 379.62it/s]
+[PPS Info] Propagation complete. Terms generated: 401,871
+zero-filter:   0%|          | 0/240 [00:00<?, ?it/s]zero-filter:  23%|██▎       | 55/240 [00:00<00:00, 548.94it/s, step=191 rows=136820 cols=144349 nnz=86175]zero-filter:  48%|████▊     | 115/240 [00:00<00:00, 578.88it/s, step=127 rows=262122 cols=259152 nnz=24046]zero-filter:  77%|███████▋  | 185/240 [00:00<00:00, 631.76it/s, step=55 rows=17085 cols=14567 nnz=4094]    zero-filter: 100%|██████████| 240/240 [00:00<00:00, 655.24it/s, step=0 rows=37 cols=30 nnz=7]          
+[PPS Info] Terms retained after pruning: 1,940 (0.482742% of peak)
+[PPS Profile] compile_s=1.001218 propagate_s=0.633255 canonicalize_s=0.000000 zero_filter_s=0.367233
+[done] preset=gpu w_max=5 propagated=401,871 zero_filtered=1,940 VRAM_peak=0.809GB prop_s=0.63
+
+[ALL DONE] points: 4

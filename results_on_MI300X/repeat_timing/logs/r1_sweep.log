@@ -1,0 +1,53 @@
+
+################## n=12, mw=9 ##################
+full=231g emb=60 par=48 obs=['Z0', 'Z10Z11']
+propagate:   0%|          | 0/231 [00:00<?, ?it/s]<repo>/padopauli/backend/__init__.py:99: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  return torch.sparse_coo_tensor(indices, values, size=shape, device=device, dtype=dtype)
+propagate:   0%|          | 1/231 [00:00<02:27,  1.56it/s]propagate:   7%|▋         | 16/231 [00:00<00:09, 23.38it/s]propagate:  79%|███████▉  | 183/231 [00:01<00:00, 219.71it/s]propagate: 100%|██████████| 231/231 [00:01<00:00, 186.41it/s]
+[PPS Info] Propagation complete. Terms generated: 254,566
+zero-filter:   0%|          | 0/231 [00:00<?, ?it/s]zero-filter:   0%|          | 1/231 [00:00<02:00,  1.91it/s, step=230 rows=853 cols=936 nnz=76884]zero-filter:  54%|█████▎    | 124/231 [00:00<00:00, 264.59it/s, step=110 rows=15 cols=15 nnz=27]  zero-filter: 100%|██████████| 231/231 [00:00<00:00, 334.86it/s, step=0 rows=2 cols=2 nnz=2]     
+[PPS Info] Terms retained after pruning: 853 (0.335080% of peak)
+[A] compile=1.9s VRAM=0.1GB | max|Δ|=0.0093 mean=0.0008
+[B] forward throughput (PPS vs lightning.qubit, lightning.amdgpu):
+    batch  128: PPS    11814 s/s (0.011s)  | lightning.qubit   220.7 s/s (0.58s)  | x54
+    batch  128: PPS    11814 s/s (0.011s)  | lightning.amdgpu   200.7 s/s (0.64s)  | x59
+    batch  256: PPS    21082 s/s (0.012s)  | lightning.qubit   209.5 s/s (1.22s)  | x101
+    batch  256: PPS    21082 s/s (0.012s)  | lightning.amdgpu   198.2 s/s (1.29s)  | x106
+    batch  512: PPS    36457 s/s (0.014s)  | lightning.qubit   202.4 s/s (2.53s)  | x180
+    batch  512: PPS    36457 s/s (0.014s)  | lightning.amdgpu   216.1 s/s (2.37s)  | x169
+
+################## n=16, mw=9 ##################
+full=372g emb=80 par=64 obs=['Z0', 'Z14Z15']
+propagate:   0%|          | 0/372 [00:00<?, ?it/s]propagate:  53%|█████▎    | 196/372 [00:00<00:00, 1959.74it/s]propagate: 100%|██████████| 372/372 [00:00<00:00, 1859.12it/s]
+[PPS Info] Propagation complete. Terms generated: 718,276
+zero-filter:   0%|          | 0/372 [00:00<?, ?it/s]zero-filter:  37%|███▋      | 139/372 [00:00<00:00, 1382.12it/s, step=235 rows=140 cols=140 nnz=683]zero-filter:  84%|████████▎ | 311/372 [00:00<00:00, 1575.17it/s, step=67 rows=6 cols=6 nnz=6]       zero-filter: 100%|██████████| 372/372 [00:00<00:00, 1608.79it/s, step=0 rows=2 cols=2 nnz=2] 
+[PPS Info] Terms retained after pruning: 2,088 (0.290696% of peak)
+[A] compile=0.4s VRAM=0.2GB | max|Δ|=0.0438 mean=0.0031
+[B] forward throughput (PPS vs lightning.qubit, lightning.amdgpu):
+    batch  128: PPS     7583 s/s (0.017s)  | lightning.qubit    73.2 s/s (1.75s)  | x104
+    batch  128: PPS     7583 s/s (0.017s)  | lightning.amdgpu   140.6 s/s (0.91s)  | x54
+    batch  256: PPS    15046 s/s (0.017s)  | lightning.qubit    72.6 s/s (3.53s)  | x207
+    batch  256: PPS    15046 s/s (0.017s)  | lightning.amdgpu   137.1 s/s (1.87s)  | x110
+    batch  512: PPS    25432 s/s (0.020s)  | lightning.qubit    72.4 s/s (7.07s)  | x351
+    batch  512: PPS    25432 s/s (0.020s)  | lightning.amdgpu   130.7 s/s (3.92s)  | x195
+
+################## n=20, mw=9 ##################
+full=531g emb=100 par=80 obs=['Z0', 'Z18Z19']
+propagate:   0%|          | 0/531 [00:00<?, ?it/s]propagate:  36%|███▌      | 190/531 [00:00<00:00, 1896.45it/s]propagate:  78%|███████▊  | 416/531 [00:00<00:00, 2109.73it/s]propagate: 100%|██████████| 531/531 [00:00<00:00, 1961.25it/s]
+[PPS Info] Propagation complete. Terms generated: 795,534
+zero-filter:   0%|          | 0/531 [00:00<?, ?it/s]zero-filter:  24%|██▍       | 130/531 [00:00<00:00, 1295.55it/s, step=402 rows=176 cols=176 nnz=447]zero-filter:  54%|█████▍    | 286/531 [00:00<00:00, 1447.34it/s, step=250 rows=16 cols=16 nnz=27]   zero-filter:  91%|█████████ | 484/531 [00:00<00:00, 1688.86it/s, step=50 rows=5 cols=5 nnz=0]    zero-filter: 100%|██████████| 531/531 [00:00<00:00, 1632.60it/s, step=0 rows=2 cols=2 nnz=2] 
+[PPS Info] Terms retained after pruning: 2,485 (0.312369% of peak)
+[A] compile=0.6s VRAM=0.2GB | max|Δ|=0.2038 mean=0.0180
+[B] forward throughput (PPS vs lightning.amdgpu):
+    batch  128: PPS     5367 s/s (0.024s)  | lightning.amdgpu    60.9 s/s (2.10s)  | x88
+    batch  256: PPS     9728 s/s (0.026s)  | lightning.amdgpu    59.7 s/s (4.29s)  | x163
+    batch  512: PPS    17500 s/s (0.029s)  | lightning.amdgpu    60.1 s/s (8.52s)  | x291
+
+################## extra: n=16 mw=10 (accuracy only) ##################
+propagate:   0%|          | 0/372 [00:00<?, ?it/s]propagate:  53%|█████▎    | 197/372 [00:00<00:00, 1967.15it/s]propagate: 100%|██████████| 372/372 [00:00<00:00, 1778.15it/s]
+[PPS Info] Propagation complete. Terms generated: 2,604,018
+zero-filter:   0%|          | 0/372 [00:00<?, ?it/s]zero-filter:  33%|███▎      | 122/372 [00:00<00:00, 1213.39it/s, step=251 rows=194 cols=194 nnz=683]zero-filter:  73%|███████▎  | 272/372 [00:00<00:00, 1381.43it/s, step=107 rows=20 cols=18 nnz=2]    zero-filter: 100%|██████████| 372/372 [00:00<00:00, 1486.35it/s, step=0 rows=2 cols=2 nnz=2]    
+[PPS Info] Terms retained after pruning: 3,867 (0.148501% of peak)
+n=16 mw=10: compile=0.5s VRAM=0.6GB max|Δ|=0.0189 mean=0.0016
+
+[saved] <repo>/results_on_MI300X/random_circuit_statevector/results/random_circuit_sweep.json

@@ -1,0 +1,48 @@
+[exact] <sum ZZ> = -0.45178657  (n=16, edges=34, params=150)
+propagate:   0%|          | 0/166 [00:00<?, ?it/s]<repo>/padopauli/backend/__init__.py:103: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  return torch.sparse_coo_tensor(
+propagate:   1%|          | 1/166 [00:00<02:24,  1.15it/s]propagate:  25%|██▍       | 41/166 [00:00<00:02, 57.17it/s]propagate:  61%|██████▏   | 102/166 [00:01<00:00, 149.56it/s]propagate: 100%|██████████| 166/166 [00:01<00:00, 143.38it/s]
+[PPS Info] Propagation complete. Terms generated: 85
+zero-filter:   0%|          | 0/166 [00:00<?, ?it/s]zero-filter: 100%|██████████| 166/166 [00:00<00:00, 4897.92it/s, step=0 rows=0 cols=0 nnz=4]
+[PPS Info] Terms retained after pruning: 0 (0.000000% of peak)
+  eps=1e-01  expval=+0.000000  err=4.518e-01  retained=0
+propagate:   0%|          | 0/166 [00:00<?, ?it/s]propagate:  40%|████      | 67/166 [00:00<00:00, 669.06it/s]propagate:  81%|████████  | 134/166 [00:00<00:00, 627.26it/s]propagate: 100%|██████████| 166/166 [00:00<00:00, 668.83it/s]
+[PPS Info] Propagation complete. Terms generated: 175
+zero-filter:   0%|          | 0/166 [00:00<?, ?it/s]zero-filter: 100%|██████████| 166/166 [00:00<00:00, 2967.05it/s, step=0 rows=21 cols=19 nnz=4]
+[PPS Info] Terms retained after pruning: 8 (4.571429% of peak)
+  eps=5e-02  expval=-0.482011  err=3.022e-02  retained=8
+propagate:   0%|          | 0/166 [00:00<?, ?it/s]propagate:  39%|███▉      | 65/166 [00:00<00:00, 647.66it/s]propagate:  78%|███████▊  | 130/166 [00:00<00:00, 626.48it/s]propagate: 100%|██████████| 166/166 [00:00<00:00, 664.65it/s]
+[PPS Info] Propagation complete. Terms generated: 483
+zero-filter:   0%|          | 0/166 [00:00<?, ?it/s]zero-filter: 100%|██████████| 166/166 [00:00<00:00, 2399.78it/s, step=0 rows=38 cols=34 nnz=4]
+[PPS Info] Terms retained after pruning: 12 (2.484472% of peak)
+  eps=1e-02  expval=-0.381747  err=7.004e-02  retained=12
+propagate:   0%|          | 0/166 [00:00<?, ?it/s]propagate:  40%|███▉      | 66/166 [00:00<00:00, 653.96it/s]propagate:  80%|███████▉  | 132/166 [00:00<00:00, 618.01it/s]propagate: 100%|██████████| 166/166 [00:00<00:00, 658.46it/s]
+[PPS Info] Propagation complete. Terms generated: 736
+zero-filter:   0%|          | 0/166 [00:00<?, ?it/s]zero-filter: 100%|██████████| 166/166 [00:00<00:00, 2277.94it/s, step=0 rows=38 cols=34 nnz=4]
+[PPS Info] Terms retained after pruning: 19 (2.581522% of peak)
+  eps=5e-03  expval=-0.439234  err=1.255e-02  retained=19
+propagate:   0%|          | 0/166 [00:00<?, ?it/s]propagate:  39%|███▊      | 64/166 [00:00<00:00, 639.88it/s]propagate:  77%|███████▋  | 128/166 [00:00<00:00, 568.80it/s]propagate: 100%|██████████| 166/166 [00:00<00:00, 615.58it/s]
+[PPS Info] Propagation complete. Terms generated: 1,856
+zero-filter:   0%|          | 0/166 [00:00<?, ?it/s]zero-filter: 100%|██████████| 166/166 [00:00<00:00, 1897.26it/s, step=0 rows=38 cols=34 nnz=4]
+[PPS Info] Terms retained after pruning: 32 (1.724138% of peak)
+  eps=1e-03  expval=-0.451718  err=6.883e-05  retained=32
+propagate:   0%|          | 0/166 [00:00<?, ?it/s]propagate:  39%|███▊      | 64/166 [00:00<00:00, 636.16it/s]propagate:  77%|███████▋  | 128/166 [00:00<00:00, 605.01it/s]propagate: 100%|██████████| 166/166 [00:00<00:00, 611.22it/s]
+[PPS Info] Propagation complete. Terms generated: 2,732
+zero-filter:   0%|          | 0/166 [00:00<?, ?it/s]zero-filter: 100%|██████████| 166/166 [00:00<00:00, 2122.50it/s, step=0 rows=38 cols=34 nnz=4]
+[PPS Info] Terms retained after pruning: 36 (1.317716% of peak)
+  eps=5e-04  expval=-0.452082  err=2.951e-04  retained=36
+propagate:   0%|          | 0/166 [00:00<?, ?it/s]propagate:  38%|███▊      | 63/166 [00:00<00:00, 622.76it/s]propagate:  76%|███████▌  | 126/166 [00:00<00:00, 593.18it/s]propagate: 100%|██████████| 166/166 [00:00<00:00, 620.08it/s]
+[PPS Info] Propagation complete. Terms generated: 6,702
+zero-filter:   0%|          | 0/166 [00:00<?, ?it/s]zero-filter: 100%|██████████| 166/166 [00:00<00:00, 1892.87it/s, step=0 rows=38 cols=34 nnz=4]
+[PPS Info] Terms retained after pruning: 49 (0.731125% of peak)
+  eps=1e-04  expval=-0.451037  err=7.497e-04  retained=49
+propagate:   0%|          | 0/166 [00:00<?, ?it/s]propagate:  39%|███▉      | 65/166 [00:00<00:00, 648.34it/s]propagate:  78%|███████▊  | 130/166 [00:00<00:00, 587.24it/s]propagate: 100%|██████████| 166/166 [00:00<00:00, 602.33it/s]
+[PPS Info] Propagation complete. Terms generated: 23,606
+zero-filter:   0%|          | 0/166 [00:00<?, ?it/s]zero-filter:  67%|██████▋   | 111/166 [00:00<00:00, 1109.68it/s, step=61 rows=3376 cols=3378 nnz=100]zero-filter: 100%|██████████| 166/166 [00:00<00:00, 1324.35it/s, step=0 rows=38 cols=34 nnz=4]       
+[PPS Info] Terms retained after pruning: 89 (0.377023% of peak)
+  eps=1e-05  expval=-0.451731  err=5.567e-05  retained=89
+propagate:   0%|          | 0/166 [00:00<?, ?it/s]propagate:  39%|███▊      | 64/166 [00:00<00:00, 632.15it/s]propagate:  77%|███████▋  | 128/166 [00:00<00:00, 551.37it/s]propagate: 100%|██████████| 166/166 [00:00<00:00, 525.29it/s]
+[PPS Info] Propagation complete. Terms generated: 79,780
+zero-filter:   0%|          | 0/166 [00:00<?, ?it/s]zero-filter:  22%|██▏       | 36/166 [00:00<00:00, 359.21it/s, step=133 rows=2007 cols=2262 nnz=7780]zero-filter:  86%|████████▌ | 143/166 [00:00<00:00, 775.26it/s, step=29 rows=687 cols=628 nnz=167]   zero-filter: 100%|██████████| 166/166 [00:00<00:00, 783.45it/s, step=0 rows=38 cols=34 nnz=4]     
+[PPS Info] Terms retained after pruning: 152 (0.190524% of peak)
+  eps=1e-06  expval=-0.451785  err=1.079e-06  retained=152

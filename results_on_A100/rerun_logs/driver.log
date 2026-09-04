@@ -1,0 +1,30 @@
+[00:34:39] run start | jobs: grad_quasi noise minabs frontier frontier_seeds wmax qubit qubit_seeds ablation stress figures kicked diffmode repeats
+[00:34:39] START grad_quasi
+[00:34:53] DONE  grad_quasi (13s)
+[00:34:53] START noise
+[00:37:39] DONE  noise (165s)
+[00:37:39] START minabs
+[00:37:50] DONE  minabs (9s)
+[00:37:50] START frontier
+[00:40:25] DONE  frontier (154s)
+[00:40:25] START frontier_seeds
+[00:45:26] DONE  frontier_seeds (299s)
+[00:45:26] START wmax
+[00:45:42] DONE  wmax (14s)
+[00:45:42] START qubit
+[01:05:58] DONE  qubit (1215s)
+[01:05:58] START qubit_seeds
+[01:46:03] DONE  qubit_seeds (2403s)
+[01:46:03] START ablation
+[01:49:03] DONE  ablation (179s)
+[01:49:03] START stress
+[01:53:48] DONE  stress (283s)
+[01:53:48] START figures
+[01:53:49] DONE  figures (1s)
+[01:53:49] START kicked
+[01:57:54] DONE  kicked (244s)
+[01:57:54] START diffmode
+[02:00:41] DONE  diffmode (166s)
+[02:00:41] START repeats
+[04:09:15] DONE  repeats (7712s)
+[04:09:15] run end

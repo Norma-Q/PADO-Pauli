@@ -1,0 +1,15 @@
+job	status	exit	seconds	finished
+grad_quasi	ok	0	13	2026-08-24_00:34:53
+noise	ok	0	165	2026-08-24_00:37:39
+minabs	ok	0	9	2026-08-24_00:37:50
+frontier	ok	0	154	2026-08-24_00:40:25
+frontier_seeds	ok	0	299	2026-08-24_00:45:26
+wmax	ok	0	14	2026-08-24_00:45:42
+qubit	ok	0	1215	2026-08-24_01:05:58
+qubit_seeds	ok	0	2403	2026-08-24_01:46:03
+ablation	ok	0	179	2026-08-24_01:49:03
+stress	ok	0	283	2026-08-24_01:53:48
+figures	ok	0	1	2026-08-24_01:53:49
+kicked	ok	0	244	2026-08-24_01:57:54
+diffmode	ok	0	166	2026-08-24_02:00:41
+repeats	ok	0	7712	2026-08-24_04:09:15

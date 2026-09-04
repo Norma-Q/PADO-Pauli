@@ -1,0 +1,8 @@
+job	status	exit	seconds	finished
+grad_quasi	ok	0	11	2026-08-25_06:24:06
+minabs	ok	0	8	2026-08-25_06:24:16
+frontier	ok	0	102	2026-08-25_06:25:59
+frontier_seeds	ok	0	183	2026-08-25_06:29:03
+stress	ok	0	206	2026-08-25_06:32:30
+frontier	ok	0	101	2026-08-25_07:02:40
+frontier_seeds	ok	0	198	2026-08-25_07:05:59

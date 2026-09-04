@@ -1,0 +1,324 @@
+[08:40:29] === Benchmark start @ 2026-08-24T08:40:29.615786 ===
+[08:40:29] engines: ['cupauliprop', 'pps', 'qiskit', 'julia', 'julia_surrogate']
+[08:40:29] suites:  ['full_scaling', 'mw_truncation', 'coeff_truncation', 'embedding_batch']
+[08:40:29] p_layers=3, n_reps=5, smoke=False
+[08:40:29] metric note: setup column is engine-specific; only PPS is a reusable padopauli compile_program compile.
+[08:40:29] truncation note: Qiskit uses max_terms/atol semantics, not PPS/CPP/Julia max_weight/build_min_abs semantics.
+[08:40:29] batch note: PPS uses native embedding batch; other SDKs loop over single-sample propagations and report throughput.
+[08:40:29] git commit: ddc290685417d7811cdb63208b1b651855ace353
+[08:40:29] results dir: <repo>/results_on_A100/engine_benchmarks/results
+[08:40:29] total test cases: 16 × engines 5 = 80 runs
+[08:40:29] 
+=== SUITE: full_scaling (5 cases) ===
+[08:40:32]     · reference (exact) expval=-2.918659e-01, 4 exact grad components
+[08:40:32]   → cupauliprop | full_scaling__2x2 ... 
+[08:40:34]     ✓ cupauliprop (wall 2.51s)
+[08:40:34]   → pps | full_scaling__2x2 ... 
+[08:40:37]     ✓ pps (wall 2.40s)
+[08:40:37]   → qiskit | full_scaling__2x2 ... 
+[08:40:37]     ✓ qiskit (wall 0.48s)
+[08:40:37]   → julia | full_scaling__2x2 ... 
+[08:40:53]     ✓ julia (wall 16.01s)
+[08:40:53]   → julia_surrogate | full_scaling__2x2 ... 
+[08:41:03]     ✓ julia_surrogate (wall 9.73s)
+[08:41:06]     · reference (exact) expval=+7.665064e-02, 4 exact grad components
+[08:41:06]   → cupauliprop | full_scaling__2x3 ... 
+[08:41:09]     ✓ cupauliprop (wall 2.65s)
+[08:41:09]   → pps | full_scaling__2x3 ... 
+[08:41:11]     ✓ pps (wall 2.58s)
+[08:41:11]   → qiskit | full_scaling__2x3 ... 
+[08:41:12]     ✓ qiskit (wall 0.63s)
+[08:41:12]   → julia | full_scaling__2x3 ... 
+[08:41:28]     ✓ julia (wall 16.41s)
+[08:41:28]   → julia_surrogate | full_scaling__2x3 ... 
+[08:41:39]     ✓ julia_surrogate (wall 10.26s)
+[08:41:42]     · reference (exact) expval=-1.503402e+00, 4 exact grad components
+[08:41:42]   → cupauliprop | full_scaling__3x3 ... 
+[08:41:45]     ✓ cupauliprop (wall 3.12s)
+[08:41:45]   → pps | full_scaling__3x3 ... 
+[08:41:48]     ✓ pps (wall 3.42s)
+[08:41:48]   → qiskit | full_scaling__3x3 ... 
+[08:42:03]     ✓ qiskit (wall 14.40s)
+[08:42:03]   → julia | full_scaling__3x3 ... 
+[08:42:41]     ✓ julia (wall 38.72s)
+[08:42:41]   → julia_surrogate | full_scaling__3x3 ... 
+[08:44:04]     ✓ julia_surrogate (wall 83.18s)
+[08:44:07]     · reference (exact) expval=+8.082553e-01, 4 exact grad components
+[08:44:07]   → cupauliprop | full_scaling__2x5 ... 
+[08:44:11]     ✓ cupauliprop (wall 3.59s)
+[08:44:11]   → pps | full_scaling__2x5 ... 
+[08:44:15]     ✓ pps (wall 3.83s)
+[08:44:15]   → qiskit | full_scaling__2x5 ... 
+[08:44:45]     ✓ qiskit (wall 30.45s)
+[08:44:45]   → julia | full_scaling__2x5 ... 
+[08:45:55]     ✓ julia (wall 69.87s)
+[08:45:55]   → julia_surrogate | full_scaling__2x5 ... 
+[08:49:12]     ✓ julia_surrogate (wall 196.64s)
+[08:49:15]     · reference (exact) expval=+5.832321e-01, 4 exact grad components
+[08:49:15]   → cupauliprop | full_scaling__3x4 ... 
+[08:49:30]     ✓ cupauliprop (wall 15.32s)
+[08:49:30]   → pps | full_scaling__3x4 ... 
+[08:50:07]     ✓ pps (wall 36.31s)
+[08:50:07]   → qiskit | full_scaling__3x4 ... 
+[09:05:07]     ⏱ qiskit TIMEOUT after 900.1s
+[09:05:07]   → julia | full_scaling__3x4 ... 
+[09:20:07]     ⏱ julia TIMEOUT after 900.2s
+[09:20:07]   → julia_surrogate | full_scaling__3x4 ... 
+[09:35:11]     ⏱ julia_surrogate TIMEOUT after 903.6s
+[09:35:11] 
+=== SUITE: mw_truncation (5 cases) ===
+[09:35:15]     · reference (exact) expval=-4.290577e-01, 4 exact grad components
+[09:35:15]   → cupauliprop | mw_truncation__mw=2 ... 
+[09:35:18]     ✓ cupauliprop (wall 3.52s)
+[09:35:18]   → pps | mw_truncation__mw=2 ... 
+[09:35:22]     ✓ pps (wall 3.75s)
+[09:35:22]   → qiskit | mw_truncation__mw=2 ... 
+[09:35:23]     ✓ qiskit (wall 0.65s)
+[09:35:23]   → julia | mw_truncation__mw=2 ... 
+[09:35:39]     ✓ julia (wall 16.19s)
+[09:35:39]   → julia_surrogate | mw_truncation__mw=2 ... 
+[09:35:49]     ✓ julia_surrogate (wall 9.82s)
+[09:35:53]     · reference (exact) expval=-4.290577e-01, 4 exact grad components
+[09:35:53]   → cupauliprop | mw_truncation__mw=3 ... 
+[09:35:57]     ✓ cupauliprop (wall 3.56s)
+[09:35:57]   → pps | mw_truncation__mw=3 ... 
+[09:36:01]     ✓ pps (wall 3.85s)
+[09:36:01]   → qiskit | mw_truncation__mw=3 ... 
+[09:36:02]     ✓ qiskit (wall 1.80s)
+[09:36:02]   → julia | mw_truncation__mw=3 ... 
+[09:36:20]     ✓ julia (wall 17.52s)
+[09:36:20]   → julia_surrogate | mw_truncation__mw=3 ... 
+[09:36:31]     ✓ julia_surrogate (wall 10.66s)
+[09:36:35]     · reference (exact) expval=-4.290577e-01, 4 exact grad components
+[09:36:35]   → cupauliprop | mw_truncation__mw=4 ... 
+[09:36:39]     ✓ cupauliprop (wall 3.77s)
+[09:36:39]   → pps | mw_truncation__mw=4 ... 
+[09:36:43]     ✓ pps (wall 4.29s)
+[09:36:43]   → qiskit | mw_truncation__mw=4 ... 
+[09:36:56]     ✓ qiskit (wall 13.33s)
+[09:36:56]   → julia | mw_truncation__mw=4 ... 
+[09:37:27]     ✓ julia (wall 30.35s)
+[09:37:27]   → julia_surrogate | mw_truncation__mw=4 ... 
+[09:37:53]     ✓ julia_surrogate (wall 26.56s)
+[09:37:57]     · reference (exact) expval=-4.290577e-01, 4 exact grad components
+[09:37:57]   → cupauliprop | mw_truncation__mw=5 ... 
+[09:38:02]     ✓ cupauliprop (wall 4.55s)
+[09:38:02]   → pps | mw_truncation__mw=5 ... 
+[09:38:08]     ✓ pps (wall 6.02s)
+[09:38:08]   → qiskit | mw_truncation__mw=5 ... 
+[09:39:58]     ✓ qiskit (wall 110.07s)
+[09:39:58]   → julia | mw_truncation__mw=5 ... 
+[09:42:14]     ✓ julia (wall 136.10s)
+[09:42:14]   → julia_surrogate | mw_truncation__mw=5 ... 
+[09:45:50]     ✓ julia_surrogate (wall 215.96s)
+[09:45:54]     · reference (exact) expval=-4.290577e-01, 4 exact grad components
+[09:45:54]   → cupauliprop | mw_truncation__mw=6 ... 
+[09:46:04]     ✓ cupauliprop (wall 9.32s)
+[09:46:04]   → pps | mw_truncation__mw=6 ... 
+[09:46:20]     ✓ pps (wall 16.63s)
+[09:46:20]   → qiskit | mw_truncation__mw=6 ... 
+[09:58:30]     ✓ qiskit (wall 729.26s)
+[09:58:30]   → julia | mw_truncation__mw=6 ... 
+[10:09:33]     ✓ julia (wall 663.73s)
+[10:09:33]   → julia_surrogate | mw_truncation__mw=6 ... 
+[10:24:36]     ⏱ julia_surrogate TIMEOUT after 902.4s
+[10:24:36] 
+=== SUITE: coeff_truncation (3 cases) ===
+[10:24:40]     · reference (exact) expval=-9.619605e-02, 4 exact grad components
+[10:24:40]   → cupauliprop | coeff_truncation__coeff=0.001 ... 
+[10:24:44]     ✓ cupauliprop (wall 3.63s)
+[10:24:44]   → pps | coeff_truncation__coeff=0.001 ... 
+[10:24:48]     ✓ pps (wall 4.08s)
+[10:24:48]   → qiskit | coeff_truncation__coeff=0.001 ... 
+[10:24:48]     ✓ qiskit (wall 0.82s)
+[10:24:48]   → julia | coeff_truncation__coeff=0.001 ... 
+[10:25:05]     ✓ julia (wall 16.85s)
+[10:25:05]   → julia_surrogate | coeff_truncation__coeff=0.001 ... 
+[10:25:11]     ✓ julia_surrogate (wall 5.59s)
+[10:25:15]     · reference (exact) expval=-9.619605e-02, 4 exact grad components
+[10:25:15]   → cupauliprop | coeff_truncation__coeff=0.005 ... 
+[10:25:19]     ✓ cupauliprop (wall 3.49s)
+[10:25:19]   → pps | coeff_truncation__coeff=0.005 ... 
+[10:25:23]     ✓ pps (wall 3.91s)
+[10:25:23]   → qiskit | coeff_truncation__coeff=0.005 ... 
+[10:25:23]     ✓ qiskit (wall 0.63s)
+[10:25:23]   → julia | coeff_truncation__coeff=0.005 ... 
+[10:25:39]     ✓ julia (wall 16.21s)
+[10:25:39]   → julia_surrogate | coeff_truncation__coeff=0.005 ... 
+[10:25:45]     ✓ julia_surrogate (wall 5.65s)
+[10:25:49]     · reference (exact) expval=-9.619605e-02, 4 exact grad components
+[10:25:49]   → cupauliprop | coeff_truncation__coeff=0.01 ... 
+[10:25:53]     ✓ cupauliprop (wall 3.44s)
+[10:25:53]   → pps | coeff_truncation__coeff=0.01 ... 
+[10:25:57]     ✓ pps (wall 3.96s)
+[10:25:57]   → qiskit | coeff_truncation__coeff=0.01 ... 
+[10:25:57]     ✓ qiskit (wall 0.61s)
+[10:25:57]   → julia | coeff_truncation__coeff=0.01 ... 
+[10:26:14]     ✓ julia (wall 16.30s)
+[10:26:14]   → julia_surrogate | coeff_truncation__coeff=0.01 ... 
+[10:26:19]     ✓ julia_surrogate (wall 5.63s)
+[10:26:19] 
+=== SUITE: embedding_batch (3 cases) ===
+[10:26:22]     · reference (exact) expval=+1.709662e-01, 4 exact grad components
+[10:26:22]   → cupauliprop | embedding_batch__bs=10 ... 
+[10:26:30]     ✓ cupauliprop (wall 7.65s)
+[10:26:30]   → pps | embedding_batch__bs=10 ... 
+[10:26:33]     ✓ pps (wall 3.00s)
+[10:26:33]   → qiskit | embedding_batch__bs=10 ... 
+[10:27:28]     ✓ qiskit (wall 54.78s)
+[10:27:28]   → julia | embedding_batch__bs=10 ... 
+[10:29:34]     ✓ julia (wall 125.94s)
+[10:29:34]   → julia_surrogate | embedding_batch__bs=10 ... 
+[10:31:11]     ✓ julia_surrogate (wall 97.20s)
+[10:31:14]     · reference (exact) expval=+2.172128e-01, 4 exact grad components
+[10:31:14]   → cupauliprop | embedding_batch__bs=100 ... 
+[10:32:09]     ✓ cupauliprop (wall 55.28s)
+[10:32:09]   → pps | embedding_batch__bs=100 ... 
+[10:32:13]     ✓ pps (wall 3.29s)
+[10:32:13]   → qiskit | embedding_batch__bs=100 ... 
+[10:40:50]     ✓ qiskit (wall 517.45s)
+[10:40:50]   → julia | embedding_batch__bs=100 ... 
+[10:55:50]     ⏱ julia TIMEOUT after 900.1s
+[10:55:50]   → julia_surrogate | embedding_batch__bs=100 ... 
+[11:07:09]     ✓ julia_surrogate (wall 678.92s)
+[11:07:12]     · reference (exact) expval=+2.122654e-01, 4 exact grad components
+[11:07:12]   → cupauliprop | embedding_batch__bs=300 ... 
+[11:09:55]     ✓ cupauliprop (wall 163.09s)
+[11:09:55]   → pps | embedding_batch__bs=300 ... 
+[11:09:59]     ✓ pps (wall 3.69s)
+[11:09:59]   → qiskit | embedding_batch__bs=300 ... 
+[11:24:59]     ⏱ qiskit TIMEOUT after 900.0s
+[11:24:59]   ⏭ julia | embedding_batch__bs=300 skipped (timed out earlier in this suite)
+[11:24:59]   → julia_surrogate | embedding_batch__bs=300 ... 
+[11:39:59]     ⏱ julia_surrogate TIMEOUT after 900.2s
+[11:39:59] 
+[11:39:59] === Summary: full_scaling ===
+label                  engine       kind status     setup      eval(steady)   bwd(steady)    fwdbwd(steady)  vram(MB)   ram(MB)    occ(MB)    throughput     n_terms(prop→final)    expval         abs_err      grad_err    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  exact reference: -2.918659e-01
+2x2                    cupauliprop  gpu  Success    0.0023s    0.0135s        0.0228s        —               0.00MB     —          1383.25MB  74.22/s        255                    -2.91866e-01   +3.17033e-08 +1.59451e-07
+2x2                    pps          gpu  Success    0.3033s    0.0050s        0.0102s        —               0.00MB     —          1423.25MB  201.07/s       255→15                 -2.91866e-01   +3.17033e-08 +1.01773e-07
+2x2                    qiskit       cpu  Success    0.0171s    0.0023s        nan            —               —          0.05MB     101.13MB   nan            531                    -2.91866e-01   +1.72085e-15 —           
+2x2                    julia        cpu  Success    0.5478s    0.0006s        —              0.0010s         —          0.00MB     —          —              255                    -2.91866e-01   +1.77636e-15 +1.39013e-09
+2x2                    julia_surrogate cpu  Success    1.9064s    0.0012s        —              —               —          0.00MB     —          —              255→15                 -2.91866e-01   +1.77636e-15 —           
+
+  exact reference: +7.665064e-02
+2x3                    cupauliprop  gpu  Success    0.0039s    0.0229s        0.0405s        —               0.00MB     —          1393.25MB  43.61/s        4095                   +7.66507e-02   +1.04085e-07 +1.08750e-07
+2x3                    pps          gpu  Success    0.3645s    0.0081s        0.0166s        —               0.00MB     —          1431.25MB  123.16/s       4095→63                +7.66507e-02   +6.68324e-08 +7.30804e-08
+2x3                    qiskit       cpu  Success    0.0277s    0.0248s        nan            —               —          0.28MB     102.36MB   nan            8264                   +7.66506e-02   +4.30211e-16 —           
+2x3                    julia        cpu  Success    0.5628s    0.0122s        —              0.0205s         —          0.00MB     —          —              4095                   +7.66506e-02   +3.99233e-11 +8.21194e-10
+2x3                    julia_surrogate cpu  Success    1.9819s    0.0225s        —              —               —          0.00MB     —          —              4095→63                +7.66506e-02   +4.02456e-16 —           
+
+  exact reference: -1.503402e+00
+3x3                    cupauliprop  gpu  Success    0.0022s    0.0514s        0.1006s        —               66.00MB    —          2456.05MB  19.45/s        262143                 -1.50340e+00   +1.03321e-07 +7.71270e-05
+3x3                    pps          gpu  Success    0.5704s    0.0147s        0.0320s        —               8.00MB     —          2281.65MB  68.02/s        262143→511             -1.50340e+00   +1.58883e-08 +1.08512e-07
+3x3                    qiskit       cpu  Success    0.0488s    2.3573s        nan            —               —          15.90MB    156.98MB   nan            521223                 -1.50340e+00   +7.26086e-14 —           
+3x3                    julia        cpu  Success    0.6560s    1.1100s        —              2.6136s         —          55.49MB    —          —              258528                 -1.50340e+00   +6.27776e-10 +7.46492e-08
+3x3                    julia_surrogate cpu  Success    25.8541s   3.7135s        —              —               —          0.00MB     —          —              262143→511             -1.50340e+00   +1.84297e-14 —           
+
+  exact reference: +8.082553e-01
+2x5                    cupauliprop  gpu  Success    0.0023s    0.0667s        0.1536s        —               146.00MB   —          4175.65MB  14.99/s        1048539                +8.08255e-01   +1.55898e-07 +1.26110e-03
+2x5                    pps          gpu  Success    0.6599s    0.0156s        0.0318s        —               48.00MB    —          3053.65MB  64.06/s        1048539→1023           +8.08255e-01   +9.62933e-08 +5.59690e-08
+2x5                    qiskit       cpu  Success    0.0530s    5.1542s        nan            —               —          42.19MB    225.87MB   nan            1111059                +8.08255e-01   +4.57412e-14 —           
+2x5                    julia        cpu  Success    0.6552s    2.5749s        —              6.2816s         —          245.46MB   —          —              767978                 +8.08255e-01   +1.74806e-09 +1.08477e-08
+2x5                    julia_surrogate cpu  Success    81.2996s   7.3335s        —              —               —          0.04MB     —          —              1048539→1023           +8.08255e-01   +9.43690e-15 —           
+
+  exact reference: +5.832321e-01
+3x4                    cupauliprop  gpu  Success    0.0022s    0.7724s        1.8037s        —               2306.00MB  —          81370.85MB 1.29/s         16777215               +5.83232e-01   +1.46019e-07 +1.83609e-02
+3x4                    pps          gpu  Success    8.2772s    0.0767s        0.1174s        —               1716.00MB  —          67975.25MB 13.04/s        ?→4095                 +5.83232e-01   +2.68102e-08 +5.47663e-08
+3x4                    qiskit       cpu  Timeout    —          —              —              —               —          —          —          —              —                      —              —            —           
+3x4                    julia        cpu  Timeout    —          —              —              —               —          —          —          —              —                      —              —            —           
+3x4                    julia_surrogate cpu  Timeout    —          —              —              —               —          —          —          —              —                      —              —            —           
+
+=== Summary: mw_truncation ===
+label                  engine       kind status     setup      eval(steady)   bwd(steady)    fwdbwd(steady)  vram(MB)   ram(MB)    occ(MB)    throughput     n_terms(prop→final)    expval         abs_err      grad_err    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  exact reference: -4.290577e-01
+mw=2                   cupauliprop  gpu  Success    0.0023s    0.0874s        0.1363s        —               0.00MB     —          1387.25MB  11.44/s        426                    -4.17534e-01   +1.15240e-02 +1.71924e-01
+mw=2                   pps          gpu  Success    0.7884s    0.0267s        0.0519s        —               0.00MB     —          1425.25MB  37.47/s        426→58                 -4.17534e-01   +1.15241e-02 +1.71924e-01
+mw=2                   qiskit       cpu  Success    0.1057s    0.0164s        nan            —               —          0.00MB     101.89MB   nan            1129                   -4.67988e-01   +3.89302e-02 —           
+mw=2                   julia        cpu  Success    0.5469s    0.0031s        —              0.0058s         —          0.00MB     —          —              426                    -4.17534e-01   +1.15240e-02 +1.70901e-01
+mw=2                   julia_surrogate cpu  Success    2.0026s    0.0025s        —              —               —          0.00MB     —          —              426→58                 -4.17534e-01   +1.15240e-02 —           
+
+  exact reference: -4.290577e-01
+mw=3                   cupauliprop  gpu  Success    0.0023s    0.0898s        0.1491s        —               12.00MB    —          1462.85MB  11.13/s        10708                  -4.33247e-01   +4.18931e-03 +2.90525e-02
+mw=3                   pps          gpu  Success    0.8208s    0.0261s        0.0548s        —               0.00MB     —          1445.25MB  38.35/s        10708→462              -4.33247e-01   +4.18943e-03 +2.90524e-02
+mw=3                   qiskit       cpu  Success    0.1068s    0.2055s        nan            —               —          1.32MB     103.62MB   nan            16249                  -4.23093e-01   +5.96489e-03 —           
+mw=3                   julia        cpu  Success    0.5556s    0.0583s        —              0.1340s         —          0.00MB     —          —              9683                   -4.33247e-01   +4.18944e-03 +2.89469e-02
+mw=3                   julia_surrogate cpu  Success    2.2302s    0.0419s        —              —               —          0.00MB     —          —              10708→462              -4.33247e-01   +4.18944e-03 —           
+
+  exact reference: -4.290577e-01
+mw=4                   cupauliprop  gpu  Success    0.0022s    0.1039s        0.1758s        —               200.00MB   —          2377.25MB  9.64/s         134001                 -4.26153e-01   +2.90507e-03 +4.63438e-03
+mw=4                   pps          gpu  Success    0.9086s    0.0283s        0.0590s        —               4.00MB     —          1644.45MB  35.33/s        134001→2010            -4.26153e-01   +2.90507e-03 +4.63432e-03
+mw=4                   qiskit       cpu  Success    0.1081s    2.1402s        nan            —               —          12.15MB    118.99MB   nan            163669                 -4.28936e-01   +1.21472e-04 —           
+mw=4                   julia        cpu  Success    0.5584s    0.6227s        —              1.6838s         —          52.15MB    —          —              104365                 -4.26153e-01   +2.90503e-03 +4.74825e-03
+mw=4                   julia_surrogate cpu  Success    8.6810s    0.7267s        —              —               —          0.00MB     —          —              134001→2010            -4.26153e-01   +2.90503e-03 —           
+
+  exact reference: -4.290577e-01
+mw=5                   cupauliprop  gpu  Success    0.0022s    0.1526s        0.2854s        —               1504.00MB  —          8887.25MB  6.56/s         1168266                -4.29180e-01   +1.22130e-04 +7.93830e-04
+mw=5                   pps          gpu  Success    1.0580s    0.0263s        0.0572s        —               8.00MB     —          3465.65MB  38.02/s        1168266→6487           -4.29180e-01   +1.22011e-04 +7.93849e-04
+mw=5                   qiskit       cpu  Success    0.1074s    18.4852s       nan            —               —          114.34MB   210.83MB   nan            1225093                -4.29091e-01   +3.33193e-05 —           
+mw=5                   julia        cpu  Success    0.5528s    4.5835s        —              15.3234s        —          186.43MB   —          —              741491                 -4.29180e-01   +1.22112e-04 +8.85495e-04
+mw=5                   julia_surrogate cpu  Success    86.6505s   8.4415s        —              —               —          0.00MB     —          —              1168266→6487           -4.29180e-01   +1.22112e-04 —           
+
+  exact reference: -4.290577e-01
+mw=6                   cupauliprop  gpu  Success    0.0023s    0.4419s        0.9363s        —               9409.00MB  —          46494.05MB 2.26/s         7025029                -4.29064e-01   +6.01987e-06 +1.35648e-04
+mw=6                   pps          gpu  Success    2.3821s    0.0439s        0.0624s        —               234.00MB   —          14810.45MB 22.78/s        7025029→14743          -4.29064e-01   +5.93046e-06 +1.35663e-04
+mw=6                   qiskit       cpu  Success    0.1085s    123.8485s      nan            —               —          781.63MB   537.86MB   nan            7062925                -4.29055e-01   +2.59183e-06 —           
+mw=6                   julia        cpu  Success    0.5546s    25.9230s       —              81.8638s        —          744.43MB   —          —              3719368                -4.29064e-01   +6.01620e-06 +1.36996e-04
+mw=6                   julia_surrogate cpu  Timeout    —          —              —              —               —          —          —          —              —                      —              —            —           
+
+=== Summary: coeff_truncation ===
+label                  engine       kind status     setup      eval(steady)   bwd(steady)    fwdbwd(steady)  vram(MB)   ram(MB)    occ(MB)    throughput     n_terms(prop→final)    expval         abs_err      grad_err    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  exact reference: -9.619605e-02
+coeff=0.001            cupauliprop  gpu  Success    0.0023s    0.0863s        0.1675s        —               317.00MB   —          1782.45MB  11.59/s        8680                   -9.08800e-02   +5.31609e-03 +1.99706e-02
+coeff=0.001            pps          gpu  Success    0.9451s    0.0295s        0.0567s        —               0.00MB     —          1435.25MB  33.96/s        8553→58                -6.05593e-02   +3.56367e-02 +4.80881e-02
+coeff=0.001            qiskit       cpu  Success    0.1120s    0.0418s        nan            —               —          0.33MB     103.53MB   nan            10528                  -8.70564e-02   +9.13969e-03 —           
+coeff=0.001            julia        cpu  Success    0.5523s    0.0425s        —              0.0653s         —          0.00MB     —          —              8680                   -9.08798e-02   +5.31625e-03 +2.09568e-02
+coeff=0.001            julia_surrogate cpu  Unsupported —          —              —              —               —          —          —          —              —                      —              —            —           
+
+  exact reference: -9.619605e-02
+coeff=0.005            cupauliprop  gpu  Success    0.0022s    0.0887s        0.1431s        —               23.50MB    —          1420.45MB  11.33/s        2039                   -6.70594e-02   +2.91367e-02 +5.23273e-02
+coeff=0.005            pps          gpu  Success    0.8811s    0.0262s        0.0515s        —               0.00MB     —          1427.25MB  38.24/s        1977→32                -5.90383e-02   +3.71577e-02 +4.28991e-02
+coeff=0.005            qiskit       cpu  Success    0.1073s    0.0125s        nan            —               —          0.14MB     101.98MB   nan            2310                   -7.67320e-02   +1.94640e-02 —           
+coeff=0.005            julia        cpu  Success    0.5458s    0.0114s        —              0.0169s         —          0.00MB     —          —              2039                   -6.70593e-02   +2.91368e-02 +5.63029e-02
+coeff=0.005            julia_surrogate cpu  Unsupported —          —              —              —               —          —          —          —              —                      —              —            —           
+
+  exact reference: -9.619605e-02
+coeff=0.01             cupauliprop  gpu  Success    0.0022s    0.0841s        0.1346s        —               1.50MB     —          1390.45MB  11.89/s        1037                   -3.71779e-02   +5.90182e-02 +6.43795e-02
+coeff=0.01             pps          gpu  Success    0.9129s    0.0265s        0.0565s        —               0.00MB     —          1425.25MB  37.71/s        1052→20                +1.51872e-01   +2.48068e-01 +8.80398e-02
+coeff=0.01             qiskit       cpu  Success    0.1074s    0.0080s        nan            —               —          0.10MB     102.21MB   nan            1212                   -8.46024e-02   +1.15937e-02 —           
+coeff=0.01             julia        cpu  Success    0.5510s    0.0062s        —              0.0092s         —          0.00MB     —          —              1037                   -3.71778e-02   +5.90182e-02 +6.17955e-02
+coeff=0.01             julia_surrogate cpu  Unsupported —          —              —              —               —          —          —          —              —                      —              —            —           
+
+=== Summary: embedding_batch ===
+label                  engine       kind status     setup      eval(steady)   bwd(steady)    fwdbwd(steady)  vram(MB)   ram(MB)    occ(MB)    throughput     n_terms(prop→final)    expval         abs_err      grad_err    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  exact reference: +1.709662e-01
+bs=10                  cupauliprop  gpu  Success    0.0023s    0.3620s        0.7029s        —               54.00MB    —          2019.25MB  27.63/s        262003                 +1.70966e-01   +3.85624e-08 +3.33660e-02
+bs=10                  pps          gpu  Success    0.4733s    0.0169s        0.0233s        —               64.00MB    —          1994.85MB  592.08/s       262003→511             +1.70966e-01   +3.59434e-08 +5.05638e-08
+bs=10                  qiskit       cpu  Success    0.0006s    10.6621s       nan            —               —          14.87MB    136.94MB   0.94/s         261787                 +1.70966e-01   +1.57069e-13 —           
+bs=10                  julia        cpu  Success    0.6404s    6.1299s        —              14.8975s        —          13.19MB    —          1.63/s         225341                 +1.70966e-01   +1.09591e-10 +4.42349e-08
+bs=10                  julia_surrogate cpu  Success    13.6750s   12.7873s       —              —               —          0.00MB     —          0.78/s         262003→511             +1.70966e-01   +1.44329e-15 —           
+
+  exact reference: +2.172128e-01
+bs=100                 cupauliprop  gpu  Success    0.0023s    3.5901s        6.9968s        —               60.00MB    —          2019.25MB  27.85/s        262003                 +2.17213e-01   +1.27620e-07 +2.96117e-02
+bs=100                 pps          gpu  Success    0.4750s    0.0480s        0.0487s        —               2154.00MB  —          5261.65MB  2827.07/s      262003→511             +2.17213e-01   +2.33122e-08 +7.12412e-08
+bs=100                 qiskit       cpu  Success    0.0006s    103.0976s      nan            —               —          21.27MB    135.59MB   0.97/s         262210                 +2.17213e-01   +1.25427e-13 —           
+bs=100                 julia        cpu  Timeout    —          —              —              —               —          —          —          —              —                      —              —            —           
+bs=100                 julia_surrogate cpu  Success    13.7408s   128.9227s      —              —               —          0.06MB     —          0.78/s         262003→511             +2.17213e-01   +1.72085e-15 —           
+
+  exact reference: +2.122654e-01
+bs=300                 cupauliprop  gpu  Success    0.0023s    10.8990s       21.2491s       —               60.00MB    —          2019.25MB  27.53/s        262003                 +2.12265e-01   +1.46775e-08 +3.54017e-02
+bs=300                 pps          gpu  Success    0.4685s    0.0530s        0.0926s        —               1970.00MB  —          9413.25MB  5658.03/s      262003→511             +2.12265e-01   +1.64136e-07 +4.79169e-08
+bs=300                 qiskit       cpu  Timeout    —          —              —              —               —          —          —          —              —                      —              —            —           
+bs=300                 julia        cpu  SkippedAfterTimeout —          —              —              —               —          —          —          —              —                      —              —            —           
+bs=300                 julia_surrogate cpu  Timeout    —          —              —              —               —          —          —          —              —                      —              —            —           
+
+[11:39:59] 
+Wrote <repo>/results_on_A100/engine_benchmarks/results/results.json
+[11:39:59] Wrote <repo>/results_on_A100/engine_benchmarks/results/summary.json
+[11:39:59] Wrote <repo>/results_on_A100/engine_benchmarks/results/summary.txt
+[11:39:59] Wrote <repo>/results_on_A100/engine_benchmarks/results/run_log.txt
+[11:39:59] === Benchmark end @ 2026-08-24T11:39:59.842641 ===

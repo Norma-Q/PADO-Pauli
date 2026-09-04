@@ -1,0 +1,21 @@
+{
+  "gpu": {
+    "backend": "rocm 7.2.26015",
+    "count": 1,
+    "name": "AMD Instinct MI300X VF"
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "pennylane": "0.45.1",
+    "pennylane_lightning": "0.45.0",
+    "pennylane_lightning_amdgpu": "0.45.0",
+    "qiskit": "2.5.1",
+    "scipy": "1.17.1",
+    "torch": "2.11.0+rocm7.2"
+  },
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "python": "3.11.15",
+  "result_file": "random_circuit_sweep.json",
+  "rocm_host": "7.2.4",
+  "timestamp_utc": "2026-08-25T06:32:29+00:00"
+}

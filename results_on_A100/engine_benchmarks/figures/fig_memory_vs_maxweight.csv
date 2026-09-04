@@ -1,0 +1,25 @@
+engine,memory_kind,max_weight,peak_MB
+PADO,VRAM,2,0.0
+PADO,VRAM,3,0.0
+PADO,VRAM,4,4.0
+PADO,VRAM,5,8.0
+PADO,VRAM,6,234.0
+cuPauliProp,VRAM,2,0.0
+cuPauliProp,VRAM,3,12.0
+cuPauliProp,VRAM,4,200.0
+cuPauliProp,VRAM,5,1504.0
+cuPauliProp,VRAM,6,9409.0
+Qiskit pauli-prop,RAM,2,0.0
+Qiskit pauli-prop,RAM,3,1.318359375
+Qiskit pauli-prop,RAM,4,12.1474609375
+Qiskit pauli-prop,RAM,5,114.3359375
+Qiskit pauli-prop,RAM,6,781.6298828125
+PauliPropagation.jl,RAM,2,0.0
+PauliPropagation.jl,RAM,3,0.0
+PauliPropagation.jl,RAM,4,52.146484375
+PauliPropagation.jl,RAM,5,186.4326171875
+PauliPropagation.jl,RAM,6,744.431640625
+PP.jl surrogate,RAM,2,0.0
+PP.jl surrogate,RAM,3,0.0
+PP.jl surrogate,RAM,4,0.0
+PP.jl surrogate,RAM,5,0.0

@@ -1,0 +1,20 @@
+propagate:   0%|          | 0/231 [00:00<?, ?it/s]<repo>/reproducibility/random_circuit_statevector/run_fwdbwd.py:112: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  prog = circ.compile(observables=obs, preset="gpu",
+propagate:   0%|          | 1/231 [00:00<00:37,  6.16it/s]propagate:  47%|████▋     | 108/231 [00:00<00:00, 503.25it/s]propagate: 100%|██████████| 231/231 [00:00<00:00, 645.01it/s]
+[PPS Info] Propagation complete. Terms generated: 254,566
+zero-filter:   0%|          | 0/231 [00:00<?, ?it/s]zero-filter:  40%|████      | 93/231 [00:00<00:00, 927.35it/s, step=142 rows=68 cols=47 nnz=43]zero-filter: 100%|██████████| 231/231 [00:00<00:00, 1178.86it/s, step=0 rows=2 cols=2 nnz=2]   
+[PPS Info] Terms retained after pruning: 853 (0.335080% of peak)
+n=12: PPS 0.251s (25 ms/step) | lightning.qubit 2.432s (243 ms/step) | PPS x9.7 | loss PPS +0.571->+0.341 exact +0.571->+0.340
+n=12: PPS 0.251s (25 ms/step) | lightning.gpu 3.856s (386 ms/step) | PPS x15.4 | loss PPS +0.571->+0.341 exact +0.571->+0.340
+propagate:   0%|          | 0/372 [00:00<?, ?it/s]propagate:  37%|███▋      | 138/372 [00:00<00:00, 1379.07it/s]propagate:  80%|████████  | 298/372 [00:00<00:00, 1501.19it/s]propagate: 100%|██████████| 372/372 [00:00<00:00, 1362.47it/s]
+[PPS Info] Propagation complete. Terms generated: 718,276
+zero-filter:   0%|          | 0/372 [00:00<?, ?it/s]zero-filter:  27%|██▋       | 101/372 [00:00<00:00, 1004.80it/s, step=275 rows=140 cols=140 nnz=414]zero-filter:  60%|██████    | 224/372 [00:00<00:00, 1136.27it/s, step=155 rows=15 cols=15 nnz=27]   zero-filter: 100%|██████████| 372/372 [00:00<00:00, 1241.03it/s, step=0 rows=2 cols=2 nnz=2]     
+[PPS Info] Terms retained after pruning: 2,088 (0.290696% of peak)
+n=16: PPS 0.365s (37 ms/step) | lightning.qubit 8.462s (846 ms/step) | PPS x23.2 | loss PPS +0.592->+0.422 exact +0.591->+0.423
+n=16: PPS 0.365s (37 ms/step) | lightning.gpu 5.505s (550 ms/step) | PPS x15.1 | loss PPS +0.592->+0.422 exact +0.591->+0.423
+propagate:   0%|          | 0/531 [00:00<?, ?it/s]propagate:  27%|██▋       | 142/531 [00:00<00:00, 1418.46it/s]propagate:  56%|█████▌    | 295/531 [00:00<00:00, 1478.53it/s]propagate:  83%|████████▎ | 443/531 [00:00<00:00, 1465.61it/s]propagate: 100%|██████████| 531/531 [00:00<00:00, 1371.33it/s]
+[PPS Info] Propagation complete. Terms generated: 795,534
+zero-filter:   0%|          | 0/531 [00:00<?, ?it/s]zero-filter:  19%|█▉        | 103/531 [00:00<00:00, 1026.16it/s, step=434 rows=2563 cols=2563 nnz=34058]zero-filter:  41%|████      | 218/531 [00:00<00:00, 1097.37it/s, step=314 rows=176 cols=176 nnz=1478]   zero-filter:  65%|██████▍   | 343/531 [00:00<00:00, 1166.65it/s, step=194 rows=16 cols=16 nnz=27]    zero-filter:  95%|█████████▍| 502/531 [00:00<00:00, 1332.68it/s, step=34 rows=5 cols=5 nnz=0]    zero-filter: 100%|██████████| 531/531 [00:00<00:00, 1253.52it/s, step=0 rows=2 cols=2 nnz=2] 
+[PPS Info] Terms retained after pruning: 2,485 (0.312369% of peak)
+n=20: PPS 0.471s (47 ms/step) | lightning.gpu 10.264s (1026 ms/step) | PPS x21.8 | loss PPS +0.552->+0.238 exact +0.553->+0.242
+[saved] results/random_circuit_fwdbwd.json

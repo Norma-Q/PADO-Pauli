@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+# reference PDFs live next to the notebooks that cite them, but stay out of git
+examples/*.pdf
+.claude/
+# the recorded runs live in results_on_<DEVICE>/ and are tracked; a re-run overwrites them in place
+# in-place fallback layout (PPS_DATA_ROOT=.)
+engine_benchmarks/results/
+reproducibility/*/results/
+reproducibility/*/figures/
+reproducibility/*/runs/
+reproducibility/rerun_logs/

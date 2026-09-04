@@ -1,0 +1,92 @@
+heavy-hex patch: n=9 edges=8 center=4 (orig qubit 4, degree 3) steps=5
+  edges (relabelled): [(0, 1), (0, 7), (1, 2), (2, 3), (3, 4), (4, 5), (4, 8), (5, 6)]
+propagate:   0%|          | 0/85 [00:00<?, ?it/s]<repo>/reproducibility/kicked_ising_127q/verify_small.py:73: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  prog = qc.compile(observables=[("Z", [center])], preset="cpu")
+propagate: 100%|██████████| 85/85 [00:00<00:00, 2089.59it/s]
+[PPS Info] Propagation complete. Terms generated: 7,660
+zero-filter:   0%|          | 0/85 [00:00<?, ?it/s]zero-filter: 100%|██████████| 85/85 [00:00<00:00, 3116.48it/s, step=0 rows=1 cols=1 nnz=0]
+[PPS Info] Terms retained after pruning: 34 (0.443864% of peak)
+  h=0.09817 (0.0312π)  pado=+0.99527131  pennylane=+0.99527131  |dev|=8.66e-15
+propagate:   0%|          | 0/85 [00:00<?, ?it/s]propagate: 100%|██████████| 85/85 [00:00<00:00, 2201.88it/s]
+[PPS Info] Propagation complete. Terms generated: 7,660
+zero-filter:   0%|          | 0/85 [00:00<?, ?it/s]zero-filter: 100%|██████████| 85/85 [00:00<00:00, 3379.20it/s, step=0 rows=1 cols=1 nnz=0]
+[PPS Info] Terms retained after pruning: 34 (0.443864% of peak)
+  h=0.39270 (0.1250π)  pado=+0.92743795  pennylane=+0.92743795  |dev|=2.20e-14
+propagate:   0%|          | 0/85 [00:00<?, ?it/s]propagate: 100%|██████████| 85/85 [00:00<00:00, 2109.67it/s]
+[PPS Info] Propagation complete. Terms generated: 7,660
+zero-filter:   0%|          | 0/85 [00:00<?, ?it/s]zero-filter: 100%|██████████| 85/85 [00:00<00:00, 3364.85it/s, step=0 rows=1 cols=1 nnz=0]
+[PPS Info] Terms retained after pruning: 34 (0.443864% of peak)
+  h=0.78540 (0.2500π)  pado=+0.48337378  pennylane=+0.48337378  |dev|=1.13e-14
+propagate:   0%|          | 0/85 [00:00<?, ?it/s]propagate: 100%|██████████| 85/85 [00:00<00:00, 2235.17it/s]
+[PPS Info] Propagation complete. Terms generated: 7,660
+zero-filter:   0%|          | 0/85 [00:00<?, ?it/s]zero-filter: 100%|██████████| 85/85 [00:00<00:00, 3358.38it/s, step=0 rows=1 cols=1 nnz=0]
+[PPS Info] Terms retained after pruning: 34 (0.443864% of peak)
+  h=1.04720 (0.3333π)  pado=+0.06253815  pennylane=+0.06253815  |dev|=1.39e-15
+  max |pado - pennylane| = 2.20e-14  -> PASS
+  -> wrote <repo>/results_on_A100/kicked_ising_127q/results/verify_small_heavyhex.json
+=== SWEEP START  max_weight=8  min_abs=1e-4  01:53:52 ===
+=== FIELD i=0  01:53:52 ===
+  i= 0  h=0.00000 (0.0000π)  <Z_62>=+1.000000  t=9.2s  terms=1  peak=0.01GB
+=== FIELD i=19  01:54:03 ===
+  i=19  h=1.57080 (0.5000π)  <Z_62>=+0.000000  t=3.5s  terms=0  peak=0.0GB
+=== FIELD i=1  01:54:09 ===
+  i= 1  h=0.08267 (0.0263π)  <Z_62>=+0.997629  t=10.4s  terms=1  peak=0.01GB
+=== FIELD i=18  01:54:21 ===
+  i=18  h=1.48812 (0.4737π)  <Z_62>=+0.000000  t=4.0s  terms=0  peak=0.0GB
+=== FIELD i=2  01:54:26 ===
+  i= 2  h=0.16535 (0.0526π)  <Z_62>=+0.986050  t=10.9s  terms=2  peak=0.02GB
+=== FIELD i=17  01:54:39 ===
+  i=17  h=1.40545 (0.4474π)  <Z_62>=+0.000000  t=4.6s  terms=0  peak=0.0GB
+=== FIELD i=3  01:54:45 ===
+  i= 3  h=0.24802 (0.0789π)  <Z_62>=+0.957643  t=11.3s  terms=9  peak=0.03GB
+=== FIELD i=16  01:54:58 ===
+  i=16  h=1.32278 (0.4211π)  <Z_62>=+0.000000  t=4.9s  terms=0  peak=0.01GB
+=== FIELD i=4  01:55:05 ===
+  i= 4  h=0.33069 (0.1053π)  <Z_62>=+0.894161  t=11.9s  terms=10  peak=0.07GB
+=== FIELD i=15  01:55:19 ===
+  i=15  h=1.24010 (0.3947π)  <Z_62>=+0.000000  t=5.5s  terms=0  peak=0.03GB
+=== FIELD i=5  01:55:26 ===
+  i= 5  h=0.41337 (0.1316π)  <Z_62>=+0.864488  t=12.7s  terms=30  peak=0.14GB
+=== FIELD i=14  01:55:40 ===
+  i=14  h=1.15743 (0.3684π)  <Z_62>=+0.000000  t=8.9s  terms=0  peak=0.07GB
+=== FIELD i=6  01:55:51 ===
+  i= 6  h=0.49604 (0.1579π)  <Z_62>=+0.804626  t=13.1s  terms=32  peak=0.25GB
+=== FIELD i=13  01:56:06 ===
+  i=13  h=1.07476 (0.3421π)  <Z_62>=+0.001464  t=12.1s  terms=1  peak=0.16GB
+=== FIELD i=7  01:56:20 ===
+  i= 7  h=0.57871 (0.1842π)  <Z_62>=+0.660705  t=13.7s  terms=60  peak=0.41GB
+=== FIELD i=12  01:56:35 ===
+  i=12  h=0.99208 (0.3158π)  <Z_62>=+0.013022  t=12.8s  terms=1  peak=0.32GB
+=== FIELD i=8  01:56:50 ===
+  i= 8  h=0.66139 (0.2105π)  <Z_62>=+0.511478  t=13.9s  terms=55  peak=0.55GB
+=== FIELD i=11  01:57:05 ===
+  i=11  h=0.90941 (0.2895π)  <Z_62>=+0.063677  t=13.4s  terms=20  peak=0.51GB
+=== FIELD i=9  01:57:20 ===
+  i= 9  h=0.74406 (0.2368π)  <Z_62>=+0.348136  t=14.3s  terms=47  peak=0.63GB
+=== FIELD i=10  01:57:36 ===
+  i=10  h=0.82673 (0.2632π)  <Z_62>=+0.179611  t=14.1s  terms=34  peak=0.62GB
+=== SWEEP DONE  01:57:52 ===
+  -> wrote <repo>/results_on_A100/kicked_ising_127q/figures/fig_kicked_ising_127q.png
+  -> wrote <repo>/results_on_A100/kicked_ising_127q/figures/fig_kicked_ising_127q.pdf
+
+  field sweep (20 points), <Z_62>:
+    h=0.00000 (0.0000π)  <Z>=+1.000000
+    h=0.08267 (0.0263π)  <Z>=+0.997629
+    h=0.16535 (0.0526π)  <Z>=+0.986050
+    h=0.24802 (0.0789π)  <Z>=+0.957643
+    h=0.33069 (0.1053π)  <Z>=+0.894161
+    h=0.41337 (0.1316π)  <Z>=+0.864488
+    h=0.49604 (0.1579π)  <Z>=+0.804626
+    h=0.57871 (0.1842π)  <Z>=+0.660705
+    h=0.66139 (0.2105π)  <Z>=+0.511478
+    h=0.74406 (0.2368π)  <Z>=+0.348136
+    h=0.82673 (0.2632π)  <Z>=+0.179611
+    h=0.90941 (0.2895π)  <Z>=+0.063677
+    h=0.99208 (0.3158π)  <Z>=+0.013022
+    h=1.07476 (0.3421π)  <Z>=+0.001464
+    h=1.15743 (0.3684π)  <Z>=+0.000000
+    h=1.24010 (0.3947π)  <Z>=+0.000000
+    h=1.32278 (0.4211π)  <Z>=+0.000000
+    h=1.40545 (0.4474π)  <Z>=+0.000000
+    h=1.48812 (0.4737π)  <Z>=+0.000000
+    h=1.57080 (0.5000π)  <Z>=+0.000000

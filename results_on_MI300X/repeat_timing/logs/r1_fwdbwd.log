@@ -1,0 +1,20 @@
+propagate:   0%|          | 0/231 [00:00<?, ?it/s]<repo>/padopauli/backend/__init__.py:99: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  return torch.sparse_coo_tensor(indices, values, size=shape, device=device, dtype=dtype)
+propagate:   0%|          | 1/231 [00:00<02:19,  1.65it/s]propagate:   7%|▋         | 16/231 [00:00<00:08, 24.50it/s]propagate:  79%|███████▉  | 183/231 [00:01<00:00, 223.66it/s]propagate: 100%|██████████| 231/231 [00:01<00:00, 191.01it/s]
+[PPS Info] Propagation complete. Terms generated: 254,566
+zero-filter:   0%|          | 0/231 [00:00<?, ?it/s]zero-filter:   0%|          | 1/231 [00:00<02:00,  1.91it/s, step=230 rows=853 cols=936 nnz=76884]zero-filter:  54%|█████▎    | 124/231 [00:00<00:00, 265.18it/s, step=110 rows=15 cols=15 nnz=27]  zero-filter: 100%|██████████| 231/231 [00:00<00:00, 340.85it/s, step=0 rows=2 cols=2 nnz=2]     
+[PPS Info] Terms retained after pruning: 853 (0.335080% of peak)
+n=12: PPS 0.236s (24 ms/step) | lightning.qubit 1.792s (179 ms/step) | PPS x7.6 | loss PPS +0.571->+0.341 exact +0.571->+0.340
+n=12: PPS 0.236s (24 ms/step) | lightning.amdgpu 2.151s (215 ms/step) | PPS x9.1 | loss PPS +0.571->+0.341 exact +0.571->+0.340
+propagate:   0%|          | 0/372 [00:00<?, ?it/s]propagate:  53%|█████▎    | 197/372 [00:00<00:00, 1966.20it/s]propagate: 100%|██████████| 372/372 [00:00<00:00, 1759.67it/s]
+[PPS Info] Propagation complete. Terms generated: 718,276
+zero-filter:   0%|          | 0/372 [00:00<?, ?it/s]zero-filter:  36%|███▌      | 133/372 [00:00<00:00, 1327.62it/s, step=243 rows=140 cols=140 nnz=631]zero-filter:  78%|███████▊  | 291/372 [00:00<00:00, 1475.30it/s, step=83 rows=17 cols=17 nnz=0]     zero-filter: 100%|██████████| 372/372 [00:00<00:00, 1525.47it/s, step=0 rows=2 cols=2 nnz=2]   
+[PPS Info] Terms retained after pruning: 2,088 (0.290696% of peak)
+n=16: PPS 0.349s (35 ms/step) | lightning.qubit 5.855s (586 ms/step) | PPS x16.8 | loss PPS +0.592->+0.422 exact +0.591->+0.423
+n=16: PPS 0.349s (35 ms/step) | lightning.amdgpu 3.243s (324 ms/step) | PPS x9.3 | loss PPS +0.592->+0.422 exact +0.591->+0.423
+propagate:   0%|          | 0/531 [00:00<?, ?it/s]propagate:  33%|███▎      | 176/531 [00:00<00:00, 1750.42it/s]propagate:  75%|███████▍  | 397/531 [00:00<00:00, 2009.04it/s]propagate: 100%|██████████| 531/531 [00:00<00:00, 1816.94it/s]
+[PPS Info] Propagation complete. Terms generated: 795,534
+zero-filter:   0%|          | 0/531 [00:00<?, ?it/s]zero-filter:  24%|██▎       | 125/531 [00:00<00:00, 1241.72it/s, step=410 rows=636 cols=506 nnz=494]zero-filter:  49%|████▉     | 262/531 [00:00<00:00, 1314.48it/s, step=274 rows=16 cols=16 nnz=27]   zero-filter:  81%|████████  | 431/531 [00:00<00:00, 1472.84it/s, step=106 rows=17 cols=17 nnz=0] zero-filter: 100%|██████████| 531/531 [00:00<00:00, 1462.33it/s, step=0 rows=2 cols=2 nnz=2]    
+[PPS Info] Terms retained after pruning: 2,485 (0.312369% of peak)
+n=20: PPS 0.470s (47 ms/step) | lightning.amdgpu 7.064s (706 ms/step) | PPS x15.0 | loss PPS +0.552->+0.238 exact +0.553->+0.242
+[saved] results/random_circuit_fwdbwd.json

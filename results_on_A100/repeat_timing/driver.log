@@ -1,0 +1,113 @@
+[02:00:42] snapshotted repo results trees into <repo>/results_on_A100/repeat_timing/_repo_snapshot
+[02:00:42] ===== START Mon Aug 24 02:00:42 UTC 2026  repeats=5  jobs=[qubit diff_mode kicked fwdbwd sweep]  once=[diff_mode fwdbwd sweep] =====
+torch 2.11.0+cu126 gpu NVIDIA A100 80GB PCIe
+[02:00:44] ----- repeat 1 / 5 -----
+[02:00:44] START  r1_qubit
+[02:20:57] ok  r1_qubit  (rc=0, 1213s)
+[02:20:57] START  r1_diff_mode
+[02:23:42] ok  r1_diff_mode  (rc=0, 165s)
+[02:23:42] START  r1_kicked
+[02:27:41] ok  r1_kicked  (rc=0, 239s)
+[02:27:41] START  r1_fwdbwd
+[02:30:58] ok  r1_fwdbwd  (rc=0, 197s)
+[02:30:58] START  r1_sweep
+[02:32:21] ok  r1_sweep  (rc=0, 83s)
+[02:32:21] ----- repeat 2 / 5 -----
+[02:32:21] START  r2_qubit
+[02:52:35] ok  r2_qubit  (rc=0, 1214s)
+[02:52:35] skip diff_mode (runs once)
+[02:52:35] START  r2_kicked
+[02:56:34] ok  r2_kicked  (rc=0, 239s)
+[02:56:34] skip fwdbwd (runs once)
+[02:56:34] skip sweep (runs once)
+[02:56:34] ----- repeat 3 / 5 -----
+[02:56:34] START  r3_qubit
+[03:16:49] ok  r3_qubit  (rc=0, 1215s)
+[03:16:49] skip diff_mode (runs once)
+[03:16:49] START  r3_kicked
+[03:20:49] ok  r3_kicked  (rc=0, 240s)
+[03:20:49] skip fwdbwd (runs once)
+[03:20:49] skip sweep (runs once)
+[03:20:49] ----- repeat 4 / 5 -----
+[03:20:49] START  r4_qubit
+[03:41:03] ok  r4_qubit  (rc=0, 1214s)
+[03:41:03] skip diff_mode (runs once)
+[03:41:03] START  r4_kicked
+[03:45:01] ok  r4_kicked  (rc=0, 238s)
+[03:45:01] skip fwdbwd (runs once)
+[03:45:01] skip sweep (runs once)
+[03:45:01] ----- repeat 5 / 5 -----
+[03:45:01] START  r5_qubit
+[04:05:14] ok  r5_qubit  (rc=0, 1213s)
+[04:05:14] skip diff_mode (runs once)
+[04:05:14] START  r5_kicked
+[04:09:13] ok  r5_kicked  (rc=0, 239s)
+[04:09:13] skip fwdbwd (runs once)
+[04:09:13] skip sweep (runs once)
+[04:09:13] restored repo results trees from the pre-run snapshot
+[04:09:13] ===== DONE Mon Aug 24 04:09:13 UTC 2026 =====
+repeat  job        status  exit  seconds  started
+1       qubit      ok      0     1213     02:00:44
+1       diff_mode  ok      0     165      02:20:57
+1       kicked     ok      0     239      02:23:42
+1       fwdbwd     ok      0     197      02:27:41
+1       sweep      ok      0     83       02:30:58
+2       qubit      ok      0     1214     02:32:21
+2       kicked     ok      0     239      02:52:35
+3       qubit      ok      0     1215     02:56:34
+3       kicked     ok      0     240      03:16:49
+4       qubit      ok      0     1214     03:20:49
+4       kicked     ok      0     238      03:41:03
+5       qubit      ok      0     1213     03:45:01
+5       kicked     ok      0     239      04:05:14
+
+=== qubit sweep  (5 repeats)
+  term counts identical across repeats: True
+  n= 10  propagate median 0.33s  (range 0.33-0.33s, n=5)
+         compile   median 0.46s  (range 0.46-0.47s, n=5)
+         VRAM      median 0.002GB  (range 0.002-0.002GB, n=5)
+  n= 20  propagate median 0.83s  (range 0.81-0.85s, n=5)
+         compile   median 1.30s  (range 1.28-1.35s, n=5)
+         VRAM      median 0.025GB  (range 0.025-0.025GB, n=5)
+  n= 30  propagate median 1.74s  (range 1.73-1.77s, n=5)
+         compile   median 2.80s  (range 2.80-2.85s, n=5)
+         VRAM      median 0.195GB  (range 0.195-0.195GB, n=5)
+  n= 40  propagate median 3.12s  (range 3.08-3.15s, n=5)
+         compile   median 4.92s  (range 4.85-4.99s, n=5)
+         VRAM      median 0.754GB  (range 0.754-0.754GB, n=5)
+  n= 50  propagate median 4.81s  (range 4.74-4.84s, n=5)
+         compile   median 7.62s  (range 7.47-7.70s, n=5)
+         VRAM      median 2.301GB  (range 2.301-2.301GB, n=5)
+  n= 60  propagate median 7.25s  (range 7.14-7.33s, n=5)
+         compile   median 11.17s  (range 11.08-11.35s, n=5)
+         VRAM      median 5.617GB  (range 5.617-5.617GB, n=5)
+  n= 70  propagate median 14.08s  (range 13.95-14.22s, n=5)
+         compile   median 19.44s  (range 19.23-19.76s, n=5)
+         VRAM      median 12.336GB  (range 12.336-12.336GB, n=5)
+  n= 80  propagate median 23.58s  (range 23.53-23.96s, n=5)
+         compile   median 30.58s  (range 30.49-31.23s, n=5)
+         VRAM      median 23.135GB  (range 23.135-23.135GB, n=5)
+  n= 90  propagate median 38.46s  (range 38.16-38.54s, n=5)
+         compile   median 47.47s  (range 47.14-47.62s, n=5)
+         VRAM      median 41.893GB  (range 41.893-41.893GB, n=5)
+  n=100  propagate median 61.86s  (range 61.78-62.02s, n=5)
+         compile   median 72.98s  (range 72.80-73.24s, n=5)
+         VRAM      median 65.303GB  (range 65.303-65.303GB, n=5)
+
+  cubic VRAM fit (10 points, max residual 0.897 GB):
+    1.85e-04 N^3 + -1.62e-02 N^2 + 4.49e-01 N + -3.43   (GB)
+
+=== diff_mode  (1 run)
+  each value is the median of REPS evaluations of one compiled program (REPS inside the script).
+Traceback (most recent call last):
+  File "<repo>/reproducibility/repeat_timing/summarize_repeats.py", line 187, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "<repo>/reproducibility/repeat_timing/summarize_repeats.py", line 173, in main
+    q = qubit_summary(); d = diff_mode_summary(); k = kicked_summary()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "<repo>/reproducibility/repeat_timing/summarize_repeats.py", line 87, in diff_mode_summary
+    b["sp"].append(r["speedup_x"]); b["mf"].append(r["manual_mem_fraction"])
+                   ~^^^^^^^^^^^^^
+KeyError: 'speedup_x'
+[04:09:13] repeat_summary.json regenerated from 5 repeat(s)

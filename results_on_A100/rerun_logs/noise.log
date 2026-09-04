@@ -1,0 +1,143 @@
+n=10 edges=22 params=160
+propagate:   0%|          | 0/170 [00:00<?, ?it/s]<repo>/reproducibility/scaling_accuracy_noise/sweep_noise.py:80: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  prog = qc.compile(
+propagate:  41%|████      | 69/170 [00:00<00:00, 675.89it/s]propagate:  81%|████████  | 137/170 [00:00<00:00, 281.55it/s]propagate: 100%|██████████| 170/170 [00:00<00:00, 245.81it/s]
+[PPS Info] Propagation complete. Terms generated: 105,263
+zero-filter:   0%|          | 0/170 [00:00<?, ?it/s]zero-filter:  12%|█▏        | 21/170 [00:00<00:00, 206.39it/s, step=153 rows=1743 cols=2272 nnz=28274]zero-filter:  27%|██▋       | 46/170 [00:00<00:00, 229.27it/s, step=129 rows=60209 cols=59119 nnz=21390]zero-filter:  54%|█████▍    | 92/170 [00:00<00:00, 333.35it/s, step=81 rows=19027 cols=18530 nnz=3173]  zero-filter: 100%|██████████| 170/170 [00:00<00:00, 473.87it/s, step=0 rows=26 cols=22 nnz=4]         
+[PPS Info] Terms retained after pruning: 278 (0.264100% of peak)
+[exp1] p=0.00  pado=+0.512628  PL=+0.512632  |dif|=4.76e-06
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  44%|████▍     | 97/220 [00:00<00:00, 964.84it/s]propagate:  88%|████████▊ | 194/220 [00:00<00:00, 343.61it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 336.83it/s]
+[PPS Info] Propagation complete. Terms generated: 95,901
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter:  10%|█         | 23/220 [00:00<00:00, 228.81it/s, step=203 rows=1565 cols=2030 nnz=25301]zero-filter:  23%|██▎       | 50/220 [00:00<00:00, 249.50it/s, step=171 rows=55239 cols=55239 nnz=58111]zero-filter:  40%|████      | 88/220 [00:00<00:00, 306.15it/s, step=139 rows=28074 cols=27863 nnz=6555] zero-filter:  75%|███████▌  | 166/220 [00:00<00:00, 490.35it/s, step=59 rows=4799 cols=4588 nnz=603]   zero-filter: 100%|██████████| 220/220 [00:00<00:00, 503.45it/s, step=0 rows=22 cols=22 nnz=22]      
+[PPS Info] Terms retained after pruning: 263 (0.274241% of peak)
+[exp1] p=0.01  pado=+0.452292  PL=+0.452278  |dif|=1.39e-05
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  44%|████▍     | 97/220 [00:00<00:00, 969.55it/s]propagate:  88%|████████▊ | 194/220 [00:00<00:00, 366.78it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 361.08it/s]
+[PPS Info] Propagation complete. Terms generated: 87,482
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter:  11%|█▏        | 25/220 [00:00<00:00, 242.06it/s, step=195 rows=12359 cols=14204 nnz=23824]zero-filter:  25%|██▍       | 54/220 [00:00<00:00, 268.18it/s, step=171 rows=50191 cols=50191 nnz=53531]zero-filter:  46%|████▋     | 102/220 [00:00<00:00, 362.51it/s, step=123 rows=21724 cols=21781 nnz=4352]zero-filter: 100%|██████████| 220/220 [00:00<00:00, 567.68it/s, step=0 rows=22 cols=22 nnz=22]          
+[PPS Info] Terms retained after pruning: 253 (0.289202% of peak)
+[exp1] p=0.02  pado=+0.398500  PL=+0.398475  |dif|=2.52e-05
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  46%|████▌     | 101/220 [00:00<00:00, 1001.66it/s]propagate:  92%|█████████▏| 202/220 [00:00<00:00, 388.04it/s] propagate: 100%|██████████| 220/220 [00:00<00:00, 407.36it/s]
+[PPS Info] Propagation complete. Terms generated: 65,700
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter:  15%|█▍        | 32/220 [00:00<00:00, 314.15it/s, step=195 rows=9258 cols=10619 nnz=16618]zero-filter:  34%|███▎      | 74/220 [00:00<00:00, 374.34it/s, step=147 rows=27116 cols=26361 nnz=7080]zero-filter:  77%|███████▋  | 169/220 [00:00<00:00, 634.61it/s, step=51 rows=1903 cols=1903 nnz=1911]  zero-filter: 100%|██████████| 220/220 [00:00<00:00, 683.91it/s, step=0 rows=22 cols=22 nnz=22]       
+[PPS Info] Terms retained after pruning: 216 (0.328767% of peak)
+[exp1] p=0.05  pado=+0.270148  PL=+0.270143  |dif|=5.51e-06
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  48%|████▊     | 105/220 [00:00<00:00, 1027.46it/s]propagate:  95%|█████████▍| 208/220 [00:00<00:00, 451.91it/s] propagate: 100%|██████████| 220/220 [00:00<00:00, 493.99it/s]
+[PPS Info] Propagation complete. Terms generated: 39,346
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter:  23%|██▎       | 50/220 [00:00<00:00, 490.88it/s, step=171 rows=21480 cols=21480 nnz=26369]zero-filter:  60%|██████    | 132/220 [00:00<00:00, 681.85it/s, step=91 rows=6478 cols=6478 nnz=6786]   zero-filter: 100%|██████████| 220/220 [00:00<00:00, 898.59it/s, step=0 rows=22 cols=22 nnz=22]       
+[PPS Info] Terms retained after pruning: 172 (0.437147% of peak)
+[exp1] p=0.10  pado=+0.136927  PL=+0.136926  |dif|=1.02e-06
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  52%|█████▏    | 114/220 [00:00<00:00, 1138.54it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 772.37it/s] 
+[PPS Info] Propagation complete. Terms generated: 12,447
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter:  52%|█████▏    | 115/220 [00:00<00:00, 1144.29it/s, step=107 rows=4651 cols=4704 nnz=1699]zero-filter: 100%|██████████| 220/220 [00:00<00:00, 1468.26it/s, step=0 rows=22 cols=22 nnz=22]        
+[PPS Info] Terms retained after pruning: 87 (0.698964% of peak)
+[exp1] p=0.20  pado=+0.030511  PL=+0.030517  |dif|=5.39e-06
+propagate:   0%|          | 0/170 [00:00<?, ?it/s]propagate: 100%|██████████| 170/170 [00:00<00:00, 1993.32it/s]
+[PPS Info] Propagation complete. Terms generated: 64
+zero-filter:   0%|          | 0/170 [00:00<?, ?it/s]zero-filter: 100%|██████████| 170/170 [00:00<00:00, 4285.90it/s, step=0 rows=4 cols=3 nnz=4]
+[PPS Info] Terms retained after pruning: 1 (1.562500% of peak)
+[exp2] p=0.00 eps=1e-01  err=8.46e-01  retained=1
+propagate:   0%|          | 0/170 [00:00<?, ?it/s]propagate: 100%|██████████| 170/170 [00:00<00:00, 1950.68it/s]
+[PPS Info] Propagation complete. Terms generated: 149
+zero-filter:   0%|          | 0/170 [00:00<?, ?it/s]zero-filter: 100%|██████████| 170/170 [00:00<00:00, 3465.44it/s, step=0 rows=25 cols=21 nnz=4]
+[PPS Info] Terms retained after pruning: 7 (4.697987% of peak)
+[exp2] p=0.00 eps=5e-02  err=1.16e-01  retained=7
+propagate:   0%|          | 0/170 [00:00<?, ?it/s]propagate: 100%|██████████| 170/170 [00:00<00:00, 1764.26it/s]
+[PPS Info] Propagation complete. Terms generated: 624
+zero-filter:   0%|          | 0/170 [00:00<?, ?it/s]zero-filter: 100%|██████████| 170/170 [00:00<00:00, 2948.04it/s, step=0 rows=26 cols=22 nnz=4]
+[PPS Info] Terms retained after pruning: 19 (3.044872% of peak)
+[exp2] p=0.00 eps=1e-02  err=8.60e-02  retained=19
+propagate:   0%|          | 0/170 [00:00<?, ?it/s]propagate:  97%|█████████▋| 165/170 [00:00<00:00, 1648.88it/s]propagate: 100%|██████████| 170/170 [00:00<00:00, 1671.08it/s]
+[PPS Info] Propagation complete. Terms generated: 1,115
+zero-filter:   0%|          | 0/170 [00:00<?, ?it/s]zero-filter: 100%|██████████| 170/170 [00:00<00:00, 2856.98it/s, step=0 rows=26 cols=22 nnz=4]
+[PPS Info] Terms retained after pruning: 28 (2.511211% of peak)
+[exp2] p=0.00 eps=5e-03  err=1.78e-02  retained=28
+propagate:   0%|          | 0/170 [00:00<?, ?it/s]propagate:  83%|████████▎ | 141/170 [00:00<00:00, 1406.98it/s]propagate: 100%|██████████| 170/170 [00:00<00:00, 1319.88it/s]
+[PPS Info] Propagation complete. Terms generated: 3,520
+zero-filter:   0%|          | 0/170 [00:00<?, ?it/s]zero-filter: 100%|██████████| 170/170 [00:00<00:00, 2443.56it/s, step=0 rows=26 cols=22 nnz=4]
+[PPS Info] Terms retained after pruning: 38 (1.079545% of peak)
+[exp2] p=0.00 eps=1e-03  err=4.21e-03  retained=38
+propagate:   0%|          | 0/170 [00:00<?, ?it/s]propagate:  76%|███████▌  | 129/170 [00:00<00:00, 1278.46it/s]propagate: 100%|██████████| 170/170 [00:00<00:00, 1119.77it/s]
+[PPS Info] Propagation complete. Terms generated: 5,508
+zero-filter:   0%|          | 0/170 [00:00<?, ?it/s]zero-filter: 100%|██████████| 170/170 [00:00<00:00, 2077.15it/s, step=0 rows=26 cols=22 nnz=4]
+[PPS Info] Terms retained after pruning: 48 (0.871460% of peak)
+[exp2] p=0.00 eps=5e-04  err=4.96e-03  retained=48
+propagate:   0%|          | 0/170 [00:00<?, ?it/s]propagate:  66%|██████▋   | 113/170 [00:00<00:00, 1118.28it/s]propagate: 100%|██████████| 170/170 [00:00<00:00, 711.47it/s] 
+[PPS Info] Propagation complete. Terms generated: 14,113
+zero-filter:   0%|          | 0/170 [00:00<?, ?it/s]zero-filter:  84%|████████▎ | 142/170 [00:00<00:00, 1415.10it/s, step=33 rows=756 cols=741 nnz=103]zero-filter: 100%|██████████| 170/170 [00:00<00:00, 1540.40it/s, step=0 rows=26 cols=22 nnz=4]     
+[PPS Info] Terms retained after pruning: 84 (0.595196% of peak)
+[exp2] p=0.00 eps=1e-04  err=7.82e-05  retained=84
+propagate:   0%|          | 0/170 [00:00<?, ?it/s]propagate:  52%|█████▏    | 88/170 [00:00<00:00, 864.85it/s]propagate: 100%|██████████| 170/170 [00:00<00:00, 421.96it/s]
+[PPS Info] Propagation complete. Terms generated: 43,481
+zero-filter:   0%|          | 0/170 [00:00<?, ?it/s]zero-filter:  24%|██▍       | 41/170 [00:00<00:00, 403.70it/s, step=129 rows=23440 cols=22894 nnz=7394]zero-filter: 100%|██████████| 170/170 [00:00<00:00, 843.92it/s, step=0 rows=26 cols=22 nnz=4]          
+[PPS Info] Terms retained after pruning: 168 (0.386376% of peak)
+[exp2] p=0.00 eps=1e-05  err=1.09e-04  retained=168
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 2726.47it/s]
+[PPS Info] Propagation complete. Terms generated: 22
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter: 100%|██████████| 220/220 [00:00<00:00, 5888.25it/s, step=0 rows=0 cols=0 nnz=22]
+[PPS Info] Terms retained after pruning: 0 (0.000000% of peak)
+[exp2] p=0.10 eps=1e-01  err=1.37e-01  retained=0
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 2352.49it/s]
+[PPS Info] Propagation complete. Terms generated: 46
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter: 100%|██████████| 220/220 [00:00<00:00, 5261.89it/s, step=0 rows=0 cols=0 nnz=22]
+[PPS Info] Terms retained after pruning: 0 (0.000000% of peak)
+[exp2] p=0.10 eps=5e-02  err=1.37e-01  retained=0
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  98%|█████████▊| 215/220 [00:00<00:00, 2146.02it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 2168.73it/s]
+[PPS Info] Propagation complete. Terms generated: 179
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter: 100%|██████████| 220/220 [00:00<00:00, 3218.24it/s, step=0 rows=22 cols=22 nnz=22]
+[PPS Info] Terms retained after pruning: 9 (5.027933% of peak)
+[exp2] p=0.10 eps=1e-02  err=1.71e-02  retained=9
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  95%|█████████▍| 208/220 [00:00<00:00, 2078.44it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 2122.18it/s]
+[PPS Info] Propagation complete. Terms generated: 296
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter: 100%|██████████| 220/220 [00:00<00:00, 3143.00it/s, step=0 rows=22 cols=22 nnz=22]
+[PPS Info] Terms retained after pruning: 10 (3.378378% of peak)
+[exp2] p=0.10 eps=5e-03  err=7.01e-03  retained=10
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  88%|████████▊ | 194/220 [00:00<00:00, 1929.98it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 1910.98it/s]
+[PPS Info] Propagation complete. Terms generated: 952
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter: 100%|██████████| 220/220 [00:00<00:00, 2920.00it/s, step=0 rows=22 cols=22 nnz=22]
+[PPS Info] Terms retained after pruning: 26 (2.731092% of peak)
+[exp2] p=0.10 eps=1e-03  err=6.30e-05  retained=26
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  85%|████████▍ | 186/220 [00:00<00:00, 1853.51it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 1783.44it/s]
+[PPS Info] Propagation complete. Terms generated: 1,543
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter: 100%|██████████| 220/220 [00:00<00:00, 2793.87it/s, step=0 rows=22 cols=22 nnz=22]
+[PPS Info] Terms retained after pruning: 28 (1.814647% of peak)
+[exp2] p=0.10 eps=5e-04  err=5.03e-06  retained=28
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  73%|███████▎  | 160/220 [00:00<00:00, 1588.24it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 1399.02it/s]
+[PPS Info] Propagation complete. Terms generated: 4,112
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter: 100%|██████████| 220/220 [00:00<00:00, 2360.50it/s, step=0 rows=22 cols=22 nnz=22]
+[PPS Info] Terms retained after pruning: 47 (1.142996% of peak)
+[exp2] p=0.10 eps=1e-04  err=3.15e-04  retained=47
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  57%|█████▋    | 126/220 [00:00<00:00, 1252.00it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 815.42it/s] 
+[PPS Info] Propagation complete. Terms generated: 14,130
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter:  52%|█████▏    | 114/220 [00:00<00:00, 1136.72it/s, step=107 rows=3598 cols=3623 nnz=1320]zero-filter: 100%|██████████| 220/220 [00:00<00:00, 1527.33it/s, step=0 rows=22 cols=22 nnz=22]        
+[PPS Info] Terms retained after pruning: 89 (0.629866% of peak)
+[exp2] p=0.10 eps=1e-05  err=1.71e-05  retained=89
+propagate:   0%|          | 0/170 [00:00<?, ?it/s]propagate:  42%|████▏     | 72/170 [00:00<00:00, 707.20it/s]propagate:  84%|████████▍ | 143/170 [00:00<00:00, 294.82it/s]propagate: 100%|██████████| 170/170 [00:00<00:00, 289.71it/s]
+[PPS Info] Propagation complete. Terms generated: 105,263
+zero-filter:   0%|          | 0/170 [00:00<?, ?it/s]zero-filter:  14%|█▍        | 24/170 [00:00<00:00, 237.66it/s, step=153 rows=1743 cols=2272 nnz=28274]zero-filter:  30%|███       | 51/170 [00:00<00:00, 255.00it/s, step=121 rows=53613 cols=53169 nnz=13195]zero-filter:  63%|██████▎   | 107/170 [00:00<00:00, 392.98it/s, step=65 rows=11747 cols=11746 nnz=2280] zero-filter: 100%|██████████| 170/170 [00:00<00:00, 504.32it/s, step=0 rows=26 cols=22 nnz=4]          
+[PPS Info] Terms retained after pruning: 278 (0.264100% of peak)
+[exp3-AD] gamma=0.00  pado=+0.512628  PL=+0.512632  |dif|=4.76e-06
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  41%|████▏     | 91/220 [00:00<00:00, 895.20it/s]propagate:  82%|████████▏ | 181/220 [00:00<00:00, 343.38it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 301.27it/s]
+[PPS Info] Propagation complete. Terms generated: 120,001
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter:  10%|█         | 22/220 [00:00<00:00, 213.69it/s, step=203 rows=1566 cols=2032 nnz=29733]zero-filter:  21%|██▏       | 47/220 [00:00<00:00, 231.09it/s, step=179 rows=54355 cols=53078 nnz=22448]zero-filter:  35%|███▌      | 78/220 [00:00<00:00, 266.10it/s, step=147 rows=43196 cols=41953 nnz=11796]zero-filter:  60%|██████    | 132/220 [00:00<00:00, 371.49it/s, step=91 rows=12780 cols=12728 nnz=13512]zero-filter: 100%|██████████| 220/220 [00:00<00:00, 478.26it/s, step=0 rows=26 cols=22 nnz=26]          
+[PPS Info] Terms retained after pruning: 261 (0.217498% of peak)
+[exp3-AD] gamma=0.02  pado=+0.624125  PL=+0.624111  |dif|=1.35e-05
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  41%|████      | 90/220 [00:00<00:00, 886.65it/s]propagate:  81%|████████▏ | 179/220 [00:00<00:00, 356.29it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 305.17it/s]
+[PPS Info] Propagation complete. Terms generated: 112,415
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter:  10%|█         | 23/220 [00:00<00:00, 228.62it/s, step=203 rows=1383 cols=1786 nnz=26528]zero-filter:  21%|██        | 46/220 [00:00<00:00, 219.49it/s, step=179 rows=45497 cols=44446 nnz=19983]zero-filter:  34%|███▎      | 74/220 [00:00<00:00, 245.07it/s, step=147 rows=40733 cols=39669 nnz=10961]zero-filter:  57%|█████▋    | 126/220 [00:00<00:00, 351.42it/s, step=99 rows=15344 cols=14419 nnz=2268] zero-filter: 100%|██████████| 220/220 [00:00<00:00, 466.26it/s, step=0 rows=26 cols=22 nnz=26]         
+[PPS Info] Terms retained after pruning: 246 (0.218832% of peak)
+[exp3-AD] gamma=0.05  pado=+1.387778  PL=+1.387741  |dif|=3.72e-05
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  42%|████▏     | 92/220 [00:00<00:00, 904.98it/s]propagate:  83%|████████▎ | 183/220 [00:00<00:00, 361.72it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 332.57it/s]
+[PPS Info] Propagation complete. Terms generated: 92,291
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter:  11%|█▏        | 25/220 [00:00<00:00, 245.04it/s, step=195 rows=8349 cols=9472 nnz=21765]zero-filter:  25%|██▍       | 54/220 [00:00<00:00, 271.07it/s, step=171 rows=39773 cols=40328 nnz=63283]zero-filter:  43%|████▎     | 95/220 [00:00<00:00, 332.58it/s, step=131 rows=24275 cols=24143 nnz=28083]zero-filter:  97%|█████████▋| 213/220 [00:00<00:00, 664.70it/s, step=11 rows=44 cols=38 nnz=6]          zero-filter: 100%|██████████| 220/220 [00:00<00:00, 542.61it/s, step=0 rows=26 cols=22 nnz=26]
+[PPS Info] Terms retained after pruning: 209 (0.226458% of peak)
+[exp3-AD] gamma=0.10  pado=+3.667812  PL=+3.667808  |dif|=4.35e-06
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  43%|████▎     | 95/220 [00:00<00:00, 924.87it/s]propagate:  85%|████████▌ | 188/220 [00:00<00:00, 424.06it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 411.26it/s]
+[PPS Info] Propagation complete. Terms generated: 55,311
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter:  18%|█▊        | 40/220 [00:00<00:00, 397.21it/s, step=187 rows=13086 cols=13878 nnz=6351]zero-filter:  41%|████      | 90/220 [00:00<00:00, 457.18it/s, step=131 rows=16275 cols=16199 nnz=20476]zero-filter:  96%|█████████▋| 212/220 [00:00<00:00, 804.26it/s, step=11 rows=44 cols=38 nnz=6]          zero-filter: 100%|██████████| 220/220 [00:00<00:00, 725.39it/s, step=0 rows=26 cols=22 nnz=26]
+[PPS Info] Terms retained after pruning: 161 (0.291081% of peak)
+[exp3-AD] gamma=0.20  pado=+9.442754  PL=+9.442754  |dif|=8.11e-08
+propagate:   0%|          | 0/220 [00:00<?, ?it/s]propagate:  45%|████▌     | 100/220 [00:00<00:00, 990.76it/s]propagate:  91%|█████████ | 200/220 [00:00<00:00, 450.77it/s]propagate: 100%|██████████| 220/220 [00:00<00:00, 468.54it/s]
+[PPS Info] Propagation complete. Terms generated: 31,099
+zero-filter:   0%|          | 0/220 [00:00<?, ?it/s]zero-filter:  25%|██▍       | 54/220 [00:00<00:00, 535.25it/s, step=171 rows=12963 cols=13595 nnz=25309]zero-filter:  65%|██████▌   | 144/220 [00:00<00:00, 747.59it/s, step=83 rows=5981 cols=5968 nnz=1174]   zero-filter: 100%|██████████| 220/220 [00:00<00:00, 931.62it/s, step=0 rows=26 cols=22 nnz=26]       
+[PPS Info] Terms retained after pruning: 110 (0.353709% of peak)
+[exp3-AD] gamma=0.30  pado=+14.468407  PL=+14.468400  |dif|=7.68e-06

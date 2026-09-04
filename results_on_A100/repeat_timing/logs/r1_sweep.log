@@ -1,0 +1,53 @@
+
+################## n=12, mw=9 ##################
+full=231g emb=60 par=48 obs=['Z0', 'Z10Z11']
+propagate:   0%|          | 0/231 [00:00<?, ?it/s]<repo>/reproducibility/random_circuit_statevector/run_random_circuit_sweep.py:128: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  return circ.compile(observables=obs, preset="gpu",
+propagate:   0%|          | 1/231 [00:00<00:39,  5.84it/s]propagate:  43%|████▎     | 100/231 [00:00<00:00, 452.44it/s]propagate:  98%|█████████▊| 227/231 [00:00<00:00, 771.01it/s]propagate: 100%|██████████| 231/231 [00:00<00:00, 609.23it/s]
+[PPS Info] Propagation complete. Terms generated: 254,566
+zero-filter:   0%|          | 0/231 [00:00<?, ?it/s]zero-filter:  37%|███▋      | 86/231 [00:00<00:00, 851.69it/s, step=150 rows=164 cols=164 nnz=326]zero-filter:  96%|█████████▌| 221/231 [00:00<00:00, 1140.96it/s, step=14 rows=2 cols=2 nnz=2]     zero-filter: 100%|██████████| 231/231 [00:00<00:00, 1099.70it/s, step=0 rows=2 cols=2 nnz=2] 
+[PPS Info] Terms retained after pruning: 853 (0.335080% of peak)
+[A] compile=0.6s VRAM=0.1GB | max|Δ|=0.0093 mean=0.0008
+[B] forward throughput (PPS vs lightning.qubit, lightning.gpu):
+    batch  128: PPS    11673 s/s (0.011s)  | lightning.qubit   124.5 s/s (1.03s)  | x94
+    batch  128: PPS    11673 s/s (0.011s)  | lightning.gpu   114.5 s/s (1.12s)  | x102
+    batch  256: PPS    24465 s/s (0.010s)  | lightning.qubit   113.8 s/s (2.25s)  | x215
+    batch  256: PPS    24465 s/s (0.010s)  | lightning.gpu   118.4 s/s (2.16s)  | x207
+    batch  512: PPS    48819 s/s (0.010s)  | lightning.qubit   116.8 s/s (4.38s)  | x418
+    batch  512: PPS    48819 s/s (0.010s)  | lightning.gpu   118.1 s/s (4.34s)  | x413
+
+################## n=16, mw=9 ##################
+full=372g emb=80 par=64 obs=['Z0', 'Z14Z15']
+propagate:   0%|          | 0/372 [00:00<?, ?it/s]propagate:  37%|███▋      | 137/372 [00:00<00:00, 1367.21it/s]propagate:  80%|████████  | 298/372 [00:00<00:00, 1501.11it/s]propagate: 100%|██████████| 372/372 [00:00<00:00, 1325.47it/s]
+[PPS Info] Propagation complete. Terms generated: 718,276
+zero-filter:   0%|          | 0/372 [00:00<?, ?it/s]zero-filter:  27%|██▋       | 101/372 [00:00<00:00, 1003.93it/s, step=275 rows=140 cols=140 nnz=414]zero-filter:  60%|█████▉    | 223/372 [00:00<00:00, 1128.61it/s, step=155 rows=15 cols=15 nnz=27]   zero-filter: 100%|█████████▉| 371/372 [00:00<00:00, 1284.88it/s, step=3 rows=2 cols=2 nnz=2]     zero-filter: 100%|██████████| 372/372 [00:00<00:00, 1228.95it/s, step=0 rows=2 cols=2 nnz=2]
+[PPS Info] Terms retained after pruning: 2,088 (0.290696% of peak)
+[A] compile=0.6s VRAM=0.2GB | max|Δ|=0.0438 mean=0.0031
+[B] forward throughput (PPS vs lightning.qubit, lightning.gpu):
+    batch  128: PPS     8383 s/s (0.015s)  | lightning.qubit    50.0 s/s (2.56s)  | x168
+    batch  128: PPS     8383 s/s (0.015s)  | lightning.gpu    74.1 s/s (1.73s)  | x113
+    batch  256: PPS    16849 s/s (0.015s)  | lightning.qubit    50.0 s/s (5.12s)  | x337
+    batch  256: PPS    16849 s/s (0.015s)  | lightning.gpu    72.3 s/s (3.54s)  | x233
+    batch  512: PPS    33383 s/s (0.015s)  | lightning.qubit    48.7 s/s (10.50s)  | x685
+    batch  512: PPS    33383 s/s (0.015s)  | lightning.gpu    71.7 s/s (7.14s)  | x466
+
+################## n=20, mw=9 ##################
+full=531g emb=100 par=80 obs=['Z0', 'Z18Z19']
+propagate:   0%|          | 0/531 [00:00<?, ?it/s]propagate:  27%|██▋       | 144/531 [00:00<00:00, 1433.60it/s]propagate:  56%|█████▋    | 299/531 [00:00<00:00, 1500.12it/s]propagate:  85%|████████▍ | 450/531 [00:00<00:00, 1484.34it/s]propagate: 100%|██████████| 531/531 [00:00<00:00, 1413.23it/s]
+[PPS Info] Propagation complete. Terms generated: 795,534
+zero-filter:   0%|          | 0/531 [00:00<?, ?it/s]zero-filter:  19%|█▉        | 101/531 [00:00<00:00, 1003.61it/s, step=434 rows=2563 cols=2563 nnz=34058]zero-filter:  41%|████      | 216/531 [00:00<00:00, 1088.53it/s, step=322 rows=176 cols=176 nnz=1334]   zero-filter:  64%|██████▍   | 342/531 [00:00<00:00, 1164.09it/s, step=194 rows=16 cols=16 nnz=27]    zero-filter:  94%|█████████▍| 501/531 [00:00<00:00, 1327.20it/s, step=34 rows=5 cols=5 nnz=0]    zero-filter: 100%|██████████| 531/531 [00:00<00:00, 1248.22it/s, step=0 rows=2 cols=2 nnz=2] 
+[PPS Info] Terms retained after pruning: 2,485 (0.312369% of peak)
+[A] compile=0.8s VRAM=0.2GB | max|Δ|=0.2038 mean=0.0180
+[B] forward throughput (PPS vs lightning.gpu):
+    batch  128: PPS     6525 s/s (0.020s)  | lightning.gpu    42.0 s/s (3.04s)  | x155
+    batch  256: PPS    12750 s/s (0.020s)  | lightning.gpu    41.3 s/s (6.20s)  | x309
+    batch  512: PPS    25253 s/s (0.020s)  | lightning.gpu    41.7 s/s (12.27s)  | x605
+
+################## extra: n=16 mw=10 (accuracy only) ##################
+propagate:   0%|          | 0/372 [00:00<?, ?it/s]propagate:  37%|███▋      | 139/372 [00:00<00:00, 1385.97it/s]propagate:  81%|████████  | 300/372 [00:00<00:00, 1508.10it/s]propagate: 100%|██████████| 372/372 [00:00<00:00, 1311.42it/s]
+[PPS Info] Propagation complete. Terms generated: 2,604,018
+zero-filter:   0%|          | 0/372 [00:00<?, ?it/s]zero-filter:  25%|██▌       | 94/372 [00:00<00:00, 939.70it/s, step=283 rows=194 cols=194 nnz=527]zero-filter:  58%|█████▊    | 216/372 [00:00<00:00, 1103.20it/s, step=163 rows=16 cols=16 nnz=27] zero-filter:  98%|█████████▊| 365/372 [00:00<00:00, 1277.08it/s, step=11 rows=2 cols=2 nnz=2]    zero-filter: 100%|██████████| 372/372 [00:00<00:00, 1213.82it/s, step=0 rows=2 cols=2 nnz=2] 
+[PPS Info] Terms retained after pruning: 3,867 (0.148501% of peak)
+n=16 mw=10: compile=0.6s VRAM=0.5GB max|Δ|=0.0189 mean=0.0016
+
+[saved] <repo>/results_on_A100/random_circuit_statevector/results/random_circuit_sweep.json

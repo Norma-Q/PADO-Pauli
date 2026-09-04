@@ -1,0 +1,14 @@
+repeat	job	status	exit	seconds	started
+1	qubit	ok	0	1213	02:00:44
+1	diff_mode	ok	0	165	02:20:57
+1	kicked	ok	0	239	02:23:42
+1	fwdbwd	ok	0	197	02:27:41
+1	sweep	ok	0	83	02:30:58
+2	qubit	ok	0	1214	02:32:21
+2	kicked	ok	0	239	02:52:35
+3	qubit	ok	0	1215	02:56:34
+3	kicked	ok	0	240	03:16:49
+4	qubit	ok	0	1214	03:20:49
+4	kicked	ok	0	238	03:41:03
+5	qubit	ok	0	1213	03:45:01
+5	kicked	ok	0	239	04:05:14

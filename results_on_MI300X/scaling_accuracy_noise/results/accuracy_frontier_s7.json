@@ -1,0 +1,116 @@
+{
+  "n_qubits": 16,
+  "depth": 3,
+  "edge_prob": 0.3,
+  "seed": 7,
+  "exact": 0.7226145691523498,
+  "max_weight": [
+    {
+      "knob": "max_weight",
+      "level": 1,
+      "expval": 0.0,
+      "abs_error": 0.7226145691523498,
+      "retained_terms": 0
+    },
+    {
+      "knob": "max_weight",
+      "level": 2,
+      "expval": 0.7222288651750506,
+      "abs_error": 0.00038570397729920103,
+      "retained_terms": 16
+    },
+    {
+      "knob": "max_weight",
+      "level": 3,
+      "expval": 0.7292460935784016,
+      "abs_error": 0.00663152442605186,
+      "retained_terms": 119
+    },
+    {
+      "knob": "max_weight",
+      "level": 4,
+      "expval": 0.72238254726316,
+      "abs_error": 0.00023202188918980404,
+      "retained_terms": 617
+    },
+    {
+      "knob": "max_weight",
+      "level": 5,
+      "expval": 0.7226049061028095,
+      "abs_error": 9.663049540309387e-06,
+      "retained_terms": 2325
+    },
+    {
+      "knob": "max_weight",
+      "level": 6,
+      "expval": 0.7226136941923023,
+      "abs_error": 8.749600475255193e-07,
+      "retained_terms": 6700
+    }
+  ],
+  "min_abs": [
+    {
+      "knob": "min_abs",
+      "level": 0.1,
+      "expval": 0.0,
+      "abs_error": 0.7226145691523498,
+      "retained_terms": 0
+    },
+    {
+      "knob": "min_abs",
+      "level": 0.05,
+      "expval": 0.6395451577443102,
+      "abs_error": 0.08306941140803958,
+      "retained_terms": 10
+    },
+    {
+      "knob": "min_abs",
+      "level": 0.01,
+      "expval": 0.6635405468182052,
+      "abs_error": 0.059074022334144605,
+      "retained_terms": 15
+    },
+    {
+      "knob": "min_abs",
+      "level": 0.005,
+      "expval": 0.6976692303413724,
+      "abs_error": 0.02494533881097738,
+      "retained_terms": 20
+    },
+    {
+      "knob": "min_abs",
+      "level": 0.001,
+      "expval": 0.7152931221302092,
+      "abs_error": 0.007321447022140548,
+      "retained_terms": 34
+    },
+    {
+      "knob": "min_abs",
+      "level": 0.0005,
+      "expval": 0.7189276767759558,
+      "abs_error": 0.0036868923763939687,
+      "retained_terms": 34
+    },
+    {
+      "knob": "min_abs",
+      "level": 0.0001,
+      "expval": 0.7227272383001183,
+      "abs_error": 0.00011266914776852932,
+      "retained_terms": 52
+    },
+    {
+      "knob": "min_abs",
+      "level": 1e-05,
+      "expval": 0.7224139378174904,
+      "abs_error": 0.00020063133485936913,
+      "retained_terms": 107
+    },
+    {
+      "knob": "min_abs",
+      "level": 1e-06,
+      "expval": 0.7226199851846027,
+      "abs_error": 5.41603225290288e-06,
+      "retained_terms": 195
+    }
+  ]
+}

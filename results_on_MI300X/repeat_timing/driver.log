@@ -1,0 +1,115 @@
+[06:42:34] snapshotted repo results trees into <repo>/results_on_MI300X/repeat_timing/_repo_snapshot
+[06:42:34] ===== START Tue Aug 25 06:42:34 UTC 2026  repeats=1  jobs=[fwdbwd sweep]  once=[diff_mode fwdbwd sweep] =====
+torch 2.11.0+rocm7.2 gpu AMD Instinct MI300X VF
+[06:42:35] ----- repeat 1 / 1 -----
+[06:42:35] START  r1_fwdbwd
+[06:44:56] ok  r1_fwdbwd  (rc=0, 141s)
+[06:44:56] START  r1_sweep
+[06:45:55] ok  r1_sweep  (rc=0, 58s)
+[06:45:55] restored repo results trees from the pre-run snapshot
+[06:45:55] ===== DONE Tue Aug 25 06:45:55 UTC 2026 =====
+repeat  job     status  exit  seconds  started
+1       fwdbwd  ok      0     141      06:42:35
+1       sweep   ok      0     58       06:44:56
+
+=== qubit sweep  (5 repeats)
+  term counts identical across repeats: True
+  n= 10  propagate median 0.94s  (range 0.93-0.95s, n=5)
+         compile   median 1.53s  (range 1.51-1.54s, n=5)
+         VRAM      median 0.002GB  (range 0.002-0.002GB, n=5)
+  n= 20  propagate median 1.55s  (range 1.53-1.58s, n=5)
+         compile   median 2.43s  (range 2.41-2.47s, n=5)
+         VRAM      median 0.025GB  (range 0.025-0.025GB, n=5)
+  n= 30  propagate median 2.19s  (range 2.16-2.29s, n=5)
+         compile   median 3.57s  (range 3.55-3.71s, n=5)
+         VRAM      median 0.193GB  (range 0.193-0.193GB, n=5)
+  n= 40  propagate median 3.41s  (range 3.37-3.43s, n=5)
+         compile   median 5.50s  (range 5.44-5.54s, n=5)
+         VRAM      median 0.752GB  (range 0.752-0.752GB, n=5)
+  n= 50  propagate median 4.68s  (range 4.65-4.74s, n=5)
+         compile   median 7.54s  (range 7.51-7.63s, n=5)
+         VRAM      median 2.279GB  (range 2.279-2.279GB, n=5)
+  n= 60  propagate median 6.55s  (range 6.51-6.62s, n=5)
+         compile   median 10.41s  (range 10.37-10.53s, n=5)
+         VRAM      median 5.658GB  (range 5.658-5.658GB, n=5)
+  n= 70  propagate median 11.66s  (range 11.62-11.68s, n=5)
+         compile   median 16.75s  (range 16.70-16.82s, n=5)
+         VRAM      median 12.287GB  (range 12.287-12.287GB, n=5)
+  n= 80  propagate median 17.55s  (range 17.49-17.72s, n=5)
+         compile   median 24.02s  (range 23.98-24.27s, n=5)
+         VRAM      median 23.006GB  (range 23.006-23.006GB, n=5)
+  n= 90  propagate median 25.75s  (range 25.72-25.77s, n=5)
+         compile   median 34.07s  (range 33.96-34.09s, n=5)
+         VRAM      median 41.090GB  (range 41.090-41.090GB, n=5)
+  n=100  propagate median 39.19s  (range 39.15-39.31s, n=5)
+         compile   median 49.49s  (range 49.48-49.75s, n=5)
+         VRAM      median 65.955GB  (range 65.955-65.955GB, n=5)
+
+  cubic VRAM fit (10 points, max residual 0.790 GB):
+    1.94e-04 N^3 + -1.75e-02 N^2 + 5.03e-01 N + -3.96   (GB)
+
+=== diff_mode  (1 run)
+  each value is the median of REPS evaluations of one compiled program (REPS inside the script).
+  w_max=4  speedup median 10.2x  (range 10.2-10.2x, n=1)
+            manual peak median 0.341GB  (range 0.341-0.341GB, n=1)   autograd peak median 0.368GB  (range 0.368-0.368GB, n=1)
+            mem fraction median 0.9347  (range 0.9347-0.9347, n=1)
+  w_max=5  speedup median 79.3x  (range 79.3-79.3x, n=1)
+            manual peak median 2.138GB  (range 2.138-2.138GB, n=1)   autograd peak median 2.410GB  (range 2.410-2.410GB, n=1)
+            mem fraction median 0.8923  (range 0.8923-0.8923, n=1)
+  w_max=6  speedup median 419.7x  (range 419.7-419.7x, n=1)
+            manual peak median 14.757GB  (range 14.757-14.757GB, n=1)   autograd peak median 16.761GB  (range 16.761-16.761GB, n=1)
+            mem fraction median 0.8648  (range 0.8648-0.8648, n=1)
+  w_max=7  speedup median 834.6x  (range 834.6-834.6x, n=1)
+            manual peak median 74.437GB  (range 74.437-74.437GB, n=1)   autograd peak median 84.418GB  (range 84.418-84.418GB, n=1)
+            mem fraction median 0.8036  (range 0.8036-0.8036, n=1)
+  speedup medians per w_max: ['10x', '79x', '420x', '835x'], observed range 10.2x-835x
+  memory saving 6.5%-19.6%
+  largest point (w=7): manual 74.4 GB vs autograd 84.4 GB
+
+=== kicked Ising 127q  (5 repeats)
+  sweep total time median 3.67min  (range 3.66-3.71min, n=5)
+  peak VRAM        median 0.6742GB  (range 0.6742-0.6742GB, n=5)
+  curve values identical across repeats: True
+
+=== fwd+bwd training loop  (1 run)
+  each value is the median of 5 training loops on one compiled program (REPS inside the script).
+  n= 12  PPS loop median 0.24s  (range 0.24-0.24s, n=1)
+        vs lightning.amdgpu   median 9.1x  (range 9.1-9.1x, n=1)
+        vs lightning.qubit    median 7.6x  (range 7.6-7.6x, n=1)
+  n= 16  PPS loop median 0.35s  (range 0.35-0.35s, n=1)
+        vs lightning.amdgpu   median 9.3x  (range 9.3-9.3x, n=1)
+        vs lightning.qubit    median 16.8x  (range 16.8-16.8x, n=1)
+  n= 20  PPS loop median 0.47s  (range 0.47-0.47s, n=1)
+        vs lightning.amdgpu   median 15.0x  (range 15.0-15.0x, n=1)
+
+=== random-circuit sweep  (1 repeats)
+  n= 12  term counts identical across repeats: True   max|err| median 0.0093  (range 0.0093-0.0093, n=1)
+        batch 128  PPS median 11814 ev/s  (range 11814-11814 ev/s, n=1)
+              vs lightning.amdgpu   median 200.7 ev/s  (range 200.7-200.7 ev/s, n=1)   speedup median 59x  (range 59-59x, n=1)
+              vs lightning.qubit    median 220.7 ev/s  (range 220.7-220.7 ev/s, n=1)   speedup median 54x  (range 54-54x, n=1)
+        batch 256  PPS median 21082 ev/s  (range 21082-21082 ev/s, n=1)
+              vs lightning.amdgpu   median 198.2 ev/s  (range 198.2-198.2 ev/s, n=1)   speedup median 106x  (range 106-106x, n=1)
+              vs lightning.qubit    median 209.5 ev/s  (range 209.5-209.5 ev/s, n=1)   speedup median 101x  (range 101-101x, n=1)
+        batch 512  PPS median 36457 ev/s  (range 36457-36457 ev/s, n=1)
+              vs lightning.amdgpu   median 216.1 ev/s  (range 216.1-216.1 ev/s, n=1)   speedup median 169x  (range 169-169x, n=1)
+              vs lightning.qubit    median 202.4 ev/s  (range 202.4-202.4 ev/s, n=1)   speedup median 180x  (range 180-180x, n=1)
+  n= 16  term counts identical across repeats: True   max|err| median 0.0438  (range 0.0438-0.0438, n=1)
+        batch 128  PPS median 7583 ev/s  (range 7583-7583 ev/s, n=1)
+              vs lightning.amdgpu   median 140.6 ev/s  (range 140.6-140.6 ev/s, n=1)   speedup median 54x  (range 54-54x, n=1)
+              vs lightning.qubit    median 73.2 ev/s  (range 73.2-73.2 ev/s, n=1)   speedup median 104x  (range 104-104x, n=1)
+        batch 256  PPS median 15046 ev/s  (range 15046-15046 ev/s, n=1)
+              vs lightning.amdgpu   median 137.1 ev/s  (range 137.1-137.1 ev/s, n=1)   speedup median 110x  (range 110-110x, n=1)
+              vs lightning.qubit    median 72.6 ev/s  (range 72.6-72.6 ev/s, n=1)   speedup median 207x  (range 207-207x, n=1)
+        batch 512  PPS median 25432 ev/s  (range 25432-25432 ev/s, n=1)
+              vs lightning.amdgpu   median 130.7 ev/s  (range 130.7-130.7 ev/s, n=1)   speedup median 195x  (range 195-195x, n=1)
+              vs lightning.qubit    median 72.4 ev/s  (range 72.4-72.4 ev/s, n=1)   speedup median 351x  (range 351-351x, n=1)
+  n= 20  term counts identical across repeats: True   max|err| median 0.2038  (range 0.2038-0.2038, n=1)
+        batch 128  PPS median 5367 ev/s  (range 5367-5367 ev/s, n=1)
+              vs lightning.amdgpu   median 60.9 ev/s  (range 60.9-60.9 ev/s, n=1)   speedup median 88x  (range 88-88x, n=1)
+        batch 256  PPS median 9728 ev/s  (range 9728-9728 ev/s, n=1)
+              vs lightning.amdgpu   median 59.7 ev/s  (range 59.7-59.7 ev/s, n=1)   speedup median 163x  (range 163-163x, n=1)
+        batch 512  PPS median 17500 ev/s  (range 17500-17500 ev/s, n=1)
+              vs lightning.amdgpu   median 60.1 ev/s  (range 60.1-60.1 ev/s, n=1)   speedup median 291x  (range 291-291x, n=1)
+
+wrote <repo>/results_on_MI300X/repeat_timing/repeat_summary.json
+[06:45:55] repeat_summary.json regenerated from 5 repeat(s)

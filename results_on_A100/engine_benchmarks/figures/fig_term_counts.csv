@@ -1,0 +1,11 @@
+count_kind,qubits,terms
+propagated,4,255
+propagated,6,4095
+propagated,9,262143
+propagated,10,1048539
+propagated,12,16777215
+evaluated,4,15
+evaluated,6,63
+evaluated,9,511
+evaluated,10,1023
+evaluated,12,4095

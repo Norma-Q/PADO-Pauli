@@ -1,0 +1,60 @@
+{
+  "config": {
+    "gen_layers": 3,
+    "v_layers": 2,
+    "seed": 42,
+    "dtype": "float32",
+    "configs": [
+      [
+        12,
+        9
+      ],
+      [
+        16,
+        9
+      ],
+      [
+        16,
+        10
+      ],
+      [
+        20,
+        9
+      ]
+    ]
+  },
+  "rows": [
+    {
+      "n": 12,
+      "mw": 9,
+      "propagated_terms": 254566,
+      "final_terms": 853,
+      "compile_s": 0.7216097180207726,
+      "vram_gb": 0.06471109390258789
+    },
+    {
+      "n": 16,
+      "mw": 9,
+      "propagated_terms": 718276,
+      "final_terms": 2088,
+      "compile_s": 0.6085250840114895,
+      "vram_gb": 0.14711761474609375
+    },
+    {
+      "n": 16,
+      "mw": 10,
+      "propagated_terms": 2604018,
+      "final_terms": 3867,
+      "compile_s": 0.6212082819838542,
+      "vram_gb": 0.5096778869628906
+    },
+    {
+      "n": 20,
+      "mw": 9,
+      "propagated_terms": 795534,
+      "final_terms": 2485,
+      "compile_s": 0.8730847760161851,
+      "vram_gb": 0.17385196685791016
+    }
+  ]
+}

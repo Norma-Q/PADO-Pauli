@@ -1,0 +1,15 @@
+{
+  "gpu": {
+    "backend": "rocm 7.2.26015",
+    "count": 1,
+    "name": "AMD Instinct MI300X VF"
+  },
+  "packages": {
+    "torch": "2.11.0+rocm7.2"
+  },
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "python": "3.11.15",
+  "result_file": "preset_comparison.json",
+  "rocm_host": "7.2.4",
+  "note": "gpu.name and torch reconstructed from the result file's config block; platform, python and the ROCm fields taken from the MI300X host environment at reconstruction time; the run predates the sidecar stamper and no timestamp was recorded. Package versions other than torch were not recorded for this run."
+}

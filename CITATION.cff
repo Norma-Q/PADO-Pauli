@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use PADO-Pauli in your research, please cite it as below."
+title: "PADO-Pauli"
+abstract: "A GPU-accelerated, differentiable Pauli-propagation surrogate (PPS) engine for simulating expectation values and gradients of parameterized quantum circuits, shipped as the Python package padopauli."
+type: software
+version: 2.0.0
+date-released: 2026-09-07
+license: Apache-2.0
+repository-code: "https://github.com/Norma-Q/PADO-Pauli"
+url: "https://pypi.org/project/padopauli/"
+authors:
+  - family-names: Kim
+    given-names: Hyunwoo
+    email: hw_kim@norma.co.kr
+    affiliation: "NORMA, Inc."
+  - family-names: Lee
+    given-names: Youngseok
+    email: ys_lee@norma.co.kr
+    affiliation: "NORMA, Inc."
+keywords:
+  - quantum computing
+  - quantum simulation
+  - Pauli propagation
+  - variational quantum algorithms
+  - PyTorch

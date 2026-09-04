@@ -1,0 +1,132 @@
+{
+  "config": {
+    "gen_layers": 3,
+    "v_layers": 2,
+    "mw": 9,
+    "acc_batch": 100,
+    "tp_batches": [
+      128,
+      256,
+      512
+    ],
+    "tp_reps": 5,
+    "n_list": [
+      12,
+      16,
+      20
+    ],
+    "dtype": "float32",
+    "pl_devices": [
+      "lightning.qubit",
+      "lightning.amdgpu"
+    ]
+  },
+  "by_n": {
+    "12": {
+      "n": 12,
+      "full_gates": 231,
+      "n_embed": 60,
+      "n_params": 48,
+      "obs": [
+        "Z0",
+        "Z10Z11"
+      ],
+      "accuracy": {
+        "compile_s": 1.9330626907758415,
+        "vram_gb": 0.069482496,
+        "exact_device": "lightning.qubit",
+        "peak_terms": null,
+        "final_terms": null,
+        "max_abs": 0.00929342068730743,
+        "mean_abs": 0.0008174666163713715,
+        "rmse": 0.0017536724596834122,
+        "per_obs_max": {
+          "Z0": 0.00929342068730743,
+          "Z10Z11": 0.004110528839146029
+        },
+        "ref_rms": 0.5129422996304761,
+        "ref_mean_abs": 0.43500535829678116,
+        "ref_rms_per_obs": {
+          "Z0": 0.6118159226976503,
+          "Z10Z11": 0.38974463721009045
+        }
+      },
+      "throughput": {}
+    },
+    "16": {
+      "n": 16,
+      "full_gates": 372,
+      "n_embed": 80,
+      "n_params": 64,
+      "obs": [
+        "Z0",
+        "Z14Z15"
+      ],
+      "accuracy": {
+        "compile_s": 0.44041960686445236,
+        "vram_gb": 0.238854144,
+        "exact_device": "lightning.qubit",
+        "peak_terms": null,
+        "final_terms": null,
+        "max_abs": 0.043815969748865785,
+        "mean_abs": 0.003135033176095312,
+        "rmse": 0.006156679888152055,
+        "per_obs_max": {
+          "Z0": 0.043815969748865785,
+          "Z14Z15": 0.02364549699467433
+        },
+        "ref_rms": 0.5073083990542506,
+        "ref_mean_abs": 0.435249558055118,
+        "ref_rms_per_obs": {
+          "Z0": 0.6131625494140602,
+          "Z14Z15": 0.3724987402636735
+        }
+      },
+      "throughput": {}
+    },
+    "20": {
+      "n": 20,
+      "full_gates": 531,
+      "n_embed": 100,
+      "n_params": 80,
+      "obs": [
+        "Z0",
+        "Z18Z19"
+      ],
+      "accuracy": {
+        "compile_s": 0.6062971488572657,
+        "vram_gb": 0.267438592,
+        "exact_device": "lightning.amdgpu",
+        "peak_terms": null,
+        "final_terms": null,
+        "max_abs": 0.20379802641905542,
+        "mean_abs": 0.018049795031149597,
+        "rmse": 0.034083859961995464,
+        "per_obs_max": {
+          "Z0": 0.08166768910564648,
+          "Z18Z19": 0.20379802641905542
+        },
+        "ref_rms": 0.4939408899730068,
+        "ref_mean_abs": 0.4308542683796584,
+        "ref_rms_per_obs": {
+          "Z0": 0.5866222717239361,
+          "Z18Z19": 0.37924862015846605
+        }
+      },
+      "throughput": {}
+    }
+  },
+  "n16_mw10": {
+    "compile_s": 0.4431528770364821,
+    "vram_gb": 0.627122688,
+    "max_abs": 0.018880285933832897,
+    "mean_abs": 0.0015620261630084607,
+    "ref_rms": 0.5073083990542506,
+    "ref_mean_abs": 0.435249558055118,
+    "per_obs_max": {
+      "Z0": 0.0033476742056315345,
+      "Z14Z15": 0.018880285933832897
+    }
+  },
+  "edge_prob_setting": "0.15"
+}

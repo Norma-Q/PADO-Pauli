@@ -1,0 +1,20 @@
+[06:23:40] run start | jobs: grad_quasi minabs frontier frontier_seeds stress
+[06:23:41] run end
+[06:23:53] run start | jobs: grad_quasi minabs frontier frontier_seeds stress
+[06:23:53] START grad_quasi
+[06:24:06] DONE  grad_quasi (11s)
+[06:24:06] START minabs
+[06:24:16] DONE  minabs (8s)
+[06:24:16] START frontier
+[06:25:59] DONE  frontier (102s)
+[06:25:59] START frontier_seeds
+[06:29:03] DONE  frontier_seeds (183s)
+[06:29:03] START stress
+[06:32:30] DONE  stress (206s)
+[06:32:30] run end
+[07:00:58] run start | jobs: frontier frontier_seeds
+[07:00:58] START frontier
+[07:02:40] DONE  frontier (101s)
+[07:02:40] START frontier_seeds
+[07:05:59] DONE  frontier_seeds (198s)
+[07:05:59] run end
