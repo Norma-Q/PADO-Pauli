@@ -43,14 +43,14 @@ def fig_terms_vs_qubits(rows):
     zf = [r["zero_filtered_terms"] for r in rows]
     ub = [r["upper_bound"] for r in rows]
 
-    plt.figure(figsize=(7, 4.2))
+    plt.figure(figsize=(4.0, 2.4))
     plt.semilogy(N, ub, "k--", marker="x", label=r"weight-limited Pauli bound $\sum_w \binom{n}{w}3^w$")
     plt.semilogy(N, prop, "o-", color="tab:blue", label="unique propagated terms")
     plt.semilogy(N, zf, "s-", color="tab:green", label="zero-filtered diagonal terms")
     plt.xlabel("number of qubits $n$")
     plt.ylabel("term count")
     plt.grid(True, which="both", alpha=0.3)
-    plt.legend(fontsize=9)
+    plt.ylim(top=3e10); plt.legend(fontsize=8, loc="upper left")
     plt.tight_layout()
     out = os.path.join(FIGS, "fig_terms_vs_qubits_p03.png")
     plt.savefig(out, dpi=150, bbox_inches="tight"); plt.close()
@@ -62,7 +62,7 @@ def fig_vram_vs_qubits(rows):
     N = np.array([r["n_qubits"] for r in rows], dtype=float)
     vram = np.array([r["vram_peak_reserved_gb"] for r in rows], dtype=float)
 
-    plt.figure(figsize=(7, 4.2))
+    plt.figure(figsize=(4.0, 2.4))
     plt.plot(N, vram, "o-", color="tab:red", label="measured peak GPU VRAM")
     plt.xlabel("number of qubits $n$")
     plt.ylabel(r"peak GPU-VRAM (GB)")

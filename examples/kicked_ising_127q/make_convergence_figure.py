@@ -47,7 +47,7 @@ IBM_mitigated = np.array([1.01688859, 1.00387483, 0.95615886, 0.95966435,
                           0.83946763, 0.81185907, 0.54640995, 0.45518584,
                           0.19469377, 0.01301832, 0.01016334])
 
-fig, (ax, ax2) = plt.subplots(1, 2, figsize=(11.0, 4.2),
+fig, (ax, ax2) = plt.subplots(1, 2, figsize=(8.2, 3.1),
                               gridspec_kw={"width_ratios": [1.55, 1.0]})
 ax.axhline(0.0, color="#6b7280", ls="--", lw=0.9, alpha=0.8, zorder=1)
 
@@ -85,7 +85,7 @@ ax2.set_ylabel(r"deviation from the hardware points")
 ax2.set_xticks(W)
 ax2.set_yscale("log")
 ax2.grid(True, which="both", alpha=0.3)
-ax2.legend(fontsize=10)
+ax2.legend(fontsize=8)
 
 ax.set_xlabel(r"transverse-field angle $h$")
 ax.set_ylabel(r"$\langle Z_{62}\rangle$")
@@ -103,9 +103,9 @@ assert len(thresholds) == 1, thresholds
 min_abs = thresholds.pop()
 exponent = int(round(np.log10(min_abs)))
 assert 10.0 ** exponent == min_abs, min_abs
-ax.legend(loc="upper right", fontsize=10,
+ax.legend(loc="upper right", fontsize=8, ncol=1,
           title=fr"PADO-Pauli, $\mathtt{{build\_min\_abs}}=10^{{{exponent}}}$",
-          title_fontsize=10)
+          title_fontsize=8)
 fig.tight_layout()
 out = os.path.join(FIGS, "fig_kicked_ising_127q_wmax.png")
 fig.savefig(out, dpi=150, bbox_inches="tight")

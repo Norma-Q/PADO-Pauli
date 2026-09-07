@@ -71,7 +71,7 @@ The trees shipped in this repository were recorded on:
 
 | tree | GPU | host | software |
 |---|---|---|---|
-| `results_on_MI300X/` | AMD Instinct MI300X VF (gfx942), 191.7 GB of device memory as reported by the driver (`/sys/class/drm/card*/device/mem_info_vram_total`, 205,822,885,888 bytes); amdgpu driver 6.16.13 | Intel Xeon Platinum 8568Y+, 20 vCPUs, 236 GB RAM, under a KVM hypervisor | PyTorch 2.11.0 (ROCm 7.2.4), Python 3.11.15, PennyLane 0.45.1, NumPy 2.4.6, SciPy 1.17.1 |
+| `results_on_MI300X/` | AMD Instinct MI300X VF (gfx942), 191.7 GB of device memory as reported by the driver (`/sys/class/drm/card*/device/mem_info_vram_total`, 205,822,885,888 bytes); amdgpu driver 6.16.13 | Intel Xeon Platinum 8568Y+, 20 vCPUs, 236 GB RAM, under a KVM hypervisor | PyTorch 2.11.0 (ROCm 7.2.4), Python 3.11.15, NumPy 2.4.6, SciPy 1.17.1; PennyLane 0.45.1 for every exact statevector reference (the engine-only runs of 2026-08-07 record PennyLane 0.44.1 as installed but never import it; the `preset_comparison` sidecar predates the stamper and records torch only) |
 | `results_on_A100/` | NVIDIA A100 80GB PCIe; NVIDIA driver 550.54.14 | Intel Xeon Gold 6338 at 2.00 GHz, 24 vCPUs, under a KVM hypervisor | PyTorch 2.11.0 (CUDA 12.6 runtime), Python 3.11.15, PennyLane 0.45.1 |
 
 These are the values the paper's Code and Data Availability statement quotes.

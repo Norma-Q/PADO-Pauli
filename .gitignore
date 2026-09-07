@@ -10,3 +10,4 @@ reproducibility/*/results/
 reproducibility/*/figures/
 reproducibility/*/runs/
 reproducibility/rerun_logs/
+results_on_A100/engine_benchmarks/report/*.html

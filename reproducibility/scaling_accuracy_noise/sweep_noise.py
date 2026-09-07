@@ -203,12 +203,12 @@ def _plot_validation(exp1):
     p = [r["p"] for r in exp1]
     pado = [r["pado"] for r in exp1]
     ref = [r["pl_exact"] for r in exp1]
-    plt.figure(figsize=(6.6, 4.2))
-    plt.plot(p, ref, "-", color="k", lw=1.5, label="PennyLane default.mixed (exact)")
+    plt.figure(figsize=(3.3, 2.3))
+    plt.plot(p, ref, "-", color="k", lw=1.5, label="exact (default.mixed)")
     plt.plot(p, pado, "o", color="tab:blue", ms=8, label="PADO-Pauli")
     plt.xlabel("depolarizing noise rate $p$")
     plt.ylabel(r"$\langle \sum_{(i,j)\in E} Z_iZ_j\rangle$")
-    plt.grid(True, alpha=0.3); plt.legend(fontsize=10); plt.tight_layout()
+    plt.grid(True, alpha=0.3); plt.legend(fontsize=8, loc="upper right"); plt.tight_layout()
     out = os.path.join(FIGS, "fig_noise_validation.png")
     plt.savefig(out, dpi=150, bbox_inches="tight"); plt.close()
 
@@ -217,18 +217,18 @@ def _plot_ampdamp(exp3):
     g = [r["gamma"] for r in exp3]
     pado = [r["pado"] for r in exp3]
     ref = [r["pl_exact"] for r in exp3]
-    plt.figure(figsize=(6.6, 4.2))
-    plt.plot(g, ref, "-", color="k", lw=1.5, label="PennyLane default.mixed (exact)")
+    plt.figure(figsize=(3.3, 2.3))
+    plt.plot(g, ref, "-", color="k", lw=1.5, label="exact (default.mixed)")
     plt.plot(g, pado, "o", color="tab:green", ms=8, label="PADO-Pauli")
     plt.xlabel(r"amplitude-damping rate $\gamma$")
     plt.ylabel(r"$\langle \sum_{(i,j)\in E} Z_iZ_j\rangle$")
-    plt.grid(True, alpha=0.3); plt.legend(fontsize=10); plt.tight_layout()
+    plt.grid(True, alpha=0.3); plt.legend(fontsize=8, loc="upper left"); plt.tight_layout()
     out = os.path.join(FIGS, "fig_noise_ampdamp.png")
     plt.savefig(out, dpi=150, bbox_inches="tight"); plt.close()
 
 
 def _plot_truncation(exp2):
-    plt.figure(figsize=(6.6, 4.2))
+    plt.figure(figsize=(3.3, 2.7))
     styles = {"0.0": ("tab:gray", "o", "noiseless ($p=0$)"),
               "0.1": ("tab:red", "s", "noisy ($p=0.1$)")}
     for key, (c, m, lab) in styles.items():
@@ -238,7 +238,7 @@ def _plot_truncation(exp2):
         plt.loglog(ret, err, m + "-", color=c, label=lab)
     plt.xlabel("retained Pauli terms (cost)")
     plt.ylabel(r"$|\langle O\rangle_\epsilon - \langle O\rangle_{\mathrm{exact}}|$ (accuracy)")
-    plt.grid(True, which="both", alpha=0.3); plt.legend(fontsize=10); plt.tight_layout()
+    plt.grid(True, which="both", alpha=0.3); plt.legend(fontsize=8, loc="upper center", bbox_to_anchor=(0.5, -0.36), ncol=2); plt.tight_layout()
     out = os.path.join(FIGS, "fig_noise_truncation.png")
     plt.savefig(out, dpi=150, bbox_inches="tight"); plt.close()
 

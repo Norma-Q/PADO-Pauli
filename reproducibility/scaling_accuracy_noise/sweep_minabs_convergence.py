@@ -90,7 +90,7 @@ def run():
 def _plot_convergence(rows, exact):
     eps = [r["min_abs"] for r in rows]
     val = [r["expval"] for r in rows]
-    plt.figure(figsize=(7, 4.3))
+    plt.figure(figsize=(4.0, 2.45))
     plt.axhline(exact, color="k", ls="--", lw=1.5, label=f"exact (statevector) = {exact:.4f}")
     plt.plot(eps, val, "o-", color="tab:blue", label=r"PADO-Pauli $\langle \sum Z_iZ_j\rangle$")
     plt.xscale("log")
@@ -107,7 +107,7 @@ def _plot_convergence(rows, exact):
 def _plot_error(rows):
     eps = [r["min_abs"] for r in rows]
     err = [max(r["abs_error"], 1e-12) for r in rows]
-    plt.figure(figsize=(7, 4.3))
+    plt.figure(figsize=(4.0, 2.45))
     plt.loglog(eps, err, "s-", color="tab:red", label="absolute error vs. exact")
     plt.gca().invert_xaxis()
     plt.xlabel(r"coefficient-truncation threshold $\epsilon$ (build_min_abs)")
