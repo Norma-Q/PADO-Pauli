@@ -1,5 +1,8 @@
 # PADO-Pauli
 
+[![PyPI](https://img.shields.io/pypi/v/padopauli)](https://pypi.org/project/padopauli/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22627344.svg)](https://doi.org/10.5281/zenodo.22627344)
+
 <p align="center">
   <img src="img/pado_logo.png" alt="PADO-Pauli" width="560">
 </p>
@@ -172,6 +175,17 @@ agreement executed by both parties; NORMA, Inc. provides the agreement form on r
 Developed and maintained by Hyunwoo Kim (<hw_kim@norma.co.kr>,
 <kimhw7537@gmail.com>) and Youngseok Lee (<ys_lee@norma.co.kr>,
 <pop756hh@gmail.com>) at NORMA, Inc.
+
+## Citation
+
+If you use PADO-Pauli in your research, please cite it via the Zenodo DOI
+[10.5281/zenodo.22627344](https://doi.org/10.5281/zenodo.22627344) (all versions;
+2.0.0 is [10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345)) or use the
+"Cite this repository" button, which reads [CITATION.cff](CITATION.cff).
+
+PADO-Pauli was first released publicly in February 2026 (1.0.0); that history is preserved
+under the tag [`v1.1.0`](https://github.com/Norma-Q/PADO-Pauli/commits/v1.1.0). 2.0.0 is a
+rebuilt binary distribution and starts a fresh history.
 
 © 2026 NORMA, Inc.
 
@@ -348,6 +362,17 @@ PADO-Pauli 소스 코드는 공개 배포되지 않습니다. 기여 및 유지�
 
 NORMA, Inc.의 Hyunwoo Kim(<hw_kim@norma.co.kr>, <kimhw7537@gmail.com>)과
 Youngseok Lee(<ys_lee@norma.co.kr>, <pop756hh@gmail.com>)가 개발하고 유지보수합니다.
+
+## 인용
+
+연구에 PADO-Pauli를 사용한 경우 Zenodo DOI
+[10.5281/zenodo.22627344](https://doi.org/10.5281/zenodo.22627344)(전체 버전; 2.0.0은
+[10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345))로 인용하거나,
+[CITATION.cff](CITATION.cff)를 읽는 "Cite this repository" 버튼을 이용하십시오.
+
+PADO-Pauli는 2026년 2월에 처음 공개되었으며(1.0.0), 그 히스토리는 태그
+[`v1.1.0`](https://github.com/Norma-Q/PADO-Pauli/commits/v1.1.0)에 보존되어 있습니다.
+2.0.0은 새로 빌드한 바이너리 배포판으로 히스토리를 새로 시작합니다.
 
 © 2026 NORMA, Inc.
 

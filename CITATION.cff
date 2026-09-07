@@ -5,6 +5,7 @@ abstract: "A GPU-accelerated, differentiable Pauli-propagation surrogate (PPS) e
 type: software
 version: 2.0.0
 date-released: 2026-09-07
+doi: 10.5281/zenodo.22627345
 license: Apache-2.0
 repository-code: "https://github.com/Norma-Q/PADO-Pauli"
 url: "https://pypi.org/project/padopauli/"
@@ -23,3 +24,7 @@ keywords:
   - Pauli propagation
   - variational quantum algorithms
   - PyTorch
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22627344
+    description: "Concept DOI (all versions)"
