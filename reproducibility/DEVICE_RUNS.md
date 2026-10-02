@@ -14,7 +14,7 @@ results_on_A100/
 ├── preset_comparison/results/      (MI300X only)
 ├── kicked_ising_127q/{results,figures}/
 ├── repeat_timing/{runs,logs}/
-├── engine_benchmarks/results/
+├── engine_benchmarks/{results,results_mw7,results_mw7_f32}/
 └── rerun_logs/
 results_on_MI300X/                same shape (no engine_benchmarks — CUDA only)
 ```

@@ -110,6 +110,11 @@ Suite ids (`--suites`, default = all four):
 instead (see the truncation mapping below), so its `mw_truncation` points are
 not a like-for-like weight cap.
 
+`--mw-values` selects the `max_weight` levels of `mw_truncation` (default
+`2,3,4,5,6`; the circuit and angles do not depend on it). `--cupp-coef-dtype
+float32` runs cuPauliProp with real single-precision coefficients instead of the
+default `complex64`.
+
 All engines run on every suite by default. For `embedding_batch`, only PPS
 evaluates a batch as one native operation; the cuPauliProp, Qiskit, and Julia
 workers loop over the batch one sample at a time (`engine_cpp.py`,

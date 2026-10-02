@@ -178,6 +178,19 @@ PPS_JULIA=<path to julia> python benchmark_all_sdks.py \
     --engines cupauliprop,pps,qiskit,julia,julia_surrogate
 ```
 
+The `max_weight=7` row of the 16-qubit memory table (cuPauliProp runs out of
+memory, PADO-Pauli completes) and the same case with cuPauliProp's real
+single-precision coefficients come from two separate runs. A separate
+`PPS_DEVICE_TAG` keeps them from overwriting the sweep's `results.json`:
+
+```bash
+PPS_DEVICE_TAG=A100_mw7 python benchmark_all_sdks.py --suites mw_truncation --mw-values 7 --engines pps,cupauliprop
+PPS_DEVICE_TAG=A100_mw7_f32 python benchmark_all_sdks.py --suites mw_truncation --mw-values 7 --engines cupauliprop --cupp-coef-dtype float32
+```
+
+The recorded files are in `../results_on_A100/engine_benchmarks/results_mw7/` and
+`../results_on_A100/engine_benchmarks/results_mw7_f32/`.
+
 ### `random_circuit_statevector/`  (random-circuit stress test)
 
 | Paper artifact | Source |
