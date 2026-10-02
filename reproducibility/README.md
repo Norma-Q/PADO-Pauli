@@ -294,4 +294,4 @@ writes its figure(s) to the `figures/` folder beside it (each plotting cell call
 | SAFE ma-QAOA convergence (`fig_SAFE_ma-QAOA_convergence.png`; also writes `fig_SAFE_ma-QAOA_summary.png`) | `../examples/04_SAFE_ma-QAOA.ipynb` |
 
 The kicked-Ising figure is not notebook-generated — it comes from the scripts in
-`../examples/kicked_ising_127q/` (see the section above).
+`kicked_ising_127q/` (see the section above).

@@ -122,7 +122,7 @@ reproducibility/    Measurement scripts behind the paper's figures and tables
 engine_benchmarks/  Cross-engine benchmark harness (CUDA only: cuPauliProp,
                     Qiskit pauli-prop, PauliPropagation.jl)
 results_on_MI300X/  Recorded runs behind the paper, one tree per measurement
-results_on_A100/    platform; the main result files carry a .runmeta.json sidecar
+results_on_A100/    platform; most result files carry a .runmeta.json sidecar
                     (reproducibility/DEVICE_RUNS.md describes the two platforms)
 ```
 
@@ -315,7 +315,7 @@ reproducibility/    논문 그림과 표를 만드는 측정 스크립트
 engine_benchmarks/  엔진 간 벤치마크 하니스 (CUDA 전용: cuPauliProp,
                     Qiskit pauli-prop, PauliPropagation.jl)
 results_on_MI300X/  논문 수치의 기록 데이터, 측정 플랫폼별 트리
-results_on_A100/    (주요 결과 파일에는 .runmeta.json 사이드카;
+results_on_A100/    (대부분의 결과 파일에 .runmeta.json 사이드카;
                     두 플랫폼의 사양은 reproducibility/DEVICE_RUNS.md)
 ```
 
@@ -348,7 +348,7 @@ jupyter lab
   생성되었음을 공식 명칭 **PADO-Pauli**(Python 패키지 `padopauli`)로 명시하고,
   그에 적용되는 출처 표시, 즉 저작권 고지 "NORMA, Inc."와 (공개된 후에는) 관련
   출판물의 인용을 함께 기재하십시오. 형식은 자유입니다 — 사사 문장, 각주, 방법론
-  절의 기술, 인용 모두 무방합니다 — 다만 명시 자체는 바이너리 라이선스 제5조가
+  절의 기술, 인용 모두 무방합니다 — 다만 명시 자체는 바이너리 라이선스 제6조가
   요구하는 사항입니다.
 - 이 **저장소의 내용**(노트북, 스크립트, 문서 및 기록 데이터)은 Apache License
   2.0에 따라 제공됩니다. [LICENSE](LICENSE)를 참조하십시오.
