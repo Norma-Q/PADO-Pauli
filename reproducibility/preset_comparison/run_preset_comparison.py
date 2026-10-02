@@ -32,6 +32,7 @@ N, DEPTH, P, SEED = 16, 5, 0.3, 42
 WMAXES = [4, 5, 6]
 PRESETS = ["cpu", "hybrid", "gpu"]
 REPS = 5
+REPS_SHORT = 20   # single-call eval and fwd+bwd: short calls, so more repeats for a stable median
 BATCH = 200
 # Output location is device-aware: <repo>/results_on_<DEVICE>/{exp}/...
 # so the same code can run on an A100, an H100 and an MI300X without one run
@@ -85,7 +86,7 @@ def measure(preset: str, wmax: int, qc, obs, thetas, thetas_b):
 
     try:  # single-theta forward
         val = prog.expvals(thetas).detach().cpu().double()
-        med, lo, hi, all_ts = _timed(lambda: prog.expvals(thetas), sync)
+        med, lo, hi, all_ts = _timed(lambda: prog.expvals(thetas), sync, REPS_SHORT)
         row["eval_s"], row["eval_s_min"], row["eval_s_max"] = med, lo, hi
         row["eval_reps_s"] = all_ts
     except RuntimeError as exc:
@@ -110,7 +111,7 @@ def measure(preset: str, wmax: int, qc, obs, thetas, thetas_b):
         sync()
         row["fwdbwd_first_s"] = time.perf_counter() - t0
 
-        med, lo, hi, all_ts = _timed(_fwdbwd, sync)
+        med, lo, hi, all_ts = _timed(_fwdbwd, sync, REPS_SHORT)
         row["fwdbwd_s"], row["fwdbwd_s_min"], row["fwdbwd_s_max"] = med, lo, hi
         row["fwdbwd_reps_s"] = all_ts
         grad = th.grad.detach().cpu().double()
@@ -169,8 +170,9 @@ def main():
         "config": {"n": N, "depth": DEPTH, "p": P, "seed": SEED,
                    "w_max_sweep": WMAXES, "presets": PRESETS,
                    "dtype": "float64 (every preset's default)",
-                   "reps": REPS, "batch": BATCH,
-                   "timing": "median of REPS timed calls after one discarded warm-up",
+                   "reps": REPS, "reps_short": REPS_SHORT, "batch": BATCH,
+                   "timing": "median of timed calls after one discarded warm-up: REPS_SHORT for eval and fwd+bwd, REPS for the batched pass",
+                   "torch_threads": torch.get_num_threads(),
                    "gpu": torch.cuda.get_device_name(0),
                    "torch": torch.__version__},
         "rows": rows,
