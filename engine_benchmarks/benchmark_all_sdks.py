@@ -45,7 +45,7 @@ import shutil
 import subprocess
 import sys
 import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
@@ -839,6 +839,9 @@ def main() -> int:
     parser.add_argument("--suites", type=str,
                         default="full_scaling,mw_truncation,coeff_truncation,embedding_batch",
                         help="Comma-separated subset of suites to run")
+    parser.add_argument("--cupp-coef-dtype", choices=("complex64", "float32"), default="complex64",
+                        help="Coefficient type of the cuPauliProp worker: complex64 (the recorded "
+                             "default) or float32 (its real single-precision type)")
     parser.add_argument("--mw-values", type=str, default="2,3,4,5,6",
                         help="Comma-separated max-weight thresholds of the 16-qubit "
                              "mw_truncation suite (the circuit and angles do not depend on them)")
@@ -879,6 +882,10 @@ def main() -> int:
     logger = RunLogger(RESULTS_DIR / "run_log.txt")
     logger.log(f"engines: {selected_engines}")
     logger.log(f"suites:  {selected_suites}")
+    if args.cupp_coef_dtype != "complex64":
+        ENGINES["cupauliprop"] = replace(ENGINES["cupauliprop"],
+                                         extra_args=("--coef-dtype", args.cupp_coef_dtype))
+    logger.log(f"cupauliprop coefficient dtype: {args.cupp_coef_dtype}")
     logger.log(f"p_layers={args.p_layers}, n_reps={args.n_reps}, "
                f"smoke={args.smoke_test}")
     logger.log(
@@ -937,6 +944,7 @@ def main() -> int:
                 "p_layers": args.p_layers,
                 "n_reps": args.n_reps,
                 "smoke_test": args.smoke_test,
+                "cupp_coef_dtype": args.cupp_coef_dtype,
             },
             "results": results,
             "summary_rows": flat_rows,
@@ -1022,6 +1030,7 @@ def main() -> int:
             "p_layers": args.p_layers,
             "n_reps": args.n_reps,
             "smoke_test": args.smoke_test,
+            "cupp_coef_dtype": args.cupp_coef_dtype,
         },
         "results": results,
     })

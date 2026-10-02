@@ -42,7 +42,10 @@ def _cleanup() -> None:
     cp.get_default_memory_pool().free_all_blocks()
 
 
-def run(config: Dict[str, Any]) -> Dict[str, Any]:
+COEF_DTYPES = ("complex64", "float32")  # complex64: the recorded default; float32: the real single-precision type
+
+
+def run(config: Dict[str, Any], coef_dtype: str = "complex64") -> Dict[str, Any]:
     import numpy as np
     import torch
     import cupy as cp
@@ -89,7 +92,9 @@ def run(config: Dict[str, Any]) -> Dict[str, Any]:
     num_terms = len(edges) + len(fields)
     xz_size = ppe.get_num_packed_integers(n_qubits)
     xz_bits = cp.zeros((num_terms, 2 * xz_size), dtype=cp.uint64)
-    coeffs = cp.zeros((num_terms,), dtype=cp.complex64)
+    if coef_dtype not in COEF_DTYPES:
+        raise ValueError(f"coef_dtype must be one of {COEF_DTYPES}, got {coef_dtype!r}")
+    coeffs = cp.zeros((num_terms,), dtype=getattr(cp, coef_dtype))
     idx = 0
     for u, v, w in edges:
         xz_bits[idx, 1] = (1 << int(u)) | (1 << int(v))
@@ -156,7 +161,7 @@ def run(config: Dict[str, Any]) -> Dict[str, Any]:
             #   d trace / d sig = 2**ex,   d trace / d ex = sig * 2**ex * ln 2
             t0 = time.perf_counter()
             record_grad = (step == 0 and row_idx == 0)
-            cot_trace_sig = 1.0 * (2.0 ** ex) + 0.0j
+            cot_trace_sig = 2.0 ** ex if coef_dtype == "float32" else 1.0 * (2.0 ** ex) + 0.0j
             # cotangent_trace_exponent is a real scalar (the API stores it as
             # float64); the loss is the real part of the trace, so seed it with
             # the real part of sig * 2**ex * ln 2.
@@ -230,6 +235,7 @@ def run(config: Dict[str, Any]) -> Dict[str, Any]:
             "max_weight_used": int(max_weight) if max_weight else None,
             "min_abs_coeff_used": float(min_abs_coeff) if min_abs_coeff is not None else None,
             "n_reps": n_reps,
+            "coef_dtype": coef_dtype,
             "device": "cuda",
             "memory_kind": "gpu_vram_peak_delta_MB",
             "setup_kind": "construct cuPauliProp PauliExpansion observable",
@@ -240,8 +246,9 @@ def run(config: Dict[str, Any]) -> Dict[str, Any]:
 
 def main(argv: List[str]) -> int:
     config = load_config(argv)
+    coef_dtype = argv[argv.index("--coef-dtype") + 1] if "--coef-dtype" in argv else "complex64"
     try:
-        result = run(config)
+        result = run(config, coef_dtype)
     except Exception as e:
         result = {
             "engine": "cupauliprop",
@@ -249,6 +256,7 @@ def main(argv: List[str]) -> int:
             "error": str(e),
             "traceback": traceback.format_exc(),
             "history": [],
+            "coef_dtype": coef_dtype,
         }
     result["test_id"] = config.get("test_id")
     save_result(argv, result)
