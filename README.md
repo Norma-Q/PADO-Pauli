@@ -136,6 +136,16 @@ git clone https://github.com/Norma-Q/PADO-Pauli.git && cd PADO-Pauli/tutorial
 jupyter lab
 ```
 
+## Applications
+
+- **SAFE ma-QAOA** (Surrogate-Assisted and Fine-Tuning Enhanced Multi-Angle QAOA with
+  Parameter Distillation; Hyunwoo Kim and Youngseok Lee, arXiv:2605.23377,
+  <https://arxiv.org/abs/2605.23377>) uses PADO-Pauli as the classical surrogate for
+  pre-training multi-angle QAOA parameters. The reproduction package behind the paper
+  (code, problem instances, sweep launchers, figure and table generators) is published
+  separately at <https://github.com/Norma-Q/SAFE-ma-QAOA>; `examples/04_SAFE_ma-QAOA.ipynb`
+  in this repository is a short walkthrough of the same pipeline.
+
 ## License
 
 Two separate and distinct sets of terms apply: one to the binary package, one to
@@ -330,6 +340,15 @@ pip install matplotlib jupyter
 git clone https://github.com/Norma-Q/PADO-Pauli.git && cd PADO-Pauli/tutorial
 jupyter lab
 ```
+
+## 활용 사례
+
+- **SAFE ma-QAOA**(Surrogate-Assisted and Fine-Tuning Enhanced Multi-Angle QAOA with
+  Parameter Distillation; 김현우, 이영석, arXiv:2605.23377,
+  <https://arxiv.org/abs/2605.23377>)는 PADO-Pauli를 multi-angle QAOA 파라미터
+  사전학습의 classical surrogate로 씁니다. 논문의 재현 패키지(코드, 문제 인스턴스, 스윕
+  실행기, 그림·표 생성기)는 <https://github.com/Norma-Q/SAFE-ma-QAOA>에 따로 공개돼
+  있고, 이 저장소의 `examples/04_SAFE_ma-QAOA.ipynb`는 같은 파이프라인의 짧은 예제입니다.
 
 ## 라이선스
 
