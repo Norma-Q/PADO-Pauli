@@ -1,0 +1,28 @@
+[09:25:09] === Benchmark start @ 2026-10-02T09:25:09.224675 ===
+[09:25:09] engines: ['cupauliprop']
+[09:25:09] suites:  ['mw_truncation']
+[09:25:09] cupauliprop coefficient dtype: float32
+[09:25:09] p_layers=3, n_reps=5, smoke=False
+[09:25:09] metric note: setup column is engine-specific; only PPS is a reusable padopauli compile_program compile.
+[09:25:09] truncation note: Qiskit uses max_terms/atol semantics, not PPS/CPP/Julia max_weight/build_min_abs semantics.
+[09:25:09] batch note: PPS uses native embedding batch; other SDKs loop over single-sample propagations and report throughput.
+[09:25:09] results dir: <repo>/results_on_A100_mw7_f32/engine_benchmarks/results
+[09:25:09] total test cases: 1 × engines 1 = 1 runs
+[09:25:09] 
+=== SUITE: mw_truncation (1 cases) ===
+[09:25:13]     · reference (exact) expval=-4.290577e-01, 4 exact grad components
+[09:25:13]   → cupauliprop | mw_truncation__mw=7 ... 
+[09:25:16]     ✗ cupauliprop returncode=1 (wall 3.27s)
+[09:25:16] 
+[09:25:16] === Summary: mw_truncation ===
+label                  engine       kind status     setup      eval(steady)   bwd(steady)    fwdbwd(steady)  vram(MB)   ram(MB)    occ(MB)    throughput     n_terms(prop→final)    expval         abs_err      grad_err    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  exact reference: -4.290577e-01
+mw=7                   cupauliprop  gpu  Error      —          —              —              —               —          —          —          —              —                      —              —            —           
+
+[09:25:16] 
+Wrote <repo>/results_on_A100_mw7_f32/engine_benchmarks/results/results.json
+[09:25:16] Wrote <repo>/results_on_A100_mw7_f32/engine_benchmarks/results/summary.json
+[09:25:16] Wrote <repo>/results_on_A100_mw7_f32/engine_benchmarks/results/summary.txt
+[09:25:16] Wrote <repo>/results_on_A100_mw7_f32/engine_benchmarks/results/run_log.txt
+[09:25:16] === Benchmark end @ 2026-10-02T09:25:16.622171 ===

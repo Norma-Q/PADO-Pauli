@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "timestamp": "2026-10-02T09:25:16.621671",
+    "engines": [
+      "cupauliprop"
+    ],
+    "p_layers": 3,
+    "n_reps": 5,
+    "smoke_test": false,
+    "cupp_coef_dtype": "float32"
+  },
+  "results": {
+    "mw_truncation": [
+      {
+        "suite": "mw_truncation",
+        "label": "mw=7",
+        "test_id": "mw_truncation__mw=7",
+        "qubits": 16,
+        "max_weight": 7,
+        "min_abs_coeff": null,
+        "max_terms": 32082205,
+        "engines": {
+          "cupauliprop": {
+            "engine": "cupauliprop",
+            "status": "Error",
+            "error": "Out of memory allocating 1,874,294,272 bytes (allocated so far: 82,975,955,968 bytes).",
+            "traceback": "Traceback (most recent call last):\n  File \"<repo>/engine_benchmarks/engines/engine_cpp.py\", line 251, in main\n    result = run(config, coef_dtype)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<repo>/engine_benchmarks/engines/engine_cpp.py\", line 148, in run\n    active = active.apply_gate(gate, adjoint=True, truncation=trunc)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<env>/lib/python3.11/site-packages/cuquantum/pauliprop/experimental/pauli_expansion.py\", line 778, in apply_gate\n    return self.view().apply_gate(\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<env>/lib/python3.11/site-packages/cuquantum/pauliprop/experimental/pauli_expansion.py\", line 1367, in apply_gate\n    with self._workspace.scratch_context(device_ws, host_ws, stream_holder) as (_, _dev_buf, _host_buf):\n  File \"<env>/lib/python3.11/contextlib.py\", line 137, in __enter__\n    return next(self.gen)\n           ^^^^^^^^^^^^^^\n  File \"<env>/lib/python3.11/site-packages/cuquantum/pauliprop/experimental/_internal/work.py\", line 174, in scratch_context\n    buf_device, buf_host = self._allocate(device_size, host_size, stream_holder)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<env>/lib/python3.11/site-packages/cuquantum/pauliprop/experimental/_internal/work.py\", line 105, in _allocate\n    buf_device = self._allocator.memalloc_async(device_size, stream_holder.obj)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<env>/lib/python3.11/site-packages/nvmath/memory.py\", line 212, in memalloc_async\n    cp_mem_ptr = cp.cuda.alloc(size)\n                 ^^^^^^^^^^^^^^^^^^^\n  File \"cupy/cuda/memory.pyx\", line 892, in cupy.cuda.memory.alloc\n  File \"cupy/cuda/memory.pyx\", line 904, in cupy.cuda.memory.alloc\n  File \"cupy/cuda/memory.pyx\", line 1614, in cupy.cuda.memory.MemoryPool.malloc\n  File \"cupy/cuda/memory.pyx\", line 1635, in cupy.cuda.memory.MemoryPool.malloc\n  File \"cupy/cuda/memory.pyx\", line 1350, in cupy.cuda.memory.SingleDeviceMemoryPool.malloc\n  File \"cupy/cuda/memory.pyx\", line 1376, in cupy.cuda.memory.SingleDeviceMemoryPool._malloc\n  File \"cupy/cuda/memory.pyx\", line 1560, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc\ncupy.cuda.memory.OutOfMemoryError: Out of memory allocating 1,874,294,272 bytes (allocated so far: 82,975,955,968 bytes).\n",
+            "history": [],
+            "coef_dtype": "float32",
+            "test_id": "mw_truncation__mw=7",
+            "wall_s": 3.274125744123012,
+            "cmd": "python <repo>/engine_benchmarks/engines/engine_cpp.py <repo>/results_on_A100_mw7_f32/engine_benchmarks/results/_work/cfg_cupauliprop_mw_truncation__mw=7.json <repo>/results_on_A100_mw7_f32/engine_benchmarks/results/_work/res_cupauliprop_mw_truncation__mw=7.json --coef-dtype float32",
+            "stderr_tail": []
+          }
+        },
+        "reference": {
+          "engine": "reference",
+          "status": "Success",
+          "reference_expval": -0.4290577175235314,
+          "reference_grad_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "reference_grad_values": [
+            0.15093284125716755,
+            0.5301058282389248,
+            0.07048152091404525,
+            -0.039906654087373816
+          ],
+          "n_qubits": 16,
+          "t_reference_s": 1.400489549152553,
+          "t_reference_grad_s": 1.1667907112278044,
+          "method": "exact statevector (padopauli.pennylane_expvals)",
+          "grad_method": "central difference, h=1e-4",
+          "history": [],
+          "test_id": "mw_truncation__mw=7"
+        },
+        "reference_expval": -0.4290577175235314
+      }
+    ]
+  }
+}

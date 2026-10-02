@@ -1,0 +1,6 @@
+=== Summary: mw_truncation ===
+label                  engine       kind status     setup      eval(steady)   bwd(steady)    fwdbwd(steady)  vram(MB)   ram(MB)    occ(MB)    throughput     n_terms(prop→final)    expval         abs_err      grad_err    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  exact reference: -4.290577e-01
+mw=7                   cupauliprop  gpu  Error      —          —              —              —               —          —          —          —              —                      —              —            —           
+
