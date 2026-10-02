@@ -29,7 +29,7 @@
       "mw": 9,
       "propagated_terms": 254566,
       "final_terms": 853,
-      "compile_s": 2.0117403478361666,
+      "compile_s": 2.0153454430401325,
       "vram_gb": 0.06471109390258789
     },
     {
@@ -37,7 +37,7 @@
       "mw": 9,
       "propagated_terms": 718276,
       "final_terms": 2088,
-      "compile_s": 0.4403140000067651,
+      "compile_s": 0.4631967330351472,
       "vram_gb": 0.14711761474609375
     },
     {
@@ -45,7 +45,7 @@
       "mw": 10,
       "propagated_terms": 2604018,
       "final_terms": 3867,
-      "compile_s": 0.46161913499236107,
+      "compile_s": 0.47937569860368967,
       "vram_gb": 0.5101642608642578
     },
     {
@@ -53,7 +53,7 @@
       "mw": 9,
       "propagated_terms": 795534,
       "final_terms": 2485,
-      "compile_s": 0.6471651187166572,
+      "compile_s": 0.6990836514160037,
       "vram_gb": 0.1738910675048828
     }
   ]

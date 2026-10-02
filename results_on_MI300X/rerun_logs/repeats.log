@@ -1,0 +1,157 @@
+[env] python=3.11.15 torch=2.11.0+rocm7.2 gpu=AMD Instinct MI300X VF
+[02:34:40] snapshotted repo results trees into <repo>/results_on_MI300X/repeat_timing/_repo_snapshot
+[02:34:40] ===== START Thu Oct  1 02:34:40 UTC 2026  repeats=5  jobs=[grad_quasi noise minabs frontier frontier_seeds wmax qubit qubit_seeds ablation stress figures kicked diffmode repeats tutorials examples]  once=[diff_mode fwdbwd sweep] =====
+torch 2.11.0+rocm7.2 gpu AMD Instinct MI300X VF
+[02:34:41] ----- repeat 1 / 5 -----
+[02:34:41] unknown job 'grad_quasi' -- skipped
+[02:34:41] unknown job 'noise' -- skipped
+[02:34:41] unknown job 'minabs' -- skipped
+[02:34:41] unknown job 'frontier' -- skipped
+[02:34:41] unknown job 'frontier_seeds' -- skipped
+[02:34:41] unknown job 'wmax' -- skipped
+[02:34:41] START  r1_qubit
+[03:08:21] ok  r1_qubit  (rc=0, 2020s)
+[03:08:21] unknown job 'qubit_seeds' -- skipped
+[03:08:21] unknown job 'ablation' -- skipped
+[03:08:21] unknown job 'stress' -- skipped
+[03:08:21] unknown job 'figures' -- skipped
+[03:08:21] START  r1_kicked
+[03:12:33] ok  r1_kicked  (rc=0, 252s)
+[03:12:33] unknown job 'diffmode' -- skipped
+[03:12:33] unknown job 'repeats' -- skipped
+[03:12:33] unknown job 'tutorials' -- skipped
+[03:12:33] unknown job 'examples' -- skipped
+[03:12:33] ----- repeat 2 / 5 -----
+[03:12:33] unknown job 'grad_quasi' -- skipped
+[03:12:33] unknown job 'noise' -- skipped
+[03:12:33] unknown job 'minabs' -- skipped
+[03:12:33] unknown job 'frontier' -- skipped
+[03:12:33] unknown job 'frontier_seeds' -- skipped
+[03:12:33] unknown job 'wmax' -- skipped
+[03:12:33] START  r2_qubit
+[03:46:11] ok  r2_qubit  (rc=0, 2018s)
+[03:46:11] unknown job 'qubit_seeds' -- skipped
+[03:46:11] unknown job 'ablation' -- skipped
+[03:46:11] unknown job 'stress' -- skipped
+[03:46:11] unknown job 'figures' -- skipped
+[03:46:11] START  r2_kicked
+[03:50:17] ok  r2_kicked  (rc=0, 246s)
+[03:50:17] unknown job 'diffmode' -- skipped
+[03:50:17] unknown job 'repeats' -- skipped
+[03:50:17] unknown job 'tutorials' -- skipped
+[03:50:17] unknown job 'examples' -- skipped
+[03:50:17] ----- repeat 3 / 5 -----
+[03:50:17] unknown job 'grad_quasi' -- skipped
+[03:50:17] unknown job 'noise' -- skipped
+[03:50:17] unknown job 'minabs' -- skipped
+[03:50:17] unknown job 'frontier' -- skipped
+[03:50:17] unknown job 'frontier_seeds' -- skipped
+[03:50:17] unknown job 'wmax' -- skipped
+[03:50:17] START  r3_qubit
+[04:23:52] ok  r3_qubit  (rc=0, 2015s)
+[04:23:52] unknown job 'qubit_seeds' -- skipped
+[04:23:52] unknown job 'ablation' -- skipped
+[04:23:52] unknown job 'stress' -- skipped
+[04:23:52] unknown job 'figures' -- skipped
+[04:23:52] START  r3_kicked
+[04:27:58] ok  r3_kicked  (rc=0, 246s)
+[04:27:58] unknown job 'diffmode' -- skipped
+[04:27:58] unknown job 'repeats' -- skipped
+[04:27:58] unknown job 'tutorials' -- skipped
+[04:27:58] unknown job 'examples' -- skipped
+[04:27:58] ----- repeat 4 / 5 -----
+[04:27:58] unknown job 'grad_quasi' -- skipped
+[04:27:58] unknown job 'noise' -- skipped
+[04:27:58] unknown job 'minabs' -- skipped
+[04:27:58] unknown job 'frontier' -- skipped
+[04:27:58] unknown job 'frontier_seeds' -- skipped
+[04:27:58] unknown job 'wmax' -- skipped
+[04:27:58] START  r4_qubit
+[05:01:30] ok  r4_qubit  (rc=0, 2012s)
+[05:01:30] unknown job 'qubit_seeds' -- skipped
+[05:01:30] unknown job 'ablation' -- skipped
+[05:01:30] unknown job 'stress' -- skipped
+[05:01:30] unknown job 'figures' -- skipped
+[05:01:30] START  r4_kicked
+[05:05:35] ok  r4_kicked  (rc=0, 245s)
+[05:05:35] unknown job 'diffmode' -- skipped
+[05:05:35] unknown job 'repeats' -- skipped
+[05:05:35] unknown job 'tutorials' -- skipped
+[05:05:35] unknown job 'examples' -- skipped
+[05:05:35] ----- repeat 5 / 5 -----
+[05:05:35] unknown job 'grad_quasi' -- skipped
+[05:05:35] unknown job 'noise' -- skipped
+[05:05:35] unknown job 'minabs' -- skipped
+[05:05:35] unknown job 'frontier' -- skipped
+[05:05:35] unknown job 'frontier_seeds' -- skipped
+[05:05:35] unknown job 'wmax' -- skipped
+[05:05:35] START  r5_qubit
+[05:39:07] ok  r5_qubit  (rc=0, 2012s)
+[05:39:07] unknown job 'qubit_seeds' -- skipped
+[05:39:07] unknown job 'ablation' -- skipped
+[05:39:07] unknown job 'stress' -- skipped
+[05:39:07] unknown job 'figures' -- skipped
+[05:39:07] START  r5_kicked
+[05:43:12] ok  r5_kicked  (rc=0, 245s)
+[05:43:12] unknown job 'diffmode' -- skipped
+[05:43:12] unknown job 'repeats' -- skipped
+[05:43:12] unknown job 'tutorials' -- skipped
+[05:43:12] unknown job 'examples' -- skipped
+[05:43:12] restored repo results trees from the pre-run snapshot
+[05:43:12] ===== DONE Thu Oct  1 05:43:12 UTC 2026 =====
+repeat  job     status  exit  seconds  started
+1       qubit   ok      0     2020     02:34:41
+1       kicked  ok      0     252      03:08:21
+2       qubit   ok      0     2018     03:12:33
+2       kicked  ok      0     246      03:46:11
+3       qubit   ok      0     2015     03:50:17
+3       kicked  ok      0     246      04:23:52
+4       qubit   ok      0     2012     04:27:58
+4       kicked  ok      0     245      05:01:30
+5       qubit   ok      0     2012     05:05:35
+5       kicked  ok      0     245      05:39:07
+
+
+=== qubit sweep  (5 repeats)
+  term counts identical across repeats: True
+  n= 10  propagate median 0.98s  (range 0.95-1.02s, n=5)
+         compile   median 1.55s  (range 1.54-1.63s, n=5)
+         VRAM      median 0.002GB  (range 0.002-0.002GB, n=5)
+  n= 20  propagate median 1.61s  (range 1.60-1.65s, n=5)
+         compile   median 2.44s  (range 2.43-2.54s, n=5)
+         VRAM      median 0.025GB  (range 0.025-0.025GB, n=5)
+  n= 30  propagate median 2.33s  (range 2.27-2.42s, n=5)
+         compile   median 3.61s  (range 3.57-3.79s, n=5)
+         VRAM      median 0.193GB  (range 0.193-0.193GB, n=5)
+  n= 40  propagate median 3.59s  (range 3.52-3.69s, n=5)
+         compile   median 5.54s  (range 5.38-5.66s, n=5)
+         VRAM      median 0.754GB  (range 0.754-0.754GB, n=5)
+  n= 50  propagate median 4.92s  (range 4.88-5.04s, n=5)
+         compile   median 7.57s  (range 7.51-7.76s, n=5)
+         VRAM      median 2.301GB  (range 2.301-2.301GB, n=5)
+  n= 60  propagate median 6.77s  (range 6.70-7.06s, n=5)
+         compile   median 10.26s  (range 10.22-10.72s, n=5)
+         VRAM      median 5.621GB  (range 5.621-5.621GB, n=5)
+  n= 70  propagate median 11.45s  (range 11.29-11.46s, n=5)
+         compile   median 16.06s  (range 15.88-16.18s, n=5)
+         VRAM      median 12.283GB  (range 12.283-12.283GB, n=5)
+  n= 80  propagate median 17.07s  (range 17.00-17.34s, n=5)
+         compile   median 22.96s  (range 22.88-23.44s, n=5)
+         VRAM      median 23.127GB  (range 23.127-23.127GB, n=5)
+  n= 90  propagate median 25.26s  (range 25.18-25.49s, n=5)
+         compile   median 32.73s  (range 32.60-33.12s, n=5)
+         VRAM      median 41.871GB  (range 41.871-41.871GB, n=5)
+  n=100  propagate median 38.40s  (range 38.30-38.65s, n=5)
+         compile   median 47.90s  (range 47.53-48.15s, n=5)
+         VRAM      median 65.324GB  (range 65.324-65.324GB, n=5)
+
+  cubic VRAM fit (10 points, max residual 0.883 GB):
+    1.86e-04 N^3 + -1.62e-02 N^2 + 4.52e-01 N + -3.46   (GB)
+
+=== kicked Ising 127q  (5 repeats)
+  sweep total time median 3.54min  (range 3.53-3.62min, n=5)
+  peak VRAM        median 0.6279GB  (range 0.6279-0.6279GB, n=5)
+  curve values identical across repeats: True
+
+wrote <repo>/results_on_MI300X/repeat_timing/repeat_summary.json
+[05:43:13] repeat_summary.json regenerated from 5 repeat(s)

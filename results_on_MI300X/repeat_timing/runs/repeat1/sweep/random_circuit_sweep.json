@@ -32,16 +32,16 @@
         "Z10Z11"
       ],
       "accuracy": {
-        "compile_s": 1.9311474524438381,
+        "compile_s": 1.9590303609147668,
         "vram_gb": 0.0647115707397461,
         "exact_device": "lightning.qubit",
         "peak_terms": null,
         "final_terms": null,
-        "max_abs": 0.009293420687307541,
-        "mean_abs": 0.0008174666163713664,
-        "rmse": 0.001753672459683405,
+        "max_abs": 0.00929342068730743,
+        "mean_abs": 0.0008174666163713744,
+        "rmse": 0.0017536724596834067,
         "per_obs_max": {
-          "Z0": 0.009293420687307541,
+          "Z0": 0.00929342068730743,
           "Z10Z11": 0.004110528839146029
         },
         "ref_rms": 0.5129422996304761,
@@ -53,50 +53,50 @@
       },
       "throughput": {
         "128": {
-          "pps_time_s": 0.010834523942321539,
-          "pps_samples_per_s": 11814.086219331677,
+          "pps_time_s": 0.01112318690866232,
+          "pps_samples_per_s": 11507.493405538158,
           "baselines": {
             "lightning.qubit": {
-              "pl_time_s": 0.5799675169400871,
-              "pl_samples_per_s": 220.70201564965043,
-              "speedup": 53.52958007454605
+              "pl_time_s": 0.7919425377622247,
+              "pl_samples_per_s": 161.62788825776033,
+              "speedup": 71.19744945987465
             },
             "lightning.amdgpu": {
-              "pl_time_s": 0.6377166053280234,
-              "pl_samples_per_s": 200.7161157959191,
-              "speedup": 58.85967936597484
+              "pl_time_s": 0.670262829400599,
+              "pl_samples_per_s": 190.96986194873364,
+              "speedup": 60.25816476019329
             }
           }
         },
         "256": {
-          "pps_time_s": 0.012143197003751993,
-          "pps_samples_per_s": 21081.762893322193,
+          "pps_time_s": 0.011526647955179214,
+          "pps_samples_per_s": 22209.405630799432,
           "baselines": {
             "lightning.qubit": {
-              "pl_time_s": 1.2217926890589297,
-              "pl_samples_per_s": 209.52818124749194,
-              "speedup": 100.61540537318315
+              "pl_time_s": 1.5233499761670828,
+              "pl_samples_per_s": 168.05068041168343,
+              "speedup": 132.158974759232
             },
             "lightning.amdgpu": {
-              "pl_time_s": 1.291462890803814,
-              "pl_samples_per_s": 198.22482072300517,
-              "speedup": 106.35279081816584
+              "pl_time_s": 1.3155046915635467,
+              "pl_samples_per_s": 194.60211859505458,
+              "speedup": 114.12725509435353
             }
           }
         },
         "512": {
-          "pps_time_s": 0.014043846633285284,
-          "pps_samples_per_s": 36457.248029646675,
+          "pps_time_s": 0.013929980807006359,
+          "pps_samples_per_s": 36755.255236423545,
           "baselines": {
             "lightning.qubit": {
-              "pl_time_s": 2.529728739988059,
-              "pl_samples_per_s": 202.3932415783112,
-              "speedup": 180.13075804974653
+              "pl_time_s": 3.078095660544932,
+              "pl_samples_per_s": 166.33661083468664,
+              "speedup": 220.9691243075326
             },
             "lightning.amdgpu": {
-              "pl_time_s": 2.369413313921541,
-              "pl_samples_per_s": 216.08724699558854,
-              "speedup": 168.7154079499701
+              "pl_time_s": 2.4595961356535554,
+              "pl_samples_per_s": 208.16425614685443,
+              "speedup": 176.568522938413
             }
           }
         }
@@ -112,16 +112,16 @@
         "Z14Z15"
       ],
       "accuracy": {
-        "compile_s": 0.4330115648917854,
+        "compile_s": 0.4262307854369283,
         "vram_gb": 0.2214512825012207,
         "exact_device": "lightning.qubit",
         "peak_terms": null,
         "final_terms": null,
-        "max_abs": 0.04381596974886576,
-        "mean_abs": 0.0031350331760953104,
-        "rmse": 0.006156679888152055,
+        "max_abs": 0.04381596974886573,
+        "mean_abs": 0.0031350331760953047,
+        "rmse": 0.006156679888152054,
         "per_obs_max": {
-          "Z0": 0.04381596974886576,
+          "Z0": 0.04381596974886573,
           "Z14Z15": 0.02364549699467433
         },
         "ref_rms": 0.5073083990542506,
@@ -133,50 +133,50 @@
       },
       "throughput": {
         "128": {
-          "pps_time_s": 0.016880060080438852,
-          "pps_samples_per_s": 7582.911399013944,
+          "pps_time_s": 0.01687539555132389,
+          "pps_samples_per_s": 7585.007392016852,
           "baselines": {
             "lightning.qubit": {
-              "pl_time_s": 1.7492120550014079,
-              "pl_samples_per_s": 73.17580486254823,
-              "speedup": 103.62593774345922
+              "pl_time_s": 2.0978385284543037,
+              "pl_samples_per_s": 61.01518218101893,
+              "speedup": 124.31344332487224
             },
             "lightning.amdgpu": {
-              "pl_time_s": 0.9101538630202413,
-              "pl_samples_per_s": 140.6355619644866,
-              "speedup": 53.91887580275596
+              "pl_time_s": 0.9458288764581084,
+              "pl_samples_per_s": 135.3310341711366,
+              "speedup": 56.04780483998239
             }
           }
         },
         "256": {
-          "pps_time_s": 0.017014131881296635,
-          "pps_samples_per_s": 15046.315720722532,
+          "pps_time_s": 0.016886829398572445,
+          "pps_samples_per_s": 15159.74336909221,
           "baselines": {
             "lightning.qubit": {
-              "pl_time_s": 3.5255570486187935,
-              "pl_samples_per_s": 72.61263864679003,
-              "speedup": 207.21345486303548
+              "pl_time_s": 4.174543371424079,
+              "pl_samples_per_s": 61.32407241289954,
+              "speedup": 247.20705544505478
             },
             "lightning.amdgpu": {
-              "pl_time_s": 1.867033515125513,
-              "pl_samples_per_s": 137.11591030693958,
-              "speedup": 109.73428019433148
+              "pl_time_s": 1.927872035652399,
+              "pl_samples_per_s": 132.78889639237318,
+              "speedup": 114.16423948804594
             }
           }
         },
         "512": {
-          "pps_time_s": 0.020131820812821388,
-          "pps_samples_per_s": 25432.37418812717,
+          "pps_time_s": 0.020443350076675415,
+          "pps_samples_per_s": 25044.818881429812,
           "baselines": {
             "lightning.qubit": {
-              "pl_time_s": 7.073199241422117,
-              "pl_samples_per_s": 72.38591513181505,
-              "speedup": 351.3442379199698
+              "pl_time_s": 8.275487957522273,
+              "pl_samples_per_s": 61.8694634839751,
+              "speedup": 404.800970803904
             },
             "lightning.amdgpu": {
-              "pl_time_s": 3.916830639820546,
-              "pl_samples_per_s": 130.71793168556755,
-              "speedup": 194.55918449890174
+              "pl_time_s": 3.9155041286721826,
+              "pl_samples_per_s": 130.76221686264148,
+              "speedup": 191.52947603922942
             }
           }
         }
@@ -192,7 +192,7 @@
         "Z18Z19"
       ],
       "accuracy": {
-        "compile_s": 0.5975743252784014,
+        "compile_s": 0.6014552507549524,
         "vram_gb": 0.24826288223266602,
         "exact_device": "lightning.amdgpu",
         "peak_terms": null,
@@ -213,35 +213,35 @@
       },
       "throughput": {
         "128": {
-          "pps_time_s": 0.023851013276726007,
-          "pps_samples_per_s": 5366.648306086992,
+          "pps_time_s": 0.023930925875902176,
+          "pps_samples_per_s": 5348.727444302215,
           "baselines": {
             "lightning.amdgpu": {
-              "pl_time_s": 2.102522384840995,
-              "pl_samples_per_s": 60.87925670749998,
-              "speedup": 88.15232964935086
+              "pl_time_s": 2.1627549417316914,
+              "pl_samples_per_s": 59.183774143875944,
+              "speedup": 90.37489618859794
             }
           }
         },
         "256": {
-          "pps_time_s": 0.02631707489490509,
-          "pps_samples_per_s": 9727.524849259022,
+          "pps_time_s": 0.02520770113915205,
+          "pps_samples_per_s": 10155.626591525492,
           "baselines": {
             "lightning.amdgpu": {
-              "pl_time_s": 4.286381267942488,
-              "pl_samples_per_s": 59.72403852979763,
-              "speedup": 162.87453241136308
+              "pl_time_s": 4.397145775146782,
+              "pl_samples_per_s": 58.21958449659413,
+              "speedup": 174.43660375349467
             }
           }
         },
         "512": {
-          "pps_time_s": 0.0292563671246171,
-          "pps_samples_per_s": 17500.46401247096,
+          "pps_time_s": 0.02945671696215868,
+          "pps_samples_per_s": 17381.43462008127,
           "baselines": {
             "lightning.amdgpu": {
-              "pl_time_s": 8.519677127711475,
-              "pl_samples_per_s": 60.09617410672129,
-              "speedup": 291.2076229909895
+              "pl_time_s": 8.8118656007573,
+              "pl_samples_per_s": 58.10347356591528,
+              "speedup": 299.14622230567613
             }
           }
         }
@@ -249,14 +249,14 @@
     }
   },
   "n16_mw10": {
-    "compile_s": 0.46215656120330095,
+    "compile_s": 0.44578474666923285,
     "vram_gb": 0.5845742225646973,
     "max_abs": 0.018880285933832897,
-    "mean_abs": 0.0015620261630084626,
+    "mean_abs": 0.0015620261630084659,
     "ref_rms": 0.5073083990542506,
-    "ref_mean_abs": 0.435249558055118,
+    "ref_mean_abs": 0.4352495580551181,
     "per_obs_max": {
-      "Z0": 0.0033476742056315345,
+      "Z0": 0.00334767420563159,
       "Z14Z15": 0.018880285933832897
     }
   },

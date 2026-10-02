@@ -1,0 +1,46 @@
+propagate:   0%|          | 0/266 [00:00<?, ?it/s]propagate:   0%|          | 1/266 [00:00<03:36,  1.22it/s]propagate:  15%|█▌        | 40/266 [00:01<00:05, 43.31it/s]propagate:  45%|████▌     | 120/266 [00:01<00:01, 145.04it/s]propagate:  71%|███████   | 189/266 [00:01<00:00, 232.53it/s]propagate: 100%|██████████| 266/266 [00:01<00:00, 182.23it/s]
+[PPS Info] Propagation complete. Terms generated: 69,665
+zero-filter:   0%|          | 0/266 [00:00<?, ?it/s]zero-filter:   0%|          | 1/266 [00:00<02:08,  2.06it/s, step=265 rows=696 cols=696 nnz=69665]zero-filter:  36%|███▌      | 95/266 [00:00<00:00, 215.03it/s, step=177 rows=50511 cols=50337 nnz=2701]zero-filter:  76%|███████▌  | 201/266 [00:00<00:00, 421.48it/s, step=65 rows=5280 cols=5154 nnz=510]   zero-filter: 100%|██████████| 266/266 [00:00<00:00, 357.60it/s, step=0 rows=38 cols=34 nnz=4]       
+[PPS Info] Terms retained after pruning: 696 (0.999067% of peak)
+propagate:   0%|          | 0/266 [00:00<?, ?it/s]propagate:  31%|███       | 82/266 [00:00<00:00, 819.58it/s]propagate:  62%|██████▏   | 164/266 [00:00<00:00, 778.69it/s]propagate:  91%|█████████▏| 243/266 [00:00<00:00, 729.30it/s]propagate: 100%|██████████| 266/266 [00:00<00:00, 776.60it/s]
+[PPS Info] Propagation complete. Terms generated: 69,665
+zero-filter:   0%|          | 0/266 [00:00<?, ?it/s]zero-filter:  40%|████      | 107/266 [00:00<00:00, 1065.12it/s, step=161 rows=50288 cols=50202 nnz=8546]zero-filter:  81%|████████  | 215/266 [00:00<00:00, 1068.58it/s, step=57 rows=3208 cols=3032 nnz=316]    zero-filter: 100%|██████████| 266/266 [00:00<00:00, 1084.99it/s, step=0 rows=38 cols=34 nnz=4]       
+[PPS Info] Terms retained after pruning: 696 (0.999067% of peak)
+w=4 zf=on : terms=         696 resident=  0.058GB eval=   21.96ms batch200=    68.26ms fwdbwd=    0.07s err=[]
+propagate:   0%|          | 0/266 [00:00<?, ?it/s]propagate:  30%|███       | 80/266 [00:00<00:00, 789.54it/s]propagate:  60%|█████▉    | 159/266 [00:00<00:00, 753.84it/s]propagate:  88%|████████▊ | 235/266 [00:00<00:00, 726.91it/s]propagate: 100%|██████████| 266/266 [00:00<00:00, 764.34it/s]
+[PPS Info] Propagation complete. Terms generated: 69,665
+[PPS Info] zero_filter=False: skipping backprop pruning; all propagated terms kept.
+w=4 zf=off: terms=      69,665 resident=  0.176GB eval=   21.70ms batch200=   100.07ms fwdbwd=    0.07s err=[]
+w=4 parity: {'w_max': 4, 'expval_max_abs_diff': 0.0, 'grad_max_abs_diff': 2.384185791015625e-07}
+propagate:   0%|          | 0/266 [00:00<?, ?it/s]propagate:  30%|███       | 80/266 [00:00<00:00, 793.90it/s]propagate:  60%|██████    | 160/266 [00:00<00:00, 684.92it/s]propagate:  86%|████████▋ | 230/266 [00:00<00:00, 631.00it/s]propagate: 100%|██████████| 266/266 [00:00<00:00, 665.56it/s]
+[PPS Info] Propagation complete. Terms generated: 584,910
+zero-filter:   0%|          | 0/266 [00:00<?, ?it/s]zero-filter:  33%|███▎      | 89/266 [00:00<00:00, 888.12it/s, step=177 rows=488252 cols=487825 nnz=39324]zero-filter:  67%|██████▋   | 178/266 [00:00<00:00, 862.65it/s, step=89 rows=92703 cols=88842 nnz=13823]  zero-filter: 100%|██████████| 266/266 [00:00<00:00, 922.74it/s, step=0 rows=38 cols=34 nnz=4]           
+[PPS Info] Terms retained after pruning: 2,516 (0.430152% of peak)
+w=5 zf=on : terms=       2,516 resident=  1.091GB eval=   24.09ms batch200=   769.11ms fwdbwd=    0.07s err=[]
+propagate:   0%|          | 0/266 [00:00<?, ?it/s]propagate:  30%|██▉       | 79/266 [00:00<00:00, 788.78it/s]propagate:  59%|█████▉    | 158/266 [00:00<00:00, 686.75it/s]propagate:  86%|████████▌ | 228/266 [00:00<00:00, 630.68it/s]propagate: 100%|██████████| 266/266 [00:00<00:00, 663.51it/s]
+[PPS Info] Propagation complete. Terms generated: 584,910
+[PPS Info] zero_filter=False: skipping backprop pruning; all propagated terms kept.
+w=5 zf=off: terms=     584,910 resident=  1.651GB eval=   24.03ms batch200=  1266.07ms fwdbwd=    0.07s err=[]
+w=5 parity: {'w_max': 5, 'expval_max_abs_diff': 0.0, 'grad_max_abs_diff': 2.384185791015625e-07}
+propagate:   0%|          | 0/266 [00:00<?, ?it/s]propagate:  29%|██▉       | 78/266 [00:00<00:00, 772.60it/s]propagate:  59%|█████▊    | 156/266 [00:00<00:00, 485.60it/s]propagate:  79%|███████▉  | 211/266 [00:00<00:00, 398.98it/s]propagate:  96%|█████████▌| 255/266 [00:00<00:00, 357.00it/s]propagate: 100%|██████████| 266/266 [00:00<00:00, 409.80it/s]
+[PPS Info] Propagation complete. Terms generated: 3,504,271
+zero-filter:   0%|          | 0/266 [00:00<?, ?it/s]zero-filter:  22%|██▏       | 58/266 [00:00<00:00, 574.70it/s, step=209 rows=1725310 cols=1891257 nnz=848389]zero-filter:  44%|████▎     | 116/266 [00:00<00:00, 547.48it/s, step=153 rows=3201702 cols=3170953 nnz=783425]zero-filter:  69%|██████▉   | 183/266 [00:00<00:00, 599.88it/s, step=89 rows=568072 cols=539133 nnz=106359]   zero-filter: 100%|██████████| 266/266 [00:00<00:00, 677.00it/s, step=0 rows=38 cols=34 nnz=4]              
+[PPS Info] Terms retained after pruning: 6,884 (0.196446% of peak)
+w=6 zf=on : terms=       6,884 resident=  7.607GB eval=   31.22ms batch200=  5201.43ms fwdbwd=    0.09s err=[]
+propagate:   0%|          | 0/266 [00:00<?, ?it/s]propagate:  29%|██▊       | 76/266 [00:00<00:00, 758.49it/s]propagate:  57%|█████▋    | 152/266 [00:00<00:00, 500.64it/s]propagate:  78%|███████▊  | 208/266 [00:00<00:00, 405.89it/s]propagate:  95%|█████████▌| 253/266 [00:00<00:00, 363.00it/s]propagate: 100%|██████████| 266/266 [00:00<00:00, 417.56it/s]
+[PPS Info] Propagation complete. Terms generated: 3,504,271
+[PPS Info] zero_filter=False: skipping backprop pruning; all propagated terms kept.
+w=6 zf=off: terms=   3,504,271 resident= 10.472GB eval=   36.84ms batch200=  7971.74ms fwdbwd=    0.09s err=[]
+w=6 parity: {'w_max': 6, 'expval_max_abs_diff': 0.0, 'grad_max_abs_diff': 3.5762786865234375e-07}
+propagate:   0%|          | 0/266 [00:00<?, ?it/s]propagate:  29%|██▉       | 78/266 [00:00<00:00, 777.18it/s]propagate:  59%|█████▊    | 156/266 [00:00<00:00, 205.79it/s]propagate:  74%|███████▎  | 196/266 [00:01<00:00, 139.27it/s]propagate:  83%|████████▎ | 222/266 [00:01<00:00, 127.66it/s]propagate:  91%|█████████ | 242/266 [00:01<00:00, 109.88it/s]propagate:  97%|█████████▋| 257/266 [00:01<00:00, 108.55it/s]propagate: 100%|██████████| 266/266 [00:01<00:00, 138.71it/s]
+[PPS Info] Propagation complete. Terms generated: 16,011,510
+zero-filter:   0%|          | 0/266 [00:00<?, ?it/s]zero-filter:   5%|▍         | 12/266 [00:00<00:02, 112.48it/s, step=257 rows=14892 cols=14892 nnz=16011510]zero-filter:  14%|█▍        | 37/266 [00:00<00:01, 190.92it/s, step=233 rows=664872 cols=798397 nnz=2313028]zero-filter:  23%|██▎       | 60/266 [00:00<00:01, 203.48it/s, step=209 rows=9009110 cols=9944106 nnz=4493461]zero-filter:  30%|███       | 81/266 [00:00<00:00, 193.04it/s, step=185 rows=15463967 cols=15482464 nnz=2312956]zero-filter:  38%|███▊      | 101/266 [00:00<00:00, 189.63it/s, step=169 rows=15672756 cols=15674651 nnz=2310173]zero-filter:  45%|████▌     | 121/266 [00:00<00:00, 171.46it/s, step=145 rows=14651459 cols=14596091 nnz=2242280]zero-filter:  53%|█████▎    | 142/266 [00:00<00:00, 182.33it/s, step=129 rows=13062858 cols=12971177 nnz=2110623]zero-filter:  63%|██████▎   | 168/266 [00:00<00:00, 204.29it/s, step=105 rows=6563194 cols=6086693 nnz=1586425]  zero-filter:  95%|█████████▌| 253/266 [00:00<00:00, 393.11it/s, step=17 rows=172 cols=154 nnz=22]              zero-filter: 100%|██████████| 266/266 [00:00<00:00, 268.03it/s, step=0 rows=38 cols=34 nnz=4]    
+[PPS Info] Terms retained after pruning: 14,892 (0.093008% of peak)
+w=7 zf=on : terms=      14,892 resident= 37.033GB eval=   84.30ms batch200= 22856.67ms fwdbwd=    0.19s err=[]
+propagate:   0%|          | 0/266 [00:00<?, ?it/s]propagate:  29%|██▉       | 77/266 [00:00<00:00, 761.89it/s]propagate:  58%|█████▊    | 154/266 [00:00<00:00, 208.91it/s]propagate:  73%|███████▎  | 194/266 [00:01<00:00, 141.70it/s]propagate:  83%|████████▎ | 220/266 [00:01<00:00, 129.04it/s]propagate:  90%|█████████ | 240/266 [00:01<00:00, 110.73it/s]propagate:  96%|█████████▌| 255/266 [00:01<00:00, 106.67it/s]propagate: 100%|██████████| 266/266 [00:01<00:00, 138.82it/s]
+[PPS Info] Propagation complete. Terms generated: 16,011,510
+[PPS Info] zero_filter=False: skipping backprop pruning; all propagated terms kept.
+w=7 zf=off: terms=  16,011,510 resident= 50.283GB eval=  117.12ms batch200= 33519.53ms fwdbwd=    0.26s err=[]
+w=7 parity: {'w_max': 7, 'expval_max_abs_diff': 0.0, 'grad_max_abs_diff': 2.384185791015625e-07}
+
+wrote <repo>/results_on_MI300X/zero_filter_ablation/results/zero_filter_ablation.json

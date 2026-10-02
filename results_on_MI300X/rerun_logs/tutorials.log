@@ -1,0 +1,32 @@
+=== tutorial/01_quickstart ===
+[NbConvertApp] Converting notebook 01_quickstart.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 66400 bytes to 01_quickstart.ipynb
+=== tutorial/03_training_with_compiled_program ===
+[NbConvertApp] Converting notebook 03_training_with_compiled_program.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 356830 bytes to 03_training_with_compiled_program.ipynb
+=== tutorial/04_embedding_batched_inputs_basics ===
+[NbConvertApp] Converting notebook 04_embedding_batched_inputs_basics.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 206605 bytes to 04_embedding_batched_inputs_basics.ipynb
+=== tutorial/06_quasi_probability_workflow ===
+[NbConvertApp] Converting notebook 06_quasi_probability_workflow.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 36686 bytes to 06_quasi_probability_workflow.ipynb
+=== tutorial/08_hybrid_classical_quantum ===
+[NbConvertApp] Converting notebook 08_hybrid_classical_quantum.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 41487 bytes to 08_hybrid_classical_quantum.ipynb
+=== tutorial/02_pennylane_reference_api ===
+[NbConvertApp] Converting notebook 02_pennylane_reference_api.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 52465 bytes to 02_pennylane_reference_api.ipynb
+=== tutorial/05_preset_tuning_gpu_budget ===
+[NbConvertApp] Converting notebook 05_preset_tuning_gpu_budget.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 28890 bytes to 05_preset_tuning_gpu_budget.ipynb
+=== tutorial/07_parameter_batch_evaluation ===
+[NbConvertApp] Converting notebook 07_parameter_batch_evaluation.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 30882 bytes to 07_parameter_batch_evaluation.ipynb

@@ -1,0 +1,103 @@
+
+########## n=12, mw=9 ##########
+propagate:   0%|          | 0/231 [00:00<?, ?it/s]propagate:   0%|          | 1/231 [00:00<02:29,  1.54it/s]propagate:   7%|▋         | 16/231 [00:00<00:09, 23.28it/s]propagate:  79%|███████▉  | 183/231 [00:01<00:00, 213.17it/s]propagate: 100%|██████████| 231/231 [00:01<00:00, 182.06it/s]
+[PPS Info] Propagation complete. Terms generated: 254,566
+zero-filter:   0%|          | 0/231 [00:00<?, ?it/s]zero-filter:   0%|          | 1/231 [00:00<02:05,  1.83it/s, step=230 rows=853 cols=936 nnz=76884]zero-filter:  50%|████▉     | 115/231 [00:00<00:00, 237.42it/s, step=118 rows=15 cols=15 nnz=27]  zero-filter: 100%|██████████| 231/231 [00:00<00:00, 323.71it/s, step=0 rows=2 cols=2 nnz=2]     
+[PPS Info] Terms retained after pruning: 853 (0.335080% of peak)
+[PPS Profile] compile_s=2.015225 propagate_s=1.269874 canonicalize_s=0.000000 zero_filter_s=0.714477
+n=12 mw=9: propagated=254,566 zero_filtered=853 compile=2.0s VRAM=0.1GB
+
+########## n=16, mw=9 ##########
+propagate:   0%|          | 0/372 [00:00<?, ?it/s]propagate:  50%|████▉     | 185/372 [00:00<00:00, 1840.36it/s]propagate:  99%|█████████▉| 370/372 [00:00<00:00, 1762.79it/s]propagate: 100%|██████████| 372/372 [00:00<00:00, 1752.82it/s]
+[PPS Info] Propagation complete. Terms generated: 718,276
+zero-filter:   0%|          | 0/372 [00:00<?, ?it/s]zero-filter:  34%|███▍      | 127/372 [00:00<00:00, 1262.53it/s, step=251 rows=140 cols=140 nnz=575]zero-filter:  77%|███████▋  | 288/372 [00:00<00:00, 1465.47it/s, step=91 rows=17 cols=17 nnz=0]     zero-filter: 100%|██████████| 372/372 [00:00<00:00, 1491.74it/s, step=0 rows=2 cols=2 nnz=2]   
+[PPS Info] Terms retained after pruning: 2,088 (0.290696% of peak)
+[PPS Profile] compile_s=0.463032 propagate_s=0.212466 canonicalize_s=0.000000 zero_filter_s=0.250209
+n=16 mw=9: propagated=718,276 zero_filtered=2,088 compile=0.5s VRAM=0.1GB
+
+########## n=16, mw=10 ##########
+propagate:   0%|          | 0/372 [00:00<?, ?it/s]propagate:  45%|████▍     | 166/372 [00:00<00:00, 1654.72it/s]propagate:  97%|█████████▋| 359/372 [00:00<00:00, 1815.95it/s]propagate: 100%|██████████| 372/372 [00:00<00:00, 1649.74it/s]
+[PPS Info] Propagation complete. Terms generated: 2,604,018
+zero-filter:   0%|          | 0/372 [00:00<?, ?it/s]zero-filter:  31%|███       | 114/372 [00:00<00:00, 1133.66it/s, step=259 rows=194 cols=194 nnz=683]zero-filter:  75%|███████▍  | 278/372 [00:00<00:00, 1429.54it/s, step=99 rows=17 cols=17 nnz=0]     zero-filter: 100%|██████████| 372/372 [00:00<00:00, 1483.44it/s, step=0 rows=2 cols=2 nnz=2]   
+[PPS Info] Terms retained after pruning: 3,867 (0.148501% of peak)
+[PPS Profile] compile_s=0.479230 propagate_s=0.225769 canonicalize_s=0.000000 zero_filter_s=0.253117
+n=16 mw=10: propagated=2,604,018 zero_filtered=3,867 compile=0.5s VRAM=0.5GB
+
+########## n=20, mw=9 ##########
+propagate:   0%|          | 0/531 [00:00<?, ?it/s]propagate:  35%|███▌      | 188/531 [00:00<00:00, 1869.95it/s]propagate:  77%|███████▋  | 411/531 [00:00<00:00, 2074.64it/s]propagate: 100%|██████████| 531/531 [00:00<00:00, 1896.33it/s]
+[PPS Info] Propagation complete. Terms generated: 795,534
+zero-filter:   0%|          | 0/531 [00:00<?, ?it/s]zero-filter:  23%|██▎       | 121/531 [00:00<00:00, 1203.35it/s, step=410 rows=636 cols=506 nnz=494]zero-filter:  46%|████▌     | 242/531 [00:00<00:00, 1111.89it/s, step=290 rows=108 cols=108 nnz=0]  zero-filter:  67%|██████▋   | 354/531 [00:00<00:00, 1063.11it/s, step=178 rows=16 cols=16 nnz=27] zero-filter: 100%|██████████| 531/531 [00:00<00:00, 1272.44it/s, step=0 rows=2 cols=2 nnz=2]     
+[PPS Info] Terms retained after pruning: 2,485 (0.312369% of peak)
+[PPS Profile] compile_s=0.698876 propagate_s=0.280230 canonicalize_s=0.000000 zero_filter_s=0.418319
+n=20 mw=9: propagated=795,534 zero_filtered=2,485 compile=0.7s VRAM=0.2GB
+
+[saved] <repo>/results_on_MI300X/random_circuit_statevector/results/random_circuit_termcounts.json
+
+################## n=12, mw=9 ##################
+full=231g emb=60 par=48 obs=['Z0', 'Z10Z11']
+propagate:   0%|          | 0/231 [00:00<?, ?it/s]propagate:   0%|          | 1/231 [00:00<02:36,  1.47it/s]propagate:   7%|▋         | 16/231 [00:00<00:09, 22.49it/s]propagate:  79%|███████▉  | 183/231 [00:01<00:00, 213.53it/s]propagate: 100%|██████████| 231/231 [00:01<00:00, 180.00it/s]
+[PPS Info] Propagation complete. Terms generated: 254,566
+zero-filter:   0%|          | 0/231 [00:00<?, ?it/s]zero-filter:   0%|          | 1/231 [00:00<02:09,  1.78it/s, step=230 rows=853 cols=936 nnz=76884]zero-filter:  55%|█████▍    | 127/231 [00:00<00:00, 256.72it/s, step=110 rows=15 cols=15 nnz=27]  zero-filter: 100%|██████████| 231/231 [00:00<00:00, 323.74it/s, step=0 rows=2 cols=2 nnz=2]     
+[PPS Info] Terms retained after pruning: 853 (0.335080% of peak)
+[A] compile=2.0s VRAM=0.1GB | max|Δ|=0.0093 mean=0.0008
+[B] forward throughput (PPS vs lightning.qubit, lightning.amdgpu):
+    batch  128: PPS    11679 s/s (0.011s)  | lightning.qubit   171.1 s/s (0.75s)  | x68
+    batch  128: PPS    11679 s/s (0.011s)  | lightning.amdgpu   197.1 s/s (0.65s)  | x59
+    batch  256: PPS    22645 s/s (0.011s)  | lightning.qubit   169.8 s/s (1.51s)  | x133
+    batch  256: PPS    22645 s/s (0.011s)  | lightning.amdgpu   197.2 s/s (1.30s)  | x115
+    batch  512: PPS    36867 s/s (0.014s)  | lightning.qubit   166.3 s/s (3.08s)  | x222
+    batch  512: PPS    36867 s/s (0.014s)  | lightning.amdgpu   201.1 s/s (2.55s)  | x183
+
+################## n=16, mw=9 ##################
+full=372g emb=80 par=64 obs=['Z0', 'Z14Z15']
+propagate:   0%|          | 0/372 [00:00<?, ?it/s]propagate:  53%|█████▎    | 196/372 [00:00<00:00, 1955.27it/s]propagate: 100%|██████████| 372/372 [00:00<00:00, 1829.62it/s]
+[PPS Info] Propagation complete. Terms generated: 718,276
+zero-filter:   0%|          | 0/372 [00:00<?, ?it/s]zero-filter:  32%|███▏      | 118/372 [00:00<00:00, 1179.41it/s, step=259 rows=140 cols=140 nnz=518]zero-filter:  79%|███████▉  | 293/372 [00:00<00:00, 1512.51it/s, step=83 rows=17 cols=17 nnz=0]     zero-filter: 100%|██████████| 372/372 [00:00<00:00, 1524.95it/s, step=0 rows=2 cols=2 nnz=2]   
+[PPS Info] Terms retained after pruning: 2,088 (0.290696% of peak)
+[A] compile=0.4s VRAM=0.2GB | max|Δ|=0.0438 mean=0.0031
+[B] forward throughput (PPS vs lightning.qubit, lightning.amdgpu):
+    batch  128: PPS     7451 s/s (0.017s)  | lightning.qubit    61.9 s/s (2.07s)  | x120
+    batch  128: PPS     7451 s/s (0.017s)  | lightning.amdgpu   130.8 s/s (0.98s)  | x57
+    batch  256: PPS    15315 s/s (0.017s)  | lightning.qubit    61.8 s/s (4.14s)  | x248
+    batch  256: PPS    15315 s/s (0.017s)  | lightning.amdgpu   130.8 s/s (1.96s)  | x117
+    batch  512: PPS    25229 s/s (0.020s)  | lightning.qubit    61.4 s/s (8.34s)  | x411
+    batch  512: PPS    25229 s/s (0.020s)  | lightning.amdgpu   130.1 s/s (3.94s)  | x194
+
+################## n=20, mw=9 ##################
+full=531g emb=100 par=80 obs=['Z0', 'Z18Z19']
+propagate:   0%|          | 0/531 [00:00<?, ?it/s]propagate:  35%|███▍      | 184/531 [00:00<00:00, 1836.53it/s]propagate:  78%|███████▊  | 413/531 [00:00<00:00, 2093.84it/s]propagate: 100%|██████████| 531/531 [00:00<00:00, 1924.01it/s]
+[PPS Info] Propagation complete. Terms generated: 795,534
+zero-filter:   0%|          | 0/531 [00:00<?, ?it/s]zero-filter:  24%|██▍       | 127/531 [00:00<00:00, 1261.75it/s, step=410 rows=636 cols=506 nnz=494]zero-filter:  53%|█████▎    | 283/531 [00:00<00:00, 1431.92it/s, step=250 rows=16 cols=16 nnz=27]   zero-filter:  88%|████████▊ | 469/531 [00:00<00:00, 1626.09it/s, step=66 rows=6 cols=5 nnz=1]    zero-filter: 100%|██████████| 531/531 [00:00<00:00, 1607.03it/s, step=0 rows=2 cols=2 nnz=2] 
+[PPS Info] Terms retained after pruning: 2,485 (0.312369% of peak)
+[A] compile=0.6s VRAM=0.2GB | max|Δ|=0.2038 mean=0.0180
+[B] forward throughput (PPS vs lightning.amdgpu):
+    batch  128: PPS     5223 s/s (0.025s)  | lightning.amdgpu    59.6 s/s (2.15s)  | x88
+    batch  256: PPS    10638 s/s (0.024s)  | lightning.amdgpu    57.7 s/s (4.44s)  | x184
+    batch  512: PPS    17747 s/s (0.029s)  | lightning.amdgpu    57.8 s/s (8.87s)  | x307
+
+################## extra: n=16 mw=10 (accuracy only) ##################
+propagate:   0%|          | 0/372 [00:00<?, ?it/s]propagate:  54%|█████▍    | 202/372 [00:00<00:00, 2002.88it/s]propagate: 100%|██████████| 372/372 [00:00<00:00, 1799.80it/s]
+[PPS Info] Propagation complete. Terms generated: 2,604,018
+zero-filter:   0%|          | 0/372 [00:00<?, ?it/s]zero-filter:  33%|███▎      | 123/372 [00:00<00:00, 1229.44it/s, step=251 rows=194 cols=194 nnz=683]zero-filter:  80%|████████  | 298/372 [00:00<00:00, 1533.76it/s, step=75 rows=6 cols=6 nnz=6]       zero-filter: 100%|██████████| 372/372 [00:00<00:00, 1563.76it/s, step=0 rows=2 cols=2 nnz=2] 
+[PPS Info] Terms retained after pruning: 3,867 (0.148501% of peak)
+n=16 mw=10: compile=0.4s VRAM=0.6GB max|Δ|=0.0189 mean=0.0016
+
+[saved] <repo>/results_on_MI300X/random_circuit_statevector/results/random_circuit_sweep.json
+propagate:   0%|          | 0/231 [00:00<?, ?it/s]propagate:   0%|          | 1/231 [00:00<02:25,  1.58it/s]propagate:   7%|▋         | 16/231 [00:00<00:09, 23.67it/s]propagate:  79%|███████▉  | 183/231 [00:01<00:00, 219.55it/s]propagate: 100%|██████████| 231/231 [00:01<00:00, 187.11it/s]
+[PPS Info] Propagation complete. Terms generated: 254,566
+zero-filter:   0%|          | 0/231 [00:00<?, ?it/s]zero-filter:   0%|          | 1/231 [00:00<02:02,  1.88it/s, step=230 rows=853 cols=936 nnz=76884]zero-filter:  53%|█████▎    | 122/231 [00:00<00:00, 257.85it/s, step=110 rows=15 cols=15 nnz=27]  zero-filter: 100%|██████████| 231/231 [00:00<00:00, 335.29it/s, step=0 rows=2 cols=2 nnz=2]     
+[PPS Info] Terms retained after pruning: 853 (0.335080% of peak)
+n=12: PPS 0.238s (24 ms/step) | lightning.qubit 4.512s (451 ms/step) | PPS x19.0 | loss PPS +0.571->+0.341 exact +0.571->+0.340
+n=12: PPS 0.238s (24 ms/step) | lightning.amdgpu 2.262s (226 ms/step) | PPS x9.5 | loss PPS +0.571->+0.341 exact +0.571->+0.340
+propagate:   0%|          | 0/372 [00:00<?, ?it/s]propagate:  52%|█████▏    | 194/372 [00:00<00:00, 1932.86it/s]propagate: 100%|██████████| 372/372 [00:00<00:00, 1714.23it/s]
+[PPS Info] Propagation complete. Terms generated: 718,276
+zero-filter:   0%|          | 0/372 [00:00<?, ?it/s]zero-filter:  36%|███▌      | 134/372 [00:00<00:00, 1332.65it/s, step=243 rows=140 cols=140 nnz=631]zero-filter:  83%|████████▎ | 307/372 [00:00<00:00, 1565.31it/s, step=67 rows=6 cols=6 nnz=6]       zero-filter: 100%|██████████| 372/372 [00:00<00:00, 1590.81it/s, step=0 rows=2 cols=2 nnz=2] 
+[PPS Info] Terms retained after pruning: 2,088 (0.290696% of peak)
+n=16: PPS 0.358s (36 ms/step) | lightning.qubit 14.700s (1470 ms/step) | PPS x41.0 | loss PPS +0.592->+0.422 exact +0.591->+0.423
+n=16: PPS 0.358s (36 ms/step) | lightning.amdgpu 3.453s (345 ms/step) | PPS x9.6 | loss PPS +0.592->+0.422 exact +0.591->+0.423
+propagate:   0%|          | 0/531 [00:00<?, ?it/s]propagate:  34%|███▎      | 179/531 [00:00<00:00, 1777.59it/s]propagate:  77%|███████▋  | 407/531 [00:00<00:00, 2069.41it/s]propagate: 100%|██████████| 531/531 [00:00<00:00, 1879.99it/s]
+[PPS Info] Propagation complete. Terms generated: 795,534
+zero-filter:   0%|          | 0/531 [00:00<?, ?it/s]zero-filter:  23%|██▎       | 124/531 [00:00<00:00, 1237.09it/s, step=410 rows=636 cols=506 nnz=494]zero-filter:  52%|█████▏    | 278/531 [00:00<00:00, 1412.33it/s, step=258 rows=16 cols=16 nnz=27]   zero-filter:  87%|████████▋ | 461/531 [00:00<00:00, 1600.17it/s, step=74 rows=6 cols=6 nnz=6]    zero-filter: 100%|██████████| 531/531 [00:00<00:00, 1584.50it/s, step=0 rows=2 cols=2 nnz=2] 
+[PPS Info] Terms retained after pruning: 2,485 (0.312369% of peak)
+n=20: PPS 0.486s (49 ms/step) | lightning.amdgpu 7.377s (738 ms/step) | PPS x15.2 | loss PPS +0.552->+0.238 exact +0.553->+0.242
+[saved] results/random_circuit_fwdbwd.json

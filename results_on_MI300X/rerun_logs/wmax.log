@@ -1,0 +1,34 @@
+
+=== launching preset=gpu w_max=2 ===
+propagate:   0%|          | 0/240 [00:00<?, ?it/s]propagate:   0%|          | 1/240 [00:00<03:16,  1.21it/s]propagate:  14%|█▍        | 33/240 [00:00<00:04, 48.26it/s]propagate:  50%|████▉     | 119/240 [00:01<00:00, 189.12it/s]propagate:  85%|████████▌ | 205/240 [00:01<00:00, 321.72it/s]propagate: 100%|██████████| 240/240 [00:01<00:00, 206.80it/s]
+[PPS Info] Propagation complete. Terms generated: 135
+zero-filter:   0%|          | 0/240 [00:00<?, ?it/s]zero-filter:   0%|          | 1/240 [00:00<02:04,  1.92it/s, step=239 rows=15 cols=15 nnz=135]zero-filter:  49%|████▉     | 117/240 [00:00<00:00, 251.27it/s, step=127 rows=135 cols=135 nnz=4]zero-filter:  95%|█████████▌| 228/240 [00:00<00:00, 452.80it/s, step=15 rows=122 cols=120 nnz=2] zero-filter: 100%|██████████| 240/240 [00:00<00:00, 328.04it/s, step=0 rows=37 cols=30 nnz=7]   
+[PPS Info] Terms retained after pruning: 15 (11.111111% of peak)
+[PPS Profile] compile_s=1.894463 propagate_s=1.161633 canonicalize_s=0.000000 zero_filter_s=0.732183
+[done] preset=gpu w_max=2 propagated=135 zero_filtered=15 VRAM_peak=0.002GB prop_s=1.16
+
+=== launching preset=gpu w_max=3 ===
+propagate:   0%|          | 0/240 [00:00<?, ?it/s]propagate:   0%|          | 1/240 [00:00<03:21,  1.19it/s]propagate:  16%|█▌        | 38/240 [00:00<00:03, 54.53it/s]propagate:  27%|██▋       | 65/240 [00:01<00:02, 68.19it/s]propagate:  59%|█████▉    | 142/240 [00:01<00:00, 176.46it/s]propagate:  92%|█████████▏| 220/240 [00:01<00:00, 284.74it/s]propagate: 100%|██████████| 240/240 [00:01<00:00, 164.71it/s]
+[PPS Info] Propagation complete. Terms generated: 3,247
+zero-filter:   0%|          | 0/240 [00:00<?, ?it/s]zero-filter:   0%|          | 1/240 [00:00<02:06,  1.90it/s, step=239 rows=120 cols=120 nnz=3247]zero-filter:  45%|████▌     | 109/240 [00:00<00:00, 231.38it/s, step=135 rows=2462 cols=2384 nnz=391]zero-filter:  85%|████████▌ | 205/240 [00:00<00:00, 400.81it/s, step=39 rows=487 cols=475 nnz=30]    zero-filter: 100%|██████████| 240/240 [00:00<00:00, 315.60it/s, step=0 rows=37 cols=30 nnz=7]    
+[PPS Info] Terms retained after pruning: 120 (3.695719% of peak)
+[PPS Profile] compile_s=2.219738 propagate_s=1.458122 canonicalize_s=0.000000 zero_filter_s=0.760991
+[done] preset=gpu w_max=3 propagated=3,247 zero_filtered=120 VRAM_peak=0.008GB prop_s=1.46
+
+=== launching preset=gpu w_max=4 ===
+propagate:   0%|          | 0/240 [00:00<?, ?it/s]propagate:   0%|          | 1/240 [00:00<03:21,  1.18it/s]propagate:  14%|█▍        | 34/240 [00:01<00:05, 36.36it/s]propagate:  47%|████▋     | 112/240 [00:01<00:00, 135.42it/s]propagate:  75%|███████▌  | 181/240 [00:01<00:00, 223.98it/s]propagate: 100%|██████████| 240/240 [00:01<00:00, 165.40it/s]
+[PPS Info] Propagation complete. Terms generated: 51,794
+zero-filter:   0%|          | 0/240 [00:00<?, ?it/s]zero-filter:   0%|          | 1/240 [00:00<02:01,  1.96it/s, step=239 rows=575 cols=575 nnz=51794]zero-filter:  37%|███▋      | 88/240 [00:00<00:00, 192.19it/s, step=159 rows=37046 cols=37124 nnz=2829]zero-filter:  73%|███████▎  | 175/240 [00:00<00:00, 353.22it/s, step=71 rows=8796 cols=8428 nnz=764]   zero-filter: 100%|██████████| 240/240 [00:00<00:00, 312.31it/s, step=0 rows=37 cols=30 nnz=7]       
+[PPS Info] Terms retained after pruning: 575 (1.110167% of peak)
+[PPS Profile] compile_s=2.222083 propagate_s=1.451963 canonicalize_s=0.000000 zero_filter_s=0.769474
+[done] preset=gpu w_max=4 propagated=51,794 zero_filtered=575 VRAM_peak=0.119GB prop_s=1.45
+
+=== launching preset=gpu w_max=5 ===
+propagate:   0%|          | 0/240 [00:00<?, ?it/s]propagate:   0%|          | 1/240 [00:00<03:14,  1.23it/s]propagate:  12%|█▎        | 30/240 [00:01<00:06, 32.45it/s]propagate:  42%|████▎     | 102/240 [00:01<00:01, 125.11it/s]propagate:  66%|██████▋   | 159/240 [00:01<00:00, 196.54it/s]propagate:  90%|████████▉ | 215/240 [00:01<00:00, 264.38it/s]propagate: 100%|██████████| 240/240 [00:01<00:00, 161.21it/s]
+[PPS Info] Propagation complete. Terms generated: 401,871
+zero-filter:   0%|          | 0/240 [00:00<?, ?it/s]zero-filter:   0%|          | 1/240 [00:00<02:03,  1.94it/s, step=239 rows=1940 cols=1940 nnz=401871]zero-filter:  36%|███▌      | 86/240 [00:00<00:00, 185.64it/s, step=159 rows=321223 cols=321646 nnz=32780]zero-filter:  70%|██████▉   | 167/240 [00:00<00:00, 333.16it/s, step=79 rows=76792 cols=73948 nnz=9338]   zero-filter: 100%|██████████| 240/240 [00:00<00:00, 304.63it/s, step=0 rows=37 cols=30 nnz=7]          
+[PPS Info] Terms retained after pruning: 1,940 (0.482742% of peak)
+[PPS Profile] compile_s=2.279194 propagate_s=1.489775 canonicalize_s=0.000000 zero_filter_s=0.788817
+[done] preset=gpu w_max=5 propagated=401,871 zero_filtered=1,940 VRAM_peak=0.834GB prop_s=1.49
+
+[ALL DONE] points: 4

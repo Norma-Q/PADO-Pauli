@@ -4,6 +4,7 @@
     "count": 1,
     "name": "AMD Instinct MI300X VF"
   },
+  "ld_preload": "/opt/rocm-7.2.4/lib/libhsa-runtime64.so.1",
   "packages": {
     "numpy": "2.4.6",
     "pennylane": "0.45.1",
@@ -18,5 +19,5 @@
   "python": "3.11.15",
   "result_file": "verify_small_heavyhex.json",
   "rocm_host": "7.2.4",
-  "timestamp_utc": "2026-09-07T08:31:27+00:00"
+  "timestamp_utc": "2026-10-01T02:10:33+00:00"
 }

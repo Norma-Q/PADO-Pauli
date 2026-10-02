@@ -1,0 +1,8 @@
+ w_max   min_abs  zero-filtered  compile s  peak GB  max |dev|  rms |dev|  shift vs w-1  plotted
+     3     1e-04              1      104.5     0.08     0.7375     0.4125           nan  yes
+     4     1e-04              1      116.3     0.08     0.2932     0.1396        0.5769  yes
+     5     1e-04              1      127.7     0.08     0.1385     0.0496        0.3489  yes
+     6     1e-04              4      133.5     0.10     0.1389     0.0507        0.0100  no
+     7     1e-04             42      153.2     0.28     0.0988     0.0374        0.0439  no
+     8     1e-04             60      215.1     0.63     0.0759     0.0321        0.0269  yes
+wrote <repo>/results_on_MI300X/kicked_ising_127q/figures/fig_kicked_ising_127q_wmax.png

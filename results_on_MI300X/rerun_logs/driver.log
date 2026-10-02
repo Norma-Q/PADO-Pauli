@@ -1,20 +1,62 @@
-[06:23:40] run start | jobs: grad_quasi minabs frontier frontier_seeds stress
-[06:23:41] run end
-[06:23:53] run start | jobs: grad_quasi minabs frontier frontier_seeds stress
-[06:23:53] START grad_quasi
-[06:24:06] DONE  grad_quasi (11s)
-[06:24:06] START minabs
-[06:24:16] DONE  minabs (8s)
-[06:24:16] START frontier
-[06:25:59] DONE  frontier (102s)
-[06:25:59] START frontier_seeds
-[06:29:03] DONE  frontier_seeds (183s)
-[06:29:03] START stress
-[06:32:30] DONE  stress (206s)
-[06:32:30] run end
-[07:00:58] run start | jobs: frontier frontier_seeds
-[07:00:58] START frontier
-[07:02:40] DONE  frontier (101s)
-[07:02:40] START frontier_seeds
-[07:05:59] DONE  frontier_seeds (198s)
-[07:05:59] run end
+[23:55:29] run start | jobs: grad_quasi noise minabs frontier frontier_seeds wmax qubit qubit_seeds ablation stress figures kicked diffmode repeats tutorials examples
+[23:55:29] START grad_quasi
+[23:55:43] DONE  grad_quasi (12s)
+[23:55:43] START noise
+[23:57:41] DONE  noise (117s)
+[23:57:41] START minabs
+[23:57:52] DONE  minabs (9s)
+[23:57:52] START frontier
+[00:00:11] DONE  frontier (138s)
+[00:00:11] START frontier_seeds
+[00:04:22] DONE  frontier_seeds (249s)
+[00:04:22] START wmax
+[00:05:04] DONE  wmax (41s)
+[00:05:04] START qubit
+[00:38:46] DONE  qubit (2019s)
+[00:38:46] START qubit_seeds
+[01:45:08] DONE  qubit_seeds (3980s)
+[01:45:08] START ablation
+[02:02:11] DONE  ablation (1022s)
+[02:02:11] START stress
+[02:06:20] DONE  stress (248s)
+[02:06:20] START figures
+[02:06:21] DONE  figures (1s)
+[02:06:21] START kicked
+[02:10:34] DONE  kicked (252s)
+[02:10:34] START diffmode
+[02:34:38] DONE  diffmode (1443s)
+[02:34:38] START repeats
+[05:43:14] DONE  repeats (11315s)
+[05:43:14] START tutorials
+[05:44:14] DONE  tutorials (60s)
+[05:44:14] START examples
+[05:49:46] DONE  examples (332s)
+[05:49:46] run end
+[05:49:46] START preset_comparison
+[06:13:59] DONE preset_comparison rc=0
+[06:14:29] START repeats_once (diff_mode fwdbwd sweep)
+[06:43:04] DONE repeats_once rc=0
+[06:47:09] START frontier_s7
+[06:47:32] DONE frontier_s7 rc=0
+[06:47:32] START frontier_s123
+[06:47:59] DONE frontier_s123 rc=0
+[06:47:59] START kicked_w3
+[06:49:45] DONE kicked_w3 rc=0
+[06:49:45] START kicked_w4
+[06:51:44] DONE kicked_w4 rc=0
+[06:51:44] START kicked_w5
+[06:53:53] DONE kicked_w5 rc=0
+[06:53:53] START kicked_w6
+[06:56:09] DONE kicked_w6 rc=0
+[06:56:09] START kicked_w7
+[06:58:44] DONE kicked_w7 rc=0
+[06:58:44] START kicked_wmax_figure
+[06:58:44] DONE kicked_wmax_figure rc=0
+[07:25:52] START stress_r2
+[07:30:35] DONE stress_r2 rc=0
+[07:30:35] START repeats_once_r2
+[07:35:13] DONE repeats_once_r2 rc=0
+[07:35:13] START preset_comparison_r2
+[08:00:56] DONE preset_comparison_r2 rc=0
+[09:48:45] START preset_comparison_r3 (REPS_SHORT=20, default threads) loadavg=0.05 0.29 0.52
+[10:12:08] DONE preset_comparison_r3 rc=0

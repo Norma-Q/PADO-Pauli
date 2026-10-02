@@ -1,0 +1,16 @@
+=== examples/01_kicked_ising_127q ===
+[NbConvertApp] Converting notebook 01_kicked_ising_127q.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 78744 bytes to 01_kicked_ising_127q.ipynb
+=== examples/02_vqe_h2_molecule ===
+[NbConvertApp] Converting notebook 02_vqe_h2_molecule.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 168181 bytes to 02_vqe_h2_molecule.ipynb
+=== examples/03_maxcut_qaoa ===
+[NbConvertApp] Converting notebook 03_maxcut_qaoa.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 72148 bytes to 03_maxcut_qaoa.ipynb
+=== examples/04_SAFE_ma-QAOA ===
+[NbConvertApp] Converting notebook 04_SAFE_ma-QAOA.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 159218 bytes to 04_SAFE_ma-QAOA.ipynb
