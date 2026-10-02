@@ -97,7 +97,7 @@ def diff_mode_summary():
     allmf = [v for b in by_w.values() for v in b["mf"]]
     meds = [st.median(by_w[w]["sp"]) for w in sorted(by_w)]
     print(f"  speedup medians per w_max: {['%.0fx'%m for m in meds]}, observed range {min(allsp):.1f}x-{max(allsp):.0f}x")
-    print(f"  memory saving {(1-max(allmf))*100:.1f}%-{(1-min(allmf))*100:.1f}%")
+    print(f"  reserved-memory saving {(1-max(allmf))*100:.1f}%-{(1-min(allmf))*100:.1f}%")
     wmax = max(by_w)
     print(f"  largest point (w={wmax}): manual {st.median(by_w[wmax]['mp']):.1f} GB vs autograd {st.median(by_w[wmax]['ap']):.1f} GB")
     return by_w
