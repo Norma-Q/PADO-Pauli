@@ -408,14 +408,15 @@ def make_full_scaling_cases(p_layers: int, smoke: bool, seed: int = 0) -> List[T
     return cases
 
 
-def make_mw_truncation_cases(p_layers: int, smoke: bool, seed: int = 0) -> List[TestCase]:
+def make_mw_truncation_cases(p_layers: int, smoke: bool, seed: int = 0,
+                             mw_levels: Optional[List[int]] = None) -> List[TestCase]:
     if smoke:
         prob = build_problem(2, 3)
         mw_values = [2, 3]
         label_qubits = 6
     else:
         prob = build_problem(4, 4)
-        mw_values = [2, 3, 4, 5, 6]
+        mw_values = list(mw_levels) if mw_levels else [2, 3, 4, 5, 6]
         label_qubits = 16
     gate_defs, n_p, _ = build_circuit_def(prob, p_layers)
     rng = np.random.default_rng(seed + 1)
@@ -838,6 +839,9 @@ def main() -> int:
     parser.add_argument("--suites", type=str,
                         default="full_scaling,mw_truncation,coeff_truncation,embedding_batch",
                         help="Comma-separated subset of suites to run")
+    parser.add_argument("--mw-values", type=str, default="2,3,4,5,6",
+                        help="Comma-separated max-weight thresholds of the 16-qubit "
+                             "mw_truncation suite (the circuit and angles do not depend on them)")
     parser.add_argument("--p-layers", type=int, default=3,
                         help="Number of QAOA layers")
     parser.add_argument("--n-reps", type=int, default=5,
@@ -899,7 +903,9 @@ def main() -> int:
             c.n_reps = args.n_reps
         cases_by_suite["full_scaling"] = cases
     if "mw_truncation" in selected_suites:
-        cases = make_mw_truncation_cases(args.p_layers, args.smoke_test)
+        cases = make_mw_truncation_cases(
+            args.p_layers, args.smoke_test,
+            mw_levels=[int(v) for v in args.mw_values.split(",") if v.strip()])
         for c in cases:
             c.n_reps = args.n_reps
         cases_by_suite["mw_truncation"] = cases
