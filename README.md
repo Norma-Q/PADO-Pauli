@@ -180,7 +180,9 @@ Developed and maintained by Hyunwoo Kim (<hw_kim@norma.co.kr>,
 
 If you use PADO-Pauli in your research, please cite it via the Zenodo DOI
 [10.5281/zenodo.22627344](https://doi.org/10.5281/zenodo.22627344) (all versions;
-2.0.0 is [10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345)) or use the
+2.0.0 is [10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345); the snapshot
+behind the manuscript, tag `v2.0.0-paper`, is
+[10.5281/zenodo.23092685](https://doi.org/10.5281/zenodo.23092685)) or use the
 "Cite this repository" button, which reads [CITATION.cff](CITATION.cff).
 
 PADO-Pauli was first released publicly in February 2026 (1.0.0); that history is preserved
@@ -367,7 +369,8 @@ Youngseok Lee(<ys_lee@norma.co.kr>, <pop756hh@gmail.com>)가 개발하고 유지
 
 연구에 PADO-Pauli를 사용한 경우 Zenodo DOI
 [10.5281/zenodo.22627344](https://doi.org/10.5281/zenodo.22627344)(전체 버전; 2.0.0은
-[10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345))로 인용하거나,
+[10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345), 논문에 쓴 스냅샷인 태그
+`v2.0.0-paper`는 [10.5281/zenodo.23092685](https://doi.org/10.5281/zenodo.23092685))로 인용하거나,
 [CITATION.cff](CITATION.cff)를 읽는 "Cite this repository" 버튼을 이용하십시오.
 
 PADO-Pauli는 2026년 2월에 처음 공개되었으며(1.0.0), 그 히스토리는 태그
