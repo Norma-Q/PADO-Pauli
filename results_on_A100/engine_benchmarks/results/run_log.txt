@@ -5,7 +5,6 @@
 [08:40:29] metric note: setup column is engine-specific; only PPS is a reusable padopauli compile_program compile.
 [08:40:29] truncation note: Qiskit uses max_terms/atol semantics, not PPS/CPP/Julia max_weight/build_min_abs semantics.
 [08:40:29] batch note: PPS uses native embedding batch; other SDKs loop over single-sample propagations and report throughput.
-[08:40:29] git commit: ddc290685417d7811cdb63208b1b651855ace353
 [08:40:29] results dir: <repo>/results_on_A100/engine_benchmarks/results
 [08:40:29] total test cases: 16 × engines 5 = 80 runs
 [08:40:29] 

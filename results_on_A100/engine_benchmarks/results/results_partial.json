@@ -8,7 +8,6 @@
       "julia",
       "julia_surrogate"
     ],
-    "git_commit": "ddc290685417d7811cdb63208b1b651855ace353",
     "p_layers": 3,
     "n_reps": 5,
     "smoke_test": false
