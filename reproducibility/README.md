@@ -125,8 +125,10 @@ effect. Sidecars rather than a new key because several result files are JSON
 lists at the top level. Inspect the current environment with `python -m reproducibility._runmeta`.
 
 When comparing a re-run against the recorded data: *deterministic* quantities —
-term counts, accuracies, expectation values — should not move at all (float32
-round-off aside); *timing/memory* fields are hardware- and session-dependent and
+term counts, accuracies, expectation values — should agree up to floating-point
+round-off, except that at a loose truncation threshold an individual point can
+differ by more (`min_abs=1e-3` in `minabs_convergence.json`: absolute error
+6.9e-5 on the MI300X, 2.1e-3 on the A100); *timing/memory* fields are hardware- and session-dependent and
 are expected to differ.
 
 ## Paper artifact → script → data
@@ -180,8 +182,8 @@ PPS_JULIA=<path to julia> python benchmark_all_sdks.py \
 
 | Paper artifact | Source |
 |---|---|
-| Truncation-error table; forward-throughput table vs `lightning.qubit` (CPU, up to n=16) and `lightning.amdgpu` | `run_random_circuit_sweep.py` → `results/random_circuit_sweep.json` |
-| fwd+bwd Adam-loop speedups vs the same two exact baselines | `run_fwdbwd.py` → `repeat_timing/runs/repeat1/fwdbwd/random_circuit_fwdbwd.json`, the run the manuscript quotes (`fwdbwd` is a ONCE_JOB, so repeat1 is its only repeat). `results/random_circuit_fwdbwd.json` is a separate same-protocol run and agrees within about 1%: 16.9x vs `lightning.qubit` at n=16 where repeat1 reads 16.8x (9.4x vs 9.3x against `lightning.amdgpu`) |
+| Truncation-error table; forward-throughput table vs `lightning.amdgpu` | `run_random_circuit_sweep.py` → `results/random_circuit_sweep.json` |
+| fwd+bwd Adam-loop speedups vs `lightning.amdgpu` | `run_fwdbwd.py` → `repeat_timing/runs/repeat1/fwdbwd/random_circuit_fwdbwd.json`, the run the manuscript quotes (`fwdbwd` is a ONCE_JOB, so repeat1 is its only repeat). `results/random_circuit_fwdbwd.json` is a separate same-protocol run and agrees within about 4%: 9.6x vs `lightning.amdgpu` at n=16 where repeat1 reads 10.0x |
 | Propagated / zero-filtered term-count columns of the truncation-error table | `run_random_circuit_termcounts.py` → `results/random_circuit_termcounts.json` |
 
 Random quantum circuit `U(γ)+V(θ)`: random RX+CZ generative circuit `U(γ)` with
