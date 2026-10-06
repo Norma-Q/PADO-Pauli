@@ -29,5 +29,5 @@ identifiers:
     value: 10.5281/zenodo.22627344
     description: "Concept DOI (all versions)"
   - type: doi
-    value: 10.5281/zenodo.23092685
-    description: "Snapshot v2.0.0-paper: scripts and recorded data behind the manuscript"
+    value: 10.5281/zenodo.23183558
+    description: "Snapshot v2.0.0-paper2: scripts and recorded data behind the manuscript"
