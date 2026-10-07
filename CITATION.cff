@@ -3,9 +3,9 @@ message: "If you use PADO-Pauli in your research, please cite it as below."
 title: "PADO-Pauli"
 abstract: "A GPU-accelerated, differentiable Pauli-propagation surrogate (PPS) engine for simulating expectation values and gradients of parameterized quantum circuits, shipped as the Python package padopauli. The license field covers this repository (scripts, notebooks and recorded data); the padopauli wheels are distributed under the NORMA Binary License 1.0."
 type: software
-version: 2.0.0
-date-released: 2026-09-07
-doi: 10.5281/zenodo.22627345
+version: 2.0.1
+date-released: 2026-10-07
+doi: 10.5281/zenodo.22627344
 license: Apache-2.0
 repository-code: "https://github.com/Norma-Q/PADO-Pauli"
 url: "https://pypi.org/project/padopauli/"

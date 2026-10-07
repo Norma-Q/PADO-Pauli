@@ -40,7 +40,7 @@ documentation, worked examples, and the paper-reproduction suite.
 | Windows x64 | 3.11 / 3.12 | 2.11 – 2.12 | `cpu` |
 
 torch is auto-installed only if absent. macOS GPU execution is not supported because the
-engine has no MPS path. Windows NVIDIA execution is not part of the supported 2.0.0
+engine has no MPS path. Windows NVIDIA execution is not part of the supported 2.0.1
 surface until it is validated on real GPU hardware.
 
 **Linux GPU users (NVIDIA/CUDA or AMD/ROCm)**: install the torch 2.10–2.12 build matching
@@ -77,16 +77,16 @@ a specific file directly. Pick the one matching your OS and Python version
 
 ```bash
 # Linux x86-64
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.0/padopauli-2.0.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.11
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.0/padopauli-2.0.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.12
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.1/padopauli-2.0.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.11
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.1/padopauli-2.0.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.12
 
 # macOS Apple Silicon
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.0/padopauli-2.0.0-cp311-cp311-macosx_11_0_arm64.whl   # Python 3.11
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.0/padopauli-2.0.0-cp312-cp312-macosx_11_0_arm64.whl   # Python 3.12
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.1/padopauli-2.0.1-cp311-cp311-macosx_11_0_arm64.whl   # Python 3.11
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.1/padopauli-2.0.1-cp312-cp312-macosx_11_0_arm64.whl   # Python 3.12
 
 # Windows x64
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.0/padopauli-2.0.0-cp311-cp311-win_amd64.whl   # Python 3.11
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.0/padopauli-2.0.0-cp312-cp312-win_amd64.whl   # Python 3.12
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.1/padopauli-2.0.1-cp311-cp311-win_amd64.whl   # Python 3.11
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.1/padopauli-2.0.1-cp312-cp312-win_amd64.whl   # Python 3.12
 ```
 
 ## Quickstart
@@ -145,6 +145,16 @@ jupyter lab
   (code, problem instances, sweep launchers, figure and table generators) is published
   separately at <https://github.com/Norma-Q/SAFE-ma-QAOA>; `examples/04_SAFE_ma-QAOA.ipynb`
   in this repository is a short walkthrough of the same pipeline.
+
+## Release notes
+
+The current wheel is **2.0.1** (patch release, October 2026). It keeps the API and the recorded
+results unchanged and changes how a compiled program is evaluated: step matrices are applied as
+index gathers instead of sparse matrix products, which roughly halves the GPU memory of a
+forward + backward pass and removes the slow first backward call. [CHANGELOG.md](CHANGELOG.md)
+lists the changes, the measurements and the one numerical caveat (circuits with amplitude-damping
+noise may differ from 2.0.0 by one unit in the last place). 2.0.1 has no Zenodo record of its own;
+cite the all-versions DOI below.
 
 ## License
 
@@ -245,7 +255,7 @@ rebuilt binary distribution and starts a fresh history.
 
 torch는 없을 때만 자동 설치됩니다. macOS는 엔진에 MPS 경로가 없어 GPU 실행을
 지원하지 않습니다. Windows NVIDIA 실행은 실제 GPU 하드웨어에서 검증되기 전까지
-2.0.0 지원 범위에 포함되지 않습니다.
+2.0.1 지원 범위에 포함되지 않습니다.
 
 **Linux GPU 사용자(NVIDIA/CUDA 또는 AMD/ROCm)**: GPU에 맞는 torch 2.10–2.12 빌드를
 **먼저** 설치한 뒤 padopauli를 설치하십시오. `torch>=2.10,<2.13` 의존성이 이미
@@ -282,16 +292,16 @@ pip install "padopauli[reference]"
 
 ```bash
 # Linux x86-64
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.0/padopauli-2.0.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.11
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.0/padopauli-2.0.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.12
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.1/padopauli-2.0.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.11
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.1/padopauli-2.0.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.12
 
 # macOS Apple Silicon
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.0/padopauli-2.0.0-cp311-cp311-macosx_11_0_arm64.whl   # Python 3.11
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.0/padopauli-2.0.0-cp312-cp312-macosx_11_0_arm64.whl   # Python 3.12
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.1/padopauli-2.0.1-cp311-cp311-macosx_11_0_arm64.whl   # Python 3.11
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.1/padopauli-2.0.1-cp312-cp312-macosx_11_0_arm64.whl   # Python 3.12
 
 # Windows x64
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.0/padopauli-2.0.0-cp311-cp311-win_amd64.whl   # Python 3.11
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.0/padopauli-2.0.0-cp312-cp312-win_amd64.whl   # Python 3.12
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.1/padopauli-2.0.1-cp311-cp311-win_amd64.whl   # Python 3.11
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.0.1/padopauli-2.0.1-cp312-cp312-win_amd64.whl   # Python 3.12
 ```
 
 ## 빠른 시작
@@ -349,6 +359,15 @@ jupyter lab
   사전학습의 classical surrogate로 씁니다. 논문의 재현 패키지(코드, 문제 인스턴스, 스윕
   실행기, 그림·표 생성기)는 <https://github.com/Norma-Q/SAFE-ma-QAOA>에 따로 공개돼
   있고, 이 저장소의 `examples/04_SAFE_ma-QAOA.ipynb`는 같은 파이프라인의 짧은 예제입니다.
+
+## 릴리스 노트
+
+현재 휠은 **2.0.1**(패치 릴리스, 2026년 10월)입니다. API와 기록 데이터는 그대로이고, 컴파일된
+프로그램을 평가하는 방식이 바뀌었습니다. 스텝 행렬을 희소 행렬 곱 대신 인덱스 gather로 적용해
+forward + backward의 GPU 메모리가 절반 가까이 줄고 느리던 첫 backward 호출이 사라졌습니다. 변경
+내용, 측정값, 수치 관련 유의점 하나(amplitude damping 노이즈가 든 회로는 2.0.0과 마지막 자리 하나가
+다를 수 있음)는 [CHANGELOG.md](CHANGELOG.md)에 있습니다. 2.0.1은 별도 Zenodo 레코드가 없으므로 아래의
+전체 버전 DOI로 인용하십시오.
 
 ## 라이선스
 
