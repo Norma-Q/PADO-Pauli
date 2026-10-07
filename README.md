@@ -148,13 +148,9 @@ jupyter lab
 
 ## Release notes
 
-The current wheel is **2.0.1** (patch release, October 2026). It keeps the API and the recorded
-results unchanged and changes how a compiled program is evaluated: step matrices are applied as
-index gathers instead of sparse matrix products, which roughly halves the GPU memory of a
-forward + backward pass and removes the slow first backward call. [CHANGELOG.md](CHANGELOG.md)
-lists the changes, the measurements and the one numerical caveat (circuits with amplitude-damping
-noise may differ from 2.0.0 by one unit in the last place). 2.0.1 has no Zenodo record of its own;
-cite the all-versions DOI below.
+The current wheel is **2.0.1** (patch release, October 2026): lower GPU memory and faster
+evaluation, no API changes, results unchanged. See [CHANGELOG.md](CHANGELOG.md). 2.0.1 has no
+Zenodo record of its own; cite the all-versions DOI below.
 
 ## License
 
@@ -362,12 +358,9 @@ jupyter lab
 
 ## 릴리스 노트
 
-현재 휠은 **2.0.1**(패치 릴리스, 2026년 10월)입니다. API와 기록 데이터는 그대로이고, 컴파일된
-프로그램을 평가하는 방식이 바뀌었습니다. 스텝 행렬을 희소 행렬 곱 대신 인덱스 gather로 적용해
-forward + backward의 GPU 메모리가 절반 가까이 줄고 느리던 첫 backward 호출이 사라졌습니다. 변경
-내용, 측정값, 수치 관련 유의점 하나(amplitude damping 노이즈가 든 회로는 2.0.0과 마지막 자리 하나가
-다를 수 있음)는 [CHANGELOG.md](CHANGELOG.md)에 있습니다. 2.0.1은 별도 Zenodo 레코드가 없으므로 아래의
-전체 버전 DOI로 인용하십시오.
+현재 휠은 **2.0.1**(패치 릴리스, 2026년 10월)입니다. GPU 메모리가 줄고 평가가 빨라졌으며, API 변경과
+결과 수치 변화는 없습니다. 자세한 내용은 [CHANGELOG.md](CHANGELOG.md)에 있습니다. 2.0.1은 별도 Zenodo
+레코드가 없으므로 아래의 전체 버전 DOI로 인용하십시오.
 
 ## 라이선스
 
