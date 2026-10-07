@@ -149,8 +149,8 @@ jupyter lab
 ## Release notes
 
 The current wheel is **2.0.1** (patch release, October 2026): lower GPU memory and faster
-evaluation, no API changes, results unchanged. See [CHANGELOG.md](CHANGELOG.md). 2.0.1 has no
-Zenodo record of its own; cite the all-versions DOI below.
+evaluation, no API changes, results unchanged. See [CHANGELOG.md](CHANGELOG.md). Archived on Zenodo as
+[10.5281/zenodo.23202764](https://doi.org/10.5281/zenodo.23202764).
 
 ## License
 
@@ -196,7 +196,8 @@ Developed and maintained by Hyunwoo Kim (<hw_kim@norma.co.kr>,
 
 If you use PADO-Pauli in your research, please cite it via the Zenodo DOI
 [10.5281/zenodo.22627344](https://doi.org/10.5281/zenodo.22627344) (all versions;
-2.0.0 is [10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345); the snapshot
+2.0.0 is [10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345), 2.0.1 is
+[10.5281/zenodo.23202764](https://doi.org/10.5281/zenodo.23202764); the snapshot
 behind the manuscript, tag `v2.0.0-paper2`, is
 [10.5281/zenodo.23183558](https://doi.org/10.5281/zenodo.23183558)) or use the
 "Cite this repository" button, which reads [CITATION.cff](CITATION.cff).
@@ -359,8 +360,8 @@ jupyter lab
 ## 릴리스 노트
 
 현재 휠은 **2.0.1**(패치 릴리스, 2026년 10월)입니다. GPU 메모리가 줄고 평가가 빨라졌으며, API 변경과
-결과 수치 변화는 없습니다. 자세한 내용은 [CHANGELOG.md](CHANGELOG.md)에 있습니다. 2.0.1은 별도 Zenodo
-레코드가 없으므로 아래의 전체 버전 DOI로 인용하십시오.
+결과 수치 변화는 없습니다. 자세한 내용은 [CHANGELOG.md](CHANGELOG.md)에 있습니다. Zenodo 레코드는
+[10.5281/zenodo.23202764](https://doi.org/10.5281/zenodo.23202764)입니다.
 
 ## 라이선스
 
@@ -400,7 +401,8 @@ Youngseok Lee(<ys_lee@norma.co.kr>, <pop756hh@gmail.com>)가 개발하고 유지
 
 연구에 PADO-Pauli를 사용한 경우 Zenodo DOI
 [10.5281/zenodo.22627344](https://doi.org/10.5281/zenodo.22627344)(전체 버전; 2.0.0은
-[10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345), 논문에 쓴 스냅샷인 태그
+[10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345), 2.0.1은
+[10.5281/zenodo.23202764](https://doi.org/10.5281/zenodo.23202764), 논문에 쓴 스냅샷인 태그
 `v2.0.0-paper2`는 [10.5281/zenodo.23183558](https://doi.org/10.5281/zenodo.23183558))로 인용하거나,
 [CITATION.cff](CITATION.cff)를 읽는 "Cite this repository" 버튼을 이용하십시오.
 
