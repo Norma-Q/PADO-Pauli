@@ -198,8 +198,8 @@ If you use PADO-Pauli in your research, please cite it via the Zenodo DOI
 [10.5281/zenodo.22627344](https://doi.org/10.5281/zenodo.22627344) (all versions;
 2.0.0 is [10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345), 2.0.1 is
 [10.5281/zenodo.23202764](https://doi.org/10.5281/zenodo.23202764); the snapshot
-behind the manuscript, tag `v2.0.0-paper2`, is
-[10.5281/zenodo.23183558](https://doi.org/10.5281/zenodo.23183558)) or use the
+behind the manuscript, tag `v2.0.0-whitepaper`, is
+[10.5281/zenodo.23310965](https://doi.org/10.5281/zenodo.23310965)) or use the
 "Cite this repository" button, which reads [CITATION.cff](CITATION.cff).
 
 PADO-Pauli was first released publicly in February 2026 (1.0.0); that history is preserved
@@ -403,7 +403,7 @@ Youngseok Lee(<ys_lee@norma.co.kr>, <pop756hh@gmail.com>)가 개발하고 유지
 [10.5281/zenodo.22627344](https://doi.org/10.5281/zenodo.22627344)(전체 버전; 2.0.0은
 [10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345), 2.0.1은
 [10.5281/zenodo.23202764](https://doi.org/10.5281/zenodo.23202764), 논문에 쓴 스냅샷인 태그
-`v2.0.0-paper2`는 [10.5281/zenodo.23183558](https://doi.org/10.5281/zenodo.23183558))로 인용하거나,
+`v2.0.0-whitepaper`는 [10.5281/zenodo.23310965](https://doi.org/10.5281/zenodo.23310965))로 인용하거나,
 [CITATION.cff](CITATION.cff)를 읽는 "Cite this repository" 버튼을 이용하십시오.
 
 PADO-Pauli는 2026년 2월에 처음 공개되었으며(1.0.0), 그 히스토리는 태그
