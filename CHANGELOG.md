@@ -1,5 +1,34 @@
 # Changelog
 
+## 2.0.2 (unreleased)
+
+Patch release. No API changes; results are unchanged.
+
+### Improvements
+- Faster compilation, with lower peak memory while compiling.
+- Faster evaluation of large parameter batches, and the first evaluation after compiling starts sooner.
+- Compiling with `build_thetas` that require gradients no longer uses extra memory.
+- `scipy` is no longer a dependency.
+
+### Fixes
+- Inputs that used to give a silently wrong result now raise an error: a `PauliRotation` with
+  lower-case or unknown Pauli letters, or with a Pauli word whose length differs from its qubit
+  list; a rotation with neither or both of `param_idx` and `embedding_idx`; missing or too-short
+  `thetas` or `embedding`; a `dtype` other than `"float32"` or `"float64"`; and `build_min_abs`
+  together with embedding gates.
+- Observable coefficients given as NumPy scalars or 0-dim tensors are accepted.
+- `Circuit.compile()` no longer modifies the gate objects of the circuit.
+- Asking for a second derivative with `diff_mode="vjp"` now raises an error that points to
+  `diff_mode="autograd"`.
+- The documentation of `observables=` now matches the behaviour: a nested list of terms is one
+  multi-term observable.
+
+### Notes
+- Small circuits evaluated one parameter set at a time are a little faster than in 2.0.1; the
+  further speed-up mentioned in the 2.0.1 notes is still planned.
+- Supported platforms are unchanged: Linux x86-64 (CPU, NVIDIA CUDA, AMD ROCm), macOS Apple
+  Silicon (CPU), Windows x64 (CPU); Python 3.11 and 3.12; torch 2.10–2.12 (Windows: 2.11–2.12).
+
 ## 2.0.1 (2026-10-07)
 
 Patch release. No API changes; results are unchanged.
@@ -33,6 +62,32 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
 ---
 
 # 변경 이력 — 한국어
+
+## 2.0.2 (미출시)
+
+패치 릴리스입니다. API 변경 없음, 결과 수치 동일.
+
+### 개선
+- 컴파일이 빨라지고, 컴파일 중 최고 메모리 사용량이 줄었습니다.
+- 여러 파라미터 벌을 한 번에 평가하는 배치 평가가 빨라졌고, 컴파일 뒤 첫 평가도 더 빨리 시작합니다.
+- gradient를 추적하는 `build_thetas`로 컴파일할 때 메모리를 더 쓰지 않습니다.
+- `scipy`가 더 이상 의존성이 아닙니다.
+
+### 수정
+- 조용히 틀린 결과를 내던 입력이 이제 에러를 냅니다: `PauliRotation`에 소문자나 알 수 없는 Pauli
+  글자, 또는 큐비트 수와 길이가 다른 Pauli 단어를 준 경우; `param_idx`와 `embedding_idx`를 둘 다 주지
+  않았거나 둘 다 준 회전; `thetas`나 `embedding`이 없거나 짧은 경우; `"float32"`·`"float64"`가 아닌
+  `dtype`; 임베딩 게이트와 `build_min_abs`를 함께 쓴 경우.
+- 관측량 계수로 NumPy 스칼라나 0차원 텐서를 받습니다.
+- `Circuit.compile()`이 회로의 게이트 객체를 더 이상 바꾸지 않습니다.
+- `diff_mode="vjp"`로 2차 미분을 요청하면 `diff_mode="autograd"`를 안내하는 에러를 냅니다.
+- `observables=` 설명을 실제 동작에 맞게 고쳤습니다: 항을 한 번 더 감싼 리스트가 다항 관측량 하나입니다.
+
+### 참고
+- 작은 회로를 파라미터 한 벌씩 평가하는 경우 2.0.1보다 조금 빨라졌습니다. 2.0.1 노트에서 말한 추가
+  개선은 계속 진행 중입니다.
+- 지원 플랫폼은 그대로입니다: Linux x86-64(CPU, NVIDIA CUDA, AMD ROCm), macOS Apple Silicon(CPU),
+  Windows x64(CPU); Python 3.11·3.12; torch 2.10~2.12(Windows는 2.11~2.12).
 
 ## 2.0.1 (2026-10-07)
 
