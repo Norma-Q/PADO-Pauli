@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.2 (unreleased)
+## 2.0.2 (2026-10-21)
 
 Patch release. No API changes; results are unchanged.
 
@@ -63,7 +63,7 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
 
 # 변경 이력 — 한국어
 
-## 2.0.2 (미출시)
+## 2.0.2 (2026-10-21)
 
 패치 릴리스입니다. API 변경 없음, 결과 수치 동일.
 
