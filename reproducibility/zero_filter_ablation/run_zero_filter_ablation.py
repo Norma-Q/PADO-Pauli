@@ -88,8 +88,7 @@ def measure(zf: bool, wmax: int, qc, obs, thetas, thetas_b):
         row["compile_s"] = time.perf_counter() - t0
         row["terms"] = int(prog.psum_union.x_mask.shape[0])
         # nonzeros held by the compiled step matrices
-        row["step_nnz"] = sum(int(s.mat_const._nnz()) + int(s.mat_cos._nnz())
-                              + int(s.mat_sin._nnz()) for s in prog.psum_union.steps)
+        row["step_nnz"] = prog.step_nnz   # 2.1.0: stored-format independent (CompiledProgram.step_nnz)
         row["n_steps"] = len(prog.psum_union.steps)
     except RuntimeError as exc:
         row["compile_error"] = str(exc)[:160]

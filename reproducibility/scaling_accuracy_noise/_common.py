@@ -172,8 +172,7 @@ def compile_and_measure(n: int, w_max: int, preset: str, depth: int, p: float, s
 
             eval_s = _timed(lambda: prog.expvals(th))
             batch_eval_s = _timed(lambda: prog.expvals(th_b))
-            step_nnz = sum(int(s.mat_const._nnz()) + int(s.mat_cos._nnz())
-                           + int(s.mat_sin._nnz()) for s in prog.psum_union.steps)
+            step_nnz = prog.step_nnz   # 2.1.0: stored-format independent (CompiledProgram.step_nnz)
         except RuntimeError:
             torch.cuda.empty_cache()
 
