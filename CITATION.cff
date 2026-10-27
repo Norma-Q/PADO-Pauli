@@ -5,7 +5,7 @@ abstract: "A GPU-accelerated, differentiable Pauli-propagation surrogate (PPS) e
 type: software
 version: 2.1.0
 date-released: 2026-10-27
-doi: 10.5281/zenodo.22627344
+doi: 10.5281/zenodo.23680186
 license: Apache-2.0
 repository-code: "https://github.com/Norma-Q/PADO-Pauli"
 url: "https://pypi.org/project/padopauli/"
@@ -37,6 +37,9 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.23566417
     description: "Version 2.0.2"
+  - type: doi
+    value: 10.5281/zenodo.23680186
+    description: "Version 2.1.0"
   - type: doi
     value: 10.5281/zenodo.23310965
     description: "Snapshot v2.0.0-whitepaper: scripts and recorded data behind the manuscript"

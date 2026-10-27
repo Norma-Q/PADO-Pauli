@@ -153,8 +153,8 @@ gates (`build_embedding`), evaluation options that bound peak memory (`batch_chu
 `state_checkpoint`) or replay small-circuit evaluations as a GPU graph (`cuda_graph`), a more
 compact compiled-program format, and a hook for compile backends. Programs compiled with
 `build_min_abs` now track signed coefficients, so their results differ from 2.0.x (closer to the
-exact value); everything else is unchanged. See [CHANGELOG.md](CHANGELOG.md). Zenodo archives each
-release when it is published; until the 2.1.0 record appears, cite the all-versions DOI below.
+exact value); everything else is unchanged. See [CHANGELOG.md](CHANGELOG.md). Archived on Zenodo as
+[10.5281/zenodo.23680186](https://doi.org/10.5281/zenodo.23680186).
 
 ## License
 
@@ -202,7 +202,8 @@ If you use PADO-Pauli in your research, please cite it via the Zenodo DOI
 [10.5281/zenodo.22627344](https://doi.org/10.5281/zenodo.22627344) (all versions;
 2.0.0 is [10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345), 2.0.1 is
 [10.5281/zenodo.23202764](https://doi.org/10.5281/zenodo.23202764), 2.0.2 is
-[10.5281/zenodo.23566417](https://doi.org/10.5281/zenodo.23566417); the snapshot
+[10.5281/zenodo.23566417](https://doi.org/10.5281/zenodo.23566417), 2.1.0 is
+[10.5281/zenodo.23680186](https://doi.org/10.5281/zenodo.23680186); the snapshot
 behind the manuscript, tag `v2.0.0-whitepaper`, is
 [10.5281/zenodo.23310965](https://doi.org/10.5281/zenodo.23310965)) or use the
 "Cite this repository" button, which reads [CITATION.cff](CITATION.cff).
@@ -368,8 +369,8 @@ jupyter lab
 최고 메모리를 묶거나(`batch_chunk`, `state_checkpoint`) 작은 회로의 평가를 GPU 그래프로 재생하는
 (`cuda_graph`) 평가 옵션, 더 작은 컴파일 결과 형식, 컴파일 백엔드 연결부가 들어갔습니다.
 `build_min_abs`로 컴파일한 프로그램은 부호 있는 계수를 따라가므로 결과가 2.0.x와 달라집니다(정확한 값에
-더 가깝습니다). 그 밖의 결과는 그대로입니다. 자세한 내용은 [CHANGELOG.md](CHANGELOG.md)에 있습니다.
-Zenodo 레코드는 공개 직후 만들어지며, 그전까지는 아래의 전체 버전 DOI로 인용하십시오.
+더 가깝습니다). 그 밖의 결과는 그대로입니다. 자세한 내용은 [CHANGELOG.md](CHANGELOG.md)에 있습니다. Zenodo 레코드는
+[10.5281/zenodo.23680186](https://doi.org/10.5281/zenodo.23680186)입니다.
 
 ## 라이선스
 
@@ -411,7 +412,8 @@ Youngseok Lee(<ys_lee@norma.co.kr>, <pop756hh@gmail.com>)가 개발하고 유지
 [10.5281/zenodo.22627344](https://doi.org/10.5281/zenodo.22627344)(전체 버전; 2.0.0은
 [10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345), 2.0.1은
 [10.5281/zenodo.23202764](https://doi.org/10.5281/zenodo.23202764), 2.0.2는
-[10.5281/zenodo.23566417](https://doi.org/10.5281/zenodo.23566417), 논문에 쓴 스냅샷인 태그
+[10.5281/zenodo.23566417](https://doi.org/10.5281/zenodo.23566417), 2.1.0은
+[10.5281/zenodo.23680186](https://doi.org/10.5281/zenodo.23680186), 논문에 쓴 스냅샷인 태그
 `v2.0.0-whitepaper`는 [10.5281/zenodo.23310965](https://doi.org/10.5281/zenodo.23310965))로 인용하거나,
 [CITATION.cff](CITATION.cff)를 읽는 "Cite this repository" 버튼을 이용하십시오.
 
