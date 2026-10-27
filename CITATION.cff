@@ -35,5 +35,8 @@ identifiers:
     value: 10.5281/zenodo.23202764
     description: "Version 2.0.1"
   - type: doi
+    value: 10.5281/zenodo.23566417
+    description: "Version 2.0.2"
+  - type: doi
     value: 10.5281/zenodo.23310965
     description: "Snapshot v2.0.0-whitepaper: scripts and recorded data behind the manuscript"
