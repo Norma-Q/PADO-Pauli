@@ -17,6 +17,12 @@ Minor release. New options and a more compact compiled-program format; one chang
   evaluation of small circuits as a captured GPU graph.
 - `CompiledProgram.close()` and `with compile_program(...) as prog:` release evaluation
   caches.
+- Preset option `min_abs_rule` (default `"exact"`): `"bound"` prunes on one upper bound per
+  Pauli term instead of one signed coefficient per observable. It never drops a term the exact
+  rule keeps, keeps somewhat more, and its compile cost does not grow with the number of
+  observables, so it suits programs with hundreds or thousands of observables (for example
+  `build_quasi_sampler` with high-order Z combinations).
+- `build_quasi_sampler(...)` samplers expose their compiled program as `.program`.
 - Compile backends: a backend package can register itself (`register_backend`,
   `register_preset`, or the `padopauli.backends` entry-point group) and `preset="<name>"`
   then compiles on that backend. `padopauli.backend_api` lists the engine internals such a
@@ -35,6 +41,7 @@ Minor release. New options and a more compact compiled-program format; one chang
 - Compilation of circuits with 32 or more qubits is a little faster.
 - `pennylane_expvals` evaluates a batch of parameter vectors row by row instead of silently
   using only the first row.
+- numpy 1.26 is supported again (the requirement is `numpy>=1.26`).
 
 ### Notes
 - Supported platforms are unchanged: Linux x86-64 (CPU, NVIDIA CUDA, AMD ROCm), macOS Apple
@@ -118,6 +125,11 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
   때 K번째 중간 상태만 저장하고 나머지를 다시 계산해 시간을 메모리와 바꾸며, `cuda_graph`는
   작은 회로의 forward 평가를 GPU 그래프로 캡처해 재생합니다.
 - `CompiledProgram.close()`와 `with compile_program(...) as prog:`가 평가 캐시를 놓습니다.
+- 프리셋 옵션 `min_abs_rule`(기본 `"exact"`): `"bound"`는 관측량마다의 부호 있는 계수 대신
+  Pauli 항마다 상한 하나로 절단합니다. 정확한 규칙이 남기는 항은 절대 버리지 않고 조금 더
+  남기며, 컴파일 비용이 관측량 수에 비례해 늘지 않으므로 관측량이 수백·수천 개인
+  프로그램(예: 고차 Z 조합의 `build_quasi_sampler`)에 맞습니다.
+- `build_quasi_sampler(...)`가 돌려주는 샘플러가 컴파일된 프로그램을 `.program`으로 보여 줍니다.
 - 컴파일 백엔드: 백엔드 패키지가 스스로 등록하면(`register_backend`, `register_preset`,
   또는 `padopauli.backends` entry point) `preset="<이름>"`으로 그 백엔드에서 컴파일됩니다.
   그런 패키지가 쓸 수 있는 엔진 내부 이름은 `padopauli.backend_api`에 있습니다.
@@ -132,6 +144,7 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
   `CompiledProgram.n_terms`·`.step_nnz`로 읽을 수 있습니다.
 - 32큐비트 이상 회로의 컴파일이 조금 빨라졌습니다.
 - `pennylane_expvals`가 파라미터 벡터 배치를 첫 행만 조용히 쓰지 않고 행마다 평가합니다.
+- numpy 1.26을 다시 지원합니다(요구 사항 `numpy>=1.26`).
 
 ### 참고
 - 지원 플랫폼은 그대로입니다: Linux x86-64(CPU, NVIDIA CUDA, AMD ROCm), macOS Apple
