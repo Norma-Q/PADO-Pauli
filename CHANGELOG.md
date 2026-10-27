@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.1.0 (unreleased)
+## 2.1.0 (2026-10-27)
 
 Minor release. New options and a more compact compiled-program format; one change of results
 (coefficient truncation, see below).
@@ -111,7 +111,7 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
 
 # 변경 이력 — 한국어
 
-## 2.1.0 (미출시)
+## 2.1.0 (2026-10-27)
 
 마이너 릴리스입니다. 새 옵션과 더 작은 컴파일 결과 형식이 들어갔고, 결과가 바뀌는 변경이 하나
 있습니다(계수 절단, 아래 참조).
