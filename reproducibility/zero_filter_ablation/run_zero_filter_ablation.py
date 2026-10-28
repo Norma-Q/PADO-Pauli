@@ -78,6 +78,7 @@ def measure(zf: bool, wmax: int, qc, obs, thetas, thetas_b):
     """Compile one program and run the guarded measurement phases."""
     row = {"w_max": wmax, "zero_filter": zf}
     val = grad = None
+    qc._program = None   # release the previous program first, else `base` includes it and resident_gb is under-measured (BL-028)
     torch.cuda.empty_cache()
     torch.cuda.synchronize()
     base = torch.cuda.memory_allocated()

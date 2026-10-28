@@ -53,6 +53,12 @@ optionally inspected with `qc.draw()`. `Circuit` is a facade over the functional
 Application cases (kicked Ising, VQE, MaxCut-QAOA, SAFE ma-QAOA) live one folder up, in
 `../examples/`.
 
+Two notes for the truncation sections of 01 and 03: `max_weight` alone bounds cost, not
+error, so combine it with `build_thetas` / `build_min_abs` and cross-check a small instance
+with `Circuit.expvals_reference(...)`; and a program pruned at `build_thetas` keeps that term
+set, so recompile when the parameters move far from it (see the 2.1.1 entry of
+[CHANGELOG.md](../CHANGELOG.md)).
+
 ## Feature map
 
 | Feature (module) | Where used | What / How it is applied |

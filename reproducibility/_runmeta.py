@@ -82,12 +82,52 @@ def _gpu() -> dict:
     return info
 
 
+def _cpu() -> dict:
+    """Which host CPU produced the number.
+
+    The `cpu` preset and the CPU-side statevector baselines run here, so the
+    model and the thread count move their timings as much as the GPU model
+    moves the GPU ones. Model identity only -- no hostname, see the note above.
+    """
+    info: dict = {"model": None, "cores": None, "threads": None,
+                  "torch_threads": None, "omp_num_threads": os.environ.get("OMP_NUM_THREADS")}
+    try:
+        for line in Path("/proc/cpuinfo").read_text().splitlines():
+            if line.startswith("model name"):
+                info["model"] = line.split(":", 1)[1].strip()
+                break
+    except Exception:
+        info["model"] = platform.processor() or None
+    try:
+        info["threads"] = os.cpu_count()
+        # physical cores: one entry per (physical id, core id) pair
+        ids = set()
+        phys = core = None
+        for line in Path("/proc/cpuinfo").read_text().splitlines():
+            if line.startswith("physical id"):
+                phys = line.split(":", 1)[1].strip()
+            elif line.startswith("core id"):
+                core = line.split(":", 1)[1].strip()
+                if phys is not None:
+                    ids.add((phys, core))
+        info["cores"] = len(ids) or None
+    except Exception:
+        pass
+    try:
+        import torch
+        info["torch_threads"] = torch.get_num_threads()
+    except Exception:
+        pass
+    return info
+
+
 def run_meta() -> dict:
     """Everything needed to say where a number came from."""
     return {
         "timestamp_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "platform": platform.platform(),
         "python": sys.version.split()[0],
+        "cpu": _cpu(),
         "gpu": _gpu(),
         "padopauli": _padopauli(),
         "packages": _pkg_versions(),

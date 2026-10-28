@@ -8,8 +8,10 @@ files or needing three branches:
     results_on_H100/scaling_accuracy_noise/{results,figures}/
     results_on_MI300X/scaling_accuracy_noise/{results,figures}/
 
-The device tag comes from the GPU torch reports, so nothing has to be passed on
-the command line. Override either half when needed:
+The device tag comes from the GPU torch reports; on a box without a CUDA/ROCm
+GPU it comes from the Tenstorrent kernel driver's sysfs instead (`P150A`), and
+only a box with neither is tagged `cpu`. Nothing has to be passed on the
+command line. Override either half when needed:
 
     PPS_DEVICE_TAG=A100_run2   ->  <repo>/results_on_A100_run2/...
     PPS_DATA_ROOT=/tmp/scratch ->  /tmp/scratch/...
@@ -18,6 +20,7 @@ the command line. Override either half when needed:
 """
 from __future__ import annotations
 
+import glob
 import os
 import re
 from pathlib import Path
@@ -30,6 +33,7 @@ _KNOWN = [
     r"\bMI\d{3}[A-Z]*\b",                      # MI300X, MI250X
     r"\bRTX\s*\d{4}\s*(?:Ti|SUPER)?\b",       # RTX 4090, RTX 3090 Ti
     r"\b[AL]\d{4}\b",                          # A6000 (before the 3-digit rule)
+    r"\bG[BH]\d{3}\b",                         # GB300, GH200 (before the A100 rule)
     r"\b[AHVB]\d{3}\b",                        # A100, H100, V100, B200
     r"\bL\d{1,2}S?\b",                         # L4, L40S
 ]
@@ -42,8 +46,26 @@ def repo_root() -> Path:
     return _HERE.parent
 
 
+def _tenstorrent_tag():
+    """Board name of a Tenstorrent card, e.g. "P150A", or None when there is none.
+
+    Read from the kernel driver's static sysfs attribute: no ttnn import and no
+    device open, so it is safe to call from any process, including one that is
+    about to hand the board to a worker.
+    """
+    for path in sorted(glob.glob("/sys/class/tenstorrent/tenstorrent!*/tt_card_type")):
+        try:
+            with open(path) as fh:
+                name = fh.read().strip()
+        except OSError:
+            continue
+        if name:
+            return re.sub(r"[^A-Za-z0-9]+", "_", name).strip("_").upper()
+    return None
+
+
 def device_tag() -> str:
-    """Short name of the GPU this run is using: A100, H100, MI300X, ..."""
+    """Short name of the accelerator this run is using: A100, H100, MI300X, P150A, ..."""
     forced = os.environ.get("PPS_DEVICE_TAG")
     if forced:
         return forced
@@ -51,7 +73,7 @@ def device_tag() -> str:
         import torch
 
         if not torch.cuda.is_available():
-            return "cpu"
+            return _tenstorrent_tag() or "cpu"
         name = torch.cuda.get_device_name(0)
     except Exception:
         return "unknown"

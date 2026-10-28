@@ -40,7 +40,7 @@ documentation, worked examples, and the paper-reproduction suite.
 | Windows x64 | 3.11 / 3.12 | 2.11 – 2.12 | `cpu` |
 
 torch is auto-installed only if absent. macOS GPU execution is not supported because the
-engine has no MPS path. Windows NVIDIA execution is not part of the supported 2.1.0
+engine has no MPS path. Windows NVIDIA execution is not part of the supported 2.1.1
 surface until it is validated on real GPU hardware.
 
 **Linux GPU users (NVIDIA/CUDA or AMD/ROCm)**: install the torch 2.10–2.12 build matching
@@ -77,16 +77,16 @@ a specific file directly. Pick the one matching your OS and Python version
 
 ```bash
 # Linux x86-64
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.0/padopauli-2.1.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.11
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.0/padopauli-2.1.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.12
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.1/padopauli-2.1.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.11
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.1/padopauli-2.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.12
 
 # macOS Apple Silicon
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.0/padopauli-2.1.0-cp311-cp311-macosx_11_0_arm64.whl   # Python 3.11
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.0/padopauli-2.1.0-cp312-cp312-macosx_11_0_arm64.whl   # Python 3.12
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.1/padopauli-2.1.1-cp311-cp311-macosx_11_0_arm64.whl   # Python 3.11
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.1/padopauli-2.1.1-cp312-cp312-macosx_11_0_arm64.whl   # Python 3.12
 
 # Windows x64
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.0/padopauli-2.1.0-cp311-cp311-win_amd64.whl   # Python 3.11
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.0/padopauli-2.1.0-cp312-cp312-win_amd64.whl   # Python 3.12
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.1/padopauli-2.1.1-cp311-cp311-win_amd64.whl   # Python 3.11
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.1/padopauli-2.1.1-cp312-cp312-win_amd64.whl   # Python 3.12
 ```
 
 ## Quickstart
@@ -148,13 +148,12 @@ jupyter lab
 
 ## Release notes
 
-The current wheel is **2.1.0** (minor release): compile-time pruning for circuits with embedding
-gates (`build_embedding`), evaluation options that bound peak memory (`batch_chunk`,
-`state_checkpoint`) or replay small-circuit evaluations as a GPU graph (`cuda_graph`), a more
-compact compiled-program format, and a hook for compile backends. Programs compiled with
-`build_min_abs` now track signed coefficients, so their results differ from 2.0.x (closer to the
-exact value); everything else is unchanged. See [CHANGELOG.md](CHANGELOG.md). Archived on Zenodo as
-[10.5281/zenodo.23680186](https://doi.org/10.5281/zenodo.23680186).
+The current wheel is **2.1.1** (patch release): documentation and input checks only. `preset="gpu"`
+or `"hybrid"` on a machine whose torch sees no GPU now raises an error that names the fix, and the
+docstrings and tutorial notes explain truncation accuracy, that `build_thetas` fixes the retained term
+set, when compiling once pays off, and recompiling. Compiled programs, the stored format and every
+result are identical to 2.1.0. See [CHANGELOG.md](CHANGELOG.md). Zenodo archives each release when it
+is published; until the 2.1.1 record appears, cite the all-versions DOI below.
 
 ## License
 
@@ -258,7 +257,7 @@ rebuilt binary distribution and starts a fresh history.
 
 torch는 없을 때만 자동 설치됩니다. macOS는 엔진에 MPS 경로가 없어 GPU 실행을
 지원하지 않습니다. Windows NVIDIA 실행은 실제 GPU 하드웨어에서 검증되기 전까지
-2.1.0 지원 범위에 포함되지 않습니다.
+2.1.1 지원 범위에 포함되지 않습니다.
 
 **Linux GPU 사용자(NVIDIA/CUDA 또는 AMD/ROCm)**: GPU에 맞는 torch 2.10–2.12 빌드를
 **먼저** 설치한 뒤 padopauli를 설치하십시오. `torch>=2.10,<2.13` 의존성이 이미
@@ -295,16 +294,16 @@ pip install "padopauli[reference]"
 
 ```bash
 # Linux x86-64
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.0/padopauli-2.1.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.11
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.0/padopauli-2.1.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.12
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.1/padopauli-2.1.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.11
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.1/padopauli-2.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl   # Python 3.12
 
 # macOS Apple Silicon
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.0/padopauli-2.1.0-cp311-cp311-macosx_11_0_arm64.whl   # Python 3.11
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.0/padopauli-2.1.0-cp312-cp312-macosx_11_0_arm64.whl   # Python 3.12
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.1/padopauli-2.1.1-cp311-cp311-macosx_11_0_arm64.whl   # Python 3.11
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.1/padopauli-2.1.1-cp312-cp312-macosx_11_0_arm64.whl   # Python 3.12
 
 # Windows x64
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.0/padopauli-2.1.0-cp311-cp311-win_amd64.whl   # Python 3.11
-pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.0/padopauli-2.1.0-cp312-cp312-win_amd64.whl   # Python 3.12
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.1/padopauli-2.1.1-cp311-cp311-win_amd64.whl   # Python 3.11
+pip install https://github.com/Norma-Q/PADO-Pauli/releases/download/v2.1.1/padopauli-2.1.1-cp312-cp312-win_amd64.whl   # Python 3.12
 ```
 
 ## 빠른 시작
@@ -365,12 +364,11 @@ jupyter lab
 
 ## 릴리스 노트
 
-현재 휠은 **2.1.0**(마이너 릴리스)입니다. 임베딩 게이트가 있는 회로의 컴파일 시 절단(`build_embedding`),
-최고 메모리를 묶거나(`batch_chunk`, `state_checkpoint`) 작은 회로의 평가를 GPU 그래프로 재생하는
-(`cuda_graph`) 평가 옵션, 더 작은 컴파일 결과 형식, 컴파일 백엔드 연결부가 들어갔습니다.
-`build_min_abs`로 컴파일한 프로그램은 부호 있는 계수를 따라가므로 결과가 2.0.x와 달라집니다(정확한 값에
-더 가깝습니다). 그 밖의 결과는 그대로입니다. 자세한 내용은 [CHANGELOG.md](CHANGELOG.md)에 있습니다. Zenodo 레코드는
-[10.5281/zenodo.23680186](https://doi.org/10.5281/zenodo.23680186)입니다.
+현재 휠은 **2.1.1**(패치 릴리스)입니다. 문서와 입력 검사만 바뀌었습니다. torch가 GPU를 보지 못하는 머신에서
+`preset="gpu"`나 `"hybrid"`를 쓰면 해결책을 담은 에러가 나고, docstring과 튜토리얼 노트에 절단 정확도,
+`build_thetas`가 항 집합을 고정한다는 점, 컴파일 한 번이 유리한 조건, 재컴파일 안내가 추가됐습니다. 컴파일 결과,
+저장 형식, 모든 수치는 2.1.0과 같습니다. 자세한 내용은 [CHANGELOG.md](CHANGELOG.md)에 있습니다. Zenodo 레코드는
+공개 직후 만들어지며, 그전까지는 아래의 전체 버전 DOI로 인용하십시오.
 
 ## 라이선스
 

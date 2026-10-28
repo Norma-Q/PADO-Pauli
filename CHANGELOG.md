@@ -1,5 +1,26 @@
 # Changelog
 
+## 2.1.1 (unreleased)
+
+Patch release. Documentation and input checks only; compiled programs, stored format and
+every result are identical to 2.1.0.
+
+### Improvements
+- `preset="gpu"` or `"hybrid"` on a machine whose torch sees no CUDA/ROCm device now raises a
+  `RuntimeError` that names the preset and the fix (`preset="cpu"`, or a GPU build of torch),
+  instead of torch's raw error from inside the compilation.
+- Docstrings and the tutorial notes explain truncation accuracy: `max_weight` alone has no error bound and
+  should be combined with `build_thetas` / `build_min_abs`; a program pruned at `build_thetas`
+  keeps that term set, so recompile when the parameters move far from it; when compiling once
+  pays off against propagating per parameter set; and that `Circuit.compile` releases the
+  previous program before compiling (a failed compile leaves the circuit uncompiled; keep
+  programs you still need with `compile_program(...)` and `program.close()`).
+
+### Fixes
+- Reproducibility scripts: the zero-filter ablation releases the previous program before
+  taking its memory baseline (its `resident_gb` column was under-measured before), and the
+  scaling sweep records an evaluation failure as `eval_error` instead of a silent empty field.
+
 ## 2.1.0 (2026-10-27)
 
 Minor release. New options and a more compact compiled-program format; one change of results
@@ -110,6 +131,24 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
 ---
 
 # 변경 이력 — 한국어
+
+## 2.1.1 (미출시)
+
+패치 버전. 문서와 입력 검사만 바뀌었고 컴파일 결과, 저장 형식, 모든 수치는 2.1.0과 같다.
+
+### 개선
+- torch가 CUDA/ROCm 장치를 보지 못하는 머신에서 `preset="gpu"`나 `"hybrid"`를 쓰면 프리셋 이름과
+  해결책(`preset="cpu"` 또는 GPU용 torch 설치)을 담은 `RuntimeError`가 난다. 전에는 컴파일 안쪽에서
+  torch의 원시 에러가 났다.
+- docstring과 튜토리얼 노트에 절단 정확도 안내를 추가했다. `max_weight`만으로는 오차 상한이 없어
+  `build_thetas` / `build_min_abs`와 함께 써야 하고, `build_thetas`에서 절단한 프로그램은 그 항 집합을
+  유지하므로 파라미터가 멀리 움직이면 다시 컴파일해야 한다. 컴파일 한 번이 파라미터마다 전파하는
+  방식보다 유리해지는 조건, 그리고 `Circuit.compile`이 이전 프로그램을 먼저 해제한다는 점(실패하면
+  미컴파일 상태가 되며, 붙들 프로그램은 `compile_program(...)`과 `program.close()`로)도 적었다.
+
+### 수정
+- 재현 스크립트: zero filter 소거 실험이 기준 메모리를 재기 전에 이전 프로그램을 해제한다(기존
+  `resident_gb` 열은 과소 측정이었다). 스케일링 스윕은 평가 실패를 빈 값 대신 `eval_error`로 기록한다.
 
 ## 2.1.0 (2026-10-27)
 

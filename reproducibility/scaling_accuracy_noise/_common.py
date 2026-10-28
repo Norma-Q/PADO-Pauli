@@ -153,7 +153,7 @@ def compile_and_measure(n: int, w_max: int, preset: str, depth: int, p: float, s
     # median of five calls (same protocol as run_zero_filter_ablation.py), on a
     # single parameter vector and on a batch of 200. step_nnz is the number of
     # nonzeros the evaluation streams.
-    eval_s = batch_eval_s = step_nnz = None
+    eval_s = batch_eval_s = step_nnz = eval_error = None
     if on_gpu:
         try:
             dev = prog.psum_union.x_mask.device
@@ -173,7 +173,8 @@ def compile_and_measure(n: int, w_max: int, preset: str, depth: int, p: float, s
             eval_s = _timed(lambda: prog.expvals(th))
             batch_eval_s = _timed(lambda: prog.expvals(th_b))
             step_nnz = prog.step_nnz   # 2.1.0: stored-format independent (CompiledProgram.step_nnz)
-        except RuntimeError:
+        except RuntimeError as exc:
+            eval_error = str(exc)[:160]   # recorded below; a silent None looked like a skipped measurement (BL-039)
             torch.cuda.empty_cache()
 
     xm = prog.psum_union.x_mask
@@ -203,4 +204,5 @@ def compile_and_measure(n: int, w_max: int, preset: str, depth: int, p: float, s
         "eval_s": eval_s,
         "batch_eval_200_s": batch_eval_s,
         "step_nnz": step_nnz,
+        **({"eval_error": eval_error} if eval_error is not None else {}),
     }

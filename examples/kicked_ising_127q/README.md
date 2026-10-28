@@ -32,7 +32,7 @@ PADO-Pauli's `max_weight` preset override and `build_min_abs` are the analogues 
 
 `RZZ(-pi/2)` is Clifford, so the only branching comes from the `RX(h)` layers.
 The observable is propagated backward (Heisenberg frame) with `max_weight = 8`
-(the only term-count bound PADO-Pauli exposes) and a coefficient
+(the only weight bound PADO-Pauli exposes) and a coefficient
 threshold `build_min_abs = 1e-4`, evaluated per field. The expectation value is
 the sum of the surviving diagonal `{I,Z}` coefficients (PADO-Pauli's exact
 zero-filter). The endpoints are Clifford and exact by construction: `h=0` gives
