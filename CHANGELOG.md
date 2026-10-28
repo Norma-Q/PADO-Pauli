@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.1.1 (unreleased)
+## 2.1.1 (2026-10-28)
 
 Patch release. Documentation and input checks only; compiled programs, stored format and
 every result are identical to 2.1.0.
@@ -132,7 +132,7 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
 
 # 변경 이력 — 한국어
 
-## 2.1.1 (미출시)
+## 2.1.1 (2026-10-28)
 
 패치 버전. 문서와 입력 검사만 바뀌었고 컴파일 결과, 저장 형식, 모든 수치는 2.1.0과 같다.
 
