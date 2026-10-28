@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.2.1 (unreleased)
+## 2.2.1 (2026-10-28)
 
 Patch release. One correctness fix for large GPU programs; every result that was right before is identical bit for bit.
 
@@ -157,7 +157,7 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
 
 # 변경 이력 — 한국어
 
-## 2.2.1 (미출시)
+## 2.2.1 (2026-10-28)
 
 패치 버전. 큰 GPU 프로그램의 정확성 수정 하나. 전에 맞던 결과는 모두 비트 단위로 같다.
 
