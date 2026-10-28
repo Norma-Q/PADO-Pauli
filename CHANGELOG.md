@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.2.1 (unreleased)
+
+Patch release. One correctness fix for large GPU programs; every result that was right before is identical bit for bit.
+
+### Fixes
+- On AMD GPUs with the ROCm build of PyTorch, circuits on 64 or more qubits whose compilation selected more than 67 million rows in one step could compile to wrong expectation values with inflated term counts (the `cpu` preset was not affected). The engine now gathers rows in bounded pieces on the GPU, which avoids a fault in the underlying gather kernel; smaller programs take exactly the same code path as before.
+
+### Notes
+- The fault is in the GPU kernel, not in the propagation rules: the same circuit compiled on the CPU preset, or with fewer than 64 qubits, was already right. If you compiled 64-qubit-or-larger circuits on an AMD GPU with an earlier version, recompile with this one.
+
 ## 2.2.0 (2026-10-28)
 
 Minor release. Every result of an existing input is identical to 2.1.1; the changes add Clifford gates, make the `hybrid` preset do what its name says, and remove device synchronisations from compilation.
@@ -146,6 +156,16 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
 ---
 
 # 변경 이력 — 한국어
+
+## 2.2.1 (미출시)
+
+패치 버전. 큰 GPU 프로그램의 정확성 수정 하나. 전에 맞던 결과는 모두 비트 단위로 같다.
+
+### 수정
+- AMD GPU의 ROCm PyTorch 빌드에서, 64큐비트 이상 회로가 컴파일 중 한 스텝에서 6,700만 행 넘게 선택하면 기댓값이 틀리고 항 수가 부풀 수 있었다(`cpu` 프리셋은 영향 없음). 엔진이 GPU에서 행을 일정 크기 조각으로 모아 바탕 gather 커널의 결함을 피한다. 더 작은 프로그램은 전과 똑같은 코드 경로를 지난다.
+
+### 참고
+- 결함은 전파 규칙이 아니라 GPU 커널에 있다. 같은 회로를 cpu 프리셋으로, 또는 64큐비트 미만으로 컴파일한 결과는 전에도 맞았다. 이전 버전으로 AMD GPU에서 64큐비트 이상 회로를 컴파일했다면 이 버전으로 다시 컴파일하기 바란다.
 
 ## 2.2.0 (2026-10-28)
 
