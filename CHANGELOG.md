@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.2.0 (unreleased)
+## 2.2.0 (2026-10-28)
 
 Minor release. Every result of an existing input is identical to 2.1.1; the changes add Clifford gates, make the `hybrid` preset do what its name says, and remove device synchronisations from compilation.
 
@@ -147,7 +147,7 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
 
 # 변경 이력 — 한국어
 
-## 2.2.0 (미출시)
+## 2.2.0 (2026-10-28)
 
 마이너 버전. 기존 입력의 모든 결과는 2.1.1과 비트 단위로 같다. Clifford 게이트 추가, `hybrid` 프리셋의 평가 방식 변경, 컴파일의 장치 동기화 감소.
 
