@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.2.0 (unreleased)
+
+Minor release. Every result of an existing input is identical to 2.1.1; the changes add Clifford gates, make the `hybrid` preset do what its name says, and remove device synchronisations from compilation.
+
+### New
+- Native Clifford gates `Y`, `Z`, `SDG` (S†), `SX` (√X), `CY` and `SWAP` next to `H`, `S`, `X`, `CNOT`, `CZ`: `qc.y / z / sdg / sx / cy / swap`, `CliffordGate("SWAP", [a, b])`, drawn by `draw()` and mirrored in the PennyLane reference path.
+- `preset="hybrid"` now compiles on the host and evaluates on the GPU by streaming the program step by step (at most `chunk_size` rows at a time). Nothing of the program stays on the GPU between steps, so the GPU holds the state buffers and the current step only; the values are the same bits as `preset="gpu"`. `cuda_graph` is ignored for a streamed program (it would keep every step resident), and `diff_mode="autograd"` keeps the copies in its graph until backward.
+
+### Improvements
+- Compilation performs about half as many device-to-host synchronisations per step, and the first evaluation almost none: the builders hand their structural facts (unique rows and columns, ±1 signs, the cos block) to the stored format instead of re-deriving them.
+- `hybrid` compilation sorts each step on the GPU before moving it to the host (the host sort was about half of a hybrid compile's time).
+
+### Notes
+- On AMD GPUs with the ROCm build of PyTorch, circuits on 64 or more qubits whose compilation selects more than 67 million rows in one step can compile to wrong expectation values in this version (and in 2.1.x). 2.2.1 fixes it; use 2.2.1 for such circuits.
+
 ## 2.1.1 (2026-10-28)
 
 Patch release. Documentation and input checks only; compiled programs, stored format and
@@ -131,6 +146,21 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
 ---
 
 # 변경 이력 — 한국어
+
+## 2.2.0 (미출시)
+
+마이너 버전. 기존 입력의 모든 결과는 2.1.1과 비트 단위로 같다. Clifford 게이트 추가, `hybrid` 프리셋의 평가 방식 변경, 컴파일의 장치 동기화 감소.
+
+### 새 기능
+- 네이티브 Clifford 게이트 `Y`, `Z`, `SDG`(S†), `SX`(√X), `CY`, `SWAP` 추가(기존 `H`, `S`, `X`, `CNOT`, `CZ`). `qc.y / z / sdg / sx / cy / swap`, `CliffordGate("SWAP", [a, b])`, `draw()`와 PennyLane 참조 경로에도 반영.
+- `preset="hybrid"`는 이제 호스트에서 컴파일하고 GPU에서는 프로그램을 스텝 단위(최대 `chunk_size` 행)로 올려 평가한다. 스텝 사이에 프로그램이 GPU에 남지 않으므로 GPU에는 상태 버퍼와 현재 스텝만 있다. 값은 `preset="gpu"`와 비트 단위로 같다. 스트리밍 프로그램에서는 `cuda_graph`를 쓰지 않고(모든 스텝을 상주시키게 되므로), `diff_mode="autograd"`는 backward까지 사본을 그래프에 붙들어 둔다.
+
+### 개선
+- 컴파일의 스텝당 장치→호스트 동기화가 약 절반으로, 첫 평가의 동기화는 거의 0으로 줄었다. 빌더가 아는 구조 사실(행·열 유일성, ±1 부호, cos 블록)을 저장 형식이 다시 계산하지 않고 넘겨받는다.
+- `hybrid` 컴파일은 각 스텝을 GPU에서 정렬한 뒤 호스트로 내린다(호스트 정렬이 hybrid 컴파일 시간의 절반 가까이였다).
+
+### 참고
+- AMD GPU의 ROCm PyTorch 빌드에서, 64큐비트 이상 회로가 컴파일 중 한 스텝에서 6,700만 행 넘게 선택하면 이 버전(과 2.1.x)은 기댓값이 틀릴 수 있다. 2.2.1에서 수정했으므로 그런 회로는 2.2.1을 쓰기 바란다.
 
 ## 2.1.1 (2026-10-28)
 
