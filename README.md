@@ -152,8 +152,8 @@ The current wheel is **2.2.1** (patch release): one correctness fix. On AMD GPUs
 PyTorch, circuits on 64 or more qubits whose compilation selected more than 67 million rows in one step
 could compile to wrong expectation values (2.1.x and 2.2.0; the `cpu` preset was not affected). The
 engine now gathers rows in bounded pieces on the GPU. Every result that was right before is identical
-bit for bit. See [CHANGELOG.md](CHANGELOG.md). Zenodo archives each release when it is published; until
-the 2.2.1 record appears, cite the all-versions DOI below.
+bit for bit. See [CHANGELOG.md](CHANGELOG.md). Archived on Zenodo as
+[10.5281/zenodo.23727334](https://doi.org/10.5281/zenodo.23727334).
 
 ## License
 
@@ -202,7 +202,10 @@ If you use PADO-Pauli in your research, please cite it via the Zenodo DOI
 2.0.0 is [10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345), 2.0.1 is
 [10.5281/zenodo.23202764](https://doi.org/10.5281/zenodo.23202764), 2.0.2 is
 [10.5281/zenodo.23566417](https://doi.org/10.5281/zenodo.23566417), 2.1.0 is
-[10.5281/zenodo.23680186](https://doi.org/10.5281/zenodo.23680186); the snapshot
+[10.5281/zenodo.23680186](https://doi.org/10.5281/zenodo.23680186), 2.1.1 is
+[10.5281/zenodo.23727251](https://doi.org/10.5281/zenodo.23727251), 2.2.0 is
+[10.5281/zenodo.23727297](https://doi.org/10.5281/zenodo.23727297), 2.2.1 is
+[10.5281/zenodo.23727334](https://doi.org/10.5281/zenodo.23727334); the snapshot
 behind the manuscript, tag `v2.0.0-whitepaper`, is
 [10.5281/zenodo.23310965](https://doi.org/10.5281/zenodo.23310965)) or use the
 "Cite this repository" button, which reads [CITATION.cff](CITATION.cff).
@@ -367,8 +370,8 @@ jupyter lab
 현재 휠은 **2.2.1**(패치 릴리스)입니다. 정확성 수정 하나입니다. AMD GPU의 ROCm PyTorch 빌드에서 64큐비트 이상
 회로가 컴파일 중 한 스텝에서 6,700만 행 넘게 선택하면 기댓값이 틀릴 수 있었습니다(2.1.x와 2.2.0; `cpu`
 프리셋은 영향 없음). 엔진이 GPU에서 행을 일정 크기 조각으로 모읍니다. 전에 맞던 결과는 모두 비트 단위로
-같습니다. 자세한 내용은 [CHANGELOG.md](CHANGELOG.md)에 있습니다. Zenodo 레코드는 공개 직후 만들어지며,
-그전까지는 아래의 전체 버전 DOI로 인용하십시오.
+같습니다. 자세한 내용은 [CHANGELOG.md](CHANGELOG.md)에 있습니다. Zenodo 레코드는
+[10.5281/zenodo.23727334](https://doi.org/10.5281/zenodo.23727334)입니다.
 
 ## 라이선스
 
@@ -411,7 +414,10 @@ Youngseok Lee(<ys_lee@norma.co.kr>, <pop756hh@gmail.com>)가 개발하고 유지
 [10.5281/zenodo.22627345](https://doi.org/10.5281/zenodo.22627345), 2.0.1은
 [10.5281/zenodo.23202764](https://doi.org/10.5281/zenodo.23202764), 2.0.2는
 [10.5281/zenodo.23566417](https://doi.org/10.5281/zenodo.23566417), 2.1.0은
-[10.5281/zenodo.23680186](https://doi.org/10.5281/zenodo.23680186), 논문에 쓴 스냅샷인 태그
+[10.5281/zenodo.23680186](https://doi.org/10.5281/zenodo.23680186), 2.1.1은
+[10.5281/zenodo.23727251](https://doi.org/10.5281/zenodo.23727251), 2.2.0은
+[10.5281/zenodo.23727297](https://doi.org/10.5281/zenodo.23727297), 2.2.1은
+[10.5281/zenodo.23727334](https://doi.org/10.5281/zenodo.23727334), 논문에 쓴 스냅샷인 태그
 `v2.0.0-whitepaper`는 [10.5281/zenodo.23310965](https://doi.org/10.5281/zenodo.23310965))로 인용하거나,
 [CITATION.cff](CITATION.cff)를 읽는 "Cite this repository" 버튼을 이용하십시오.
 
