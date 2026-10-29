@@ -53,6 +53,17 @@ optionally inspected with `qc.draw()`. `Circuit` is a facade over the functional
 Application cases (kicked Ising, VQE, MaxCut-QAOA, SAFE ma-QAOA) live one folder up, in
 `../examples/`.
 
+## Korean versions / 한국어판
+
+Every notebook has a Korean twin with the suffix `_ko` (`01_quickstart_ko.ipynb`, …,
+`08_hybrid_classical_quantum_ko.ipynb`) in this folder. The code cells are identical to the English
+notebook; only the markdown cells and the code comments are in Korean, and both share `figures/`.
+`python tutorial/check_ko_pairs.py` verifies that each pair runs the same code.
+
+모든 노트북에 접미사 `_ko`가 붙은 한국어판이 같은 폴더에 있습니다(`01_quickstart_ko.ipynb` ~
+`08_hybrid_classical_quantum_ko.ipynb`). 코드 셀은 영문판과 같고 markdown 셀과 코드 주석만 한국어입니다.
+그림은 `figures/`를 함께 씁니다. `python tutorial/check_ko_pairs.py`가 두 판의 코드가 같은지 확인합니다.
+
 Two notes for the truncation sections of 01 and 03: `max_weight` alone bounds cost, not
 error, so combine it with `build_thetas` / `build_min_abs` and cross-check a small instance
 with `Circuit.expvals_reference(...)`; and a program pruned at `build_thetas` keeps that term
