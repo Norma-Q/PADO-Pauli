@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.2.2 (unreleased)
+
+Patch release. Compilation drops dead terms as soon as they appear and builds no step for a gate that changes nothing; every expectation value and gradient is identical bit for bit to 2.2.1.
+
+### Improvements
+- During compilation the engine now removes, at the step where it appears, every term that cannot contribute to the expectation value: a term with an X or Y factor on a qubit that no remaining gate acts on, or with more X/Y factors than the remaining gates can clear. The final zero filter removed the same terms before, so the compiled program is the same; circuits whose propagation used to grow large before that filter now compile in a fraction of the time and memory (two-dimensional lattices with a global observable, for example). Setting `zero_filter=False` keeps every term, as before.
+- A gate that commutes with every term alive at its step (a rotation outside the observable's light cone, or a Clifford gate or noise channel on qubits no live term touches) no longer produces a step in the compiled program. Programs for local observables on wide circuits have far fewer steps and evaluate faster; the first step is always kept.
+
+### Notes
+- The number of steps, the number of propagated terms and the structural hash of a compiled program can differ from 2.2.1 for the same circuit. Expectation values and gradients do not.
+
 ## 2.2.1 (2026-10-28)
 
 Patch release. One correctness fix for large GPU programs; every result that was right before is identical bit for bit.
@@ -156,6 +167,17 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
 ---
 
 # 변경 이력 — 한국어
+
+## 2.2.2 (미출시)
+
+패치 버전. 컴파일이 죽은 항을 생기는 즉시 지우고, 아무것도 바꾸지 않는 게이트에는 스텝을 만들지 않는다. 모든 기댓값과 gradient는 2.2.1과 비트 단위로 같다.
+
+### 개선
+- 컴파일 중 기댓값에 기여할 수 없는 항을 생기는 스텝에서 바로 지운다. 남은 게이트가 건드리지 않는 큐비트에 X나 Y가 있는 항, 또는 남은 게이트가 지울 수 있는 것보다 X/Y 인자가 많은 항이다. 전에는 마지막 zero filter가 같은 항을 지웠으므로 컴파일된 프로그램은 같다. 그 필터 전까지 전파가 크게 불던 회로(전역 관측량의 2차원 격자 등)는 컴파일 시간과 메모리가 크게 줄어든다. `zero_filter=False`면 전처럼 모든 항을 남긴다.
+- 그 스텝에서 살아 있는 모든 항과 교환하는 게이트(관측량의 광원뿔 밖 회전, 살아 있는 항이 건드리지 않는 큐비트의 Clifford 게이트나 노이즈 채널)는 컴파일된 프로그램에 스텝을 만들지 않는다. 넓은 회로의 국소 관측량 프로그램은 스텝 수가 크게 줄고 평가가 빨라진다. 첫 스텝은 항상 남긴다.
+
+### 참고
+- 같은 회로라도 컴파일된 프로그램의 스텝 수, 전파 항 수, 구조 해시는 2.2.1과 다를 수 있다. 기댓값과 gradient는 다르지 않다.
 
 ## 2.2.1 (2026-10-28)
 
