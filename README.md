@@ -153,8 +153,8 @@ terms that can no longer contribute as soon as they appear and builds no step fo
 live term, so circuits whose propagation used to grow large before the final zero filter compile in a
 fraction of the time and memory, and programs for local observables on wide circuits have far fewer
 steps. Every expectation value and gradient is identical bit for bit to 2.2.1; step counts and structural
-hashes can differ. See [CHANGELOG.md](CHANGELOG.md). Zenodo archives each release when it is published;
-until the 2.2.2 record appears, cite the all-versions DOI below.
+hashes can differ. See [CHANGELOG.md](CHANGELOG.md). Archived on Zenodo as
+[10.5281/zenodo.24269290](https://doi.org/10.5281/zenodo.24269290).
 
 ## License
 
@@ -206,7 +206,8 @@ If you use PADO-Pauli in your research, please cite it via the Zenodo DOI
 [10.5281/zenodo.23680186](https://doi.org/10.5281/zenodo.23680186), 2.1.1 is
 [10.5281/zenodo.23727251](https://doi.org/10.5281/zenodo.23727251), 2.2.0 is
 [10.5281/zenodo.23727297](https://doi.org/10.5281/zenodo.23727297), 2.2.1 is
-[10.5281/zenodo.23727334](https://doi.org/10.5281/zenodo.23727334); the snapshot
+[10.5281/zenodo.23727334](https://doi.org/10.5281/zenodo.23727334), 2.2.2 is
+[10.5281/zenodo.24269290](https://doi.org/10.5281/zenodo.24269290); the snapshot
 behind the manuscript, tag `v2.0.0-whitepaper`, is
 [10.5281/zenodo.23310965](https://doi.org/10.5281/zenodo.23310965)) or use the
 "Cite this repository" button, which reads [CITATION.cff](CITATION.cff).
@@ -372,8 +373,8 @@ jupyter lab
 항을 생기는 즉시 지우고, 살아 있는 항을 바꾸지 않는 게이트에는 스텝을 만들지 않습니다. 그래서 마지막 zero
 filter 전까지 전파가 크게 불던 회로는 컴파일 시간과 메모리가 크게 줄고, 넓은 회로의 국소 관측량 프로그램은
 스텝 수가 크게 줄어듭니다. 모든 기댓값과 gradient는 2.2.1과 비트 단위로 같고, 스텝 수와 구조 해시는 다를 수
-있습니다. 자세한 내용은 [CHANGELOG.md](CHANGELOG.md)에 있습니다. Zenodo 레코드는 공개 직후 만들어지며,
-그전까지는 아래의 전체 버전 DOI로 인용하십시오.
+있습니다. 자세한 내용은 [CHANGELOG.md](CHANGELOG.md)에 있습니다. Zenodo 레코드는
+[10.5281/zenodo.24269290](https://doi.org/10.5281/zenodo.24269290)입니다.
 
 ## 라이선스
 
@@ -419,7 +420,8 @@ Youngseok Lee(<ys_lee@norma.co.kr>, <pop756hh@gmail.com>)가 개발하고 유지
 [10.5281/zenodo.23680186](https://doi.org/10.5281/zenodo.23680186), 2.1.1은
 [10.5281/zenodo.23727251](https://doi.org/10.5281/zenodo.23727251), 2.2.0은
 [10.5281/zenodo.23727297](https://doi.org/10.5281/zenodo.23727297), 2.2.1은
-[10.5281/zenodo.23727334](https://doi.org/10.5281/zenodo.23727334), 논문에 쓴 스냅샷인 태그
+[10.5281/zenodo.23727334](https://doi.org/10.5281/zenodo.23727334), 2.2.2는
+[10.5281/zenodo.24269290](https://doi.org/10.5281/zenodo.24269290), 논문에 쓴 스냅샷인 태그
 `v2.0.0-whitepaper`는 [10.5281/zenodo.23310965](https://doi.org/10.5281/zenodo.23310965))로 인용하거나,
 [CITATION.cff](CITATION.cff)를 읽는 "Cite this repository" 버튼을 이용하십시오.
 
