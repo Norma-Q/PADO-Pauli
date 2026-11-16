@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.2.2 (unreleased)
+## 2.2.2 (2026-11-16)
 
 Patch release. Compilation drops dead terms as soon as they appear and builds no step for a gate that changes nothing; every expectation value and gradient is identical bit for bit to 2.2.1.
 
@@ -168,7 +168,7 @@ sampler, tutorials, examples and the paper's reproduction suite with recorded re
 
 # 변경 이력 — 한국어
 
-## 2.2.2 (미출시)
+## 2.2.2 (2026-11-16)
 
 패치 버전. 컴파일이 죽은 항을 생기는 즉시 지우고, 아무것도 바꾸지 않는 게이트에는 스텝을 만들지 않는다. 모든 기댓값과 gradient는 2.2.1과 비트 단위로 같다.
 
